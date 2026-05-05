@@ -1,0 +1,6 @@
+@use '../abstracts' as a;
+
+header {
+    height: 10vh;
+    background-color: a.$color1;
+}
