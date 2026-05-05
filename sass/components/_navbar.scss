@@ -1,5 +1,31 @@
 @use '../abstracts' as a;
 
+// HAMBURGER STYLING
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    z-index: 100;
+    cursor: pointer;
+    
+    position: fixed;
+    margin: 5%;
+    right: 0;   
+    
+    span {
+        display: block;
+        width: 100%;
+        height: 10%;
+        background-color: a.$color2;
+        border-radius: 2px;
+    }
+}
+
+// HEADER STYLING
+
 header {
     z-index: 1000;
     position: fixed;
