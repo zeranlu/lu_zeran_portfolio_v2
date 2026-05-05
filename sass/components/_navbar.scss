@@ -1,6 +1,17 @@
 @use '../abstracts' as a;
 
 header {
-    height: 10vh;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 20vh;
     background-color: a.$color1;
+
+    transform: translateY(0);
+    transition: a.$transition;
+}
+
+header.slideUp {
+    transform: translateY(-100%);
 }
