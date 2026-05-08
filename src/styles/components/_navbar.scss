@@ -8,7 +8,7 @@ header {
     width: 100vw;
     height: 12.5vh;
     background-color: a.$color1;
-    overflow: hidden;
+    // overflow: hidden;
     transform: translateY(0);
     transition: a.$transition;
     box-shadow: a.$shadow;
@@ -16,6 +16,36 @@ header {
 
 header.slideUp {
     transform: translateY(-100%);
+}
+
+.navbar {
+    transform: translateY(-100%);
+    transition: transform a.$transition;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: a.$color1;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+.navbar.open {
+    transform: translateY(0);
+}
+
+.nav-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+
+    background-color: a.$color3;
+    height: 100%;
+    width: 75%;
+    margin: auto;
 }
 
 // HAMBURGER STYLING
@@ -77,10 +107,6 @@ header.slideUp {
 @keyframes slide-back {
     0% {right: 0%;}
     100% {right: -100%}
-}
-
-.open {
-    display: block;
 }
 
 @media screen and (min-width: 768px) {
