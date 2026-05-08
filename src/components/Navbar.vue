@@ -87,4 +87,18 @@
 
     // Scroll Tracking
     let lastScroll = 0
+
+    // Toggle Hamburger Nav
+    function toggleNav(e) {
+        e.stopPropagation()
+        if (navOpen.value === false) {
+            navOpen.value = true
+        } else {
+            navOpen.value = false
+        }
+    }
+
+    function closeNav() {
+        navOpen.value = false
+    }
 </script>
