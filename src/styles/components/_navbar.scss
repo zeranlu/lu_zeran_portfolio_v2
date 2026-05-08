@@ -1,0 +1,134 @@
+@use '../abstracts' as a;
+// HEADER STYLING
+
+header {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 12.5vh;
+    background-color: a.$color1;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: a.$transition;
+    box-shadow: a.$shadow;
+}
+
+header.slideUp {
+    transform: translateY(-100%);
+}
+
+// HAMBURGER STYLING
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    z-index: 100;
+    cursor: pointer;
+    
+    position: absolute;
+    margin: 5%;
+    right: 0;   
+    
+    span {
+        display: block;
+        width: 100%;
+        height: 10%;
+        background-color: a.$color2;
+        border-radius: 2px;
+    }
+}
+
+.hamburger.X span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 12.5px;
+    position: absolute;
+    transition: a.$transition;
+}
+
+.hamburger.X span:nth-child(2) {
+    opacity: 0;
+    transition: a.$transition;
+}
+
+.hamburger.X span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 12.5px;
+    position: absolute;
+    transition: a.$transition;
+}
+
+.slide-out {
+    animation: slide-out 0.25s forwards;
+}
+
+.slide-back {
+    animation: slide-back 0.25s forwards;
+}
+
+@keyframes slide-out {
+    0% {right:-100%;}
+    100% {right: 0%}
+}
+
+@keyframes slide-back {
+    0% {right: 0%;}
+    100% {right: -100%}
+}
+
+.open {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .nav-ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    .nav-li:first-child {
+        margin-right: auto;
+    }
+
+    .nav-li {
+        width: 10%;
+        height: 100%;
+    }
+
+    .nav-a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        place-content: center;
+        transition: all a.$transition;
+
+        &:hover {
+            border: 0.5px a.$color2;
+            border-style: none solid;
+            background-color: a.$color3;
+            font-size: 1.5rem;
+        }
+
+        &:active {
+            font-size: 1rem;
+        }
+    }
+}
