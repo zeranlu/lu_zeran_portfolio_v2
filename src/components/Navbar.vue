@@ -140,4 +140,10 @@
             document.removeEventListener('click', clickEvent)
         }
     })
+
+    // Lifecycle Hooks
+    onMounted(function() {
+        window.addEventListener('scroll', handleScroll)
+        document.addEventListener('mousemove', mouseProximity)
+    })
 </script>
