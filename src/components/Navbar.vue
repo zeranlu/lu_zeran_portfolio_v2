@@ -146,4 +146,10 @@
         window.addEventListener('scroll', handleScroll)
         document.addEventListener('mousemove', mouseProximity)
     })
+
+    onUnmounted(function() {
+        window.removeEventListener('scroll', handleScroll)
+        document.removeEventListener('mousemove', mouseProximity)
+        document.removeEventListener('click', clickEvent)
+    })
 </script>
