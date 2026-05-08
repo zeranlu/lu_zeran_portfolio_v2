@@ -111,4 +111,17 @@
             closeNav()
         }
     }
+
+    // Scroll Logic
+    function handleScroll() {
+        const currentScroll = window.scrollY
+
+        if (currentScroll > lastScroll && currentScroll > 100 && navOpen.value === false) {
+            headerHidden.value = true
+        } else if (currentScroll < lastScroll) {
+            headerHidden.value = false
+        }
+
+        lastScroll = currentScroll
+    }
 </script>
