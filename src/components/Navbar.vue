@@ -1,14 +1,14 @@
 <template>
-    <header>
+    <header :class="{ 'slideUp': headerHidden }">
         <!-- hamburger menu -->
-        <button class="hamburger" @click="toggleMenu">
+        <button class="hamburger" :class="{ 'X': navOpen }" @click="toggleNav">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </button>
 
         <!-- navbar -->
-        <nav class="navbar" :class="{ 'navbar--open': menuOpen }">
+        <nav class="navbar" :class="{ 'open': navOpen }">
             <ul class="nav-ul">
                 <li class="nav-li">
                     <RouterLink class="nav-a" to="/">
