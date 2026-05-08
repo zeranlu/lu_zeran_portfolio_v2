@@ -84,4 +84,7 @@
     // Nav State
     const navOpen = ref(false)
     const headerHidden = ref(false)
+
+    // Scroll Tracking
+    let lastScroll = 0
 </script>
