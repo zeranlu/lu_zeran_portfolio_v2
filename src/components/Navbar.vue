@@ -124,4 +124,11 @@
 
         lastScroll = currentScroll
     }
+
+    // Mouse Proximity
+    function mouseProximity(e) {
+        if (e.clientY < 100) {
+            headerHidden.value = false
+        }
+    }
 </script>
