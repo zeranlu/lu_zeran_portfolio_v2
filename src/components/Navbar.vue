@@ -131,4 +131,13 @@
             headerHidden.value = false
         }
     }
+
+    // Watching Nav States
+    watch(navOpen, function(isOpen) {
+        if (isOpen === true) {
+            document.addEventListener('click', clickEvent)
+        } else {
+            document.removeEventListener('click', clickEvent)
+        }
+    })
 </script>
