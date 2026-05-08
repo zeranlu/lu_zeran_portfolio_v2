@@ -80,4 +80,8 @@
 
 <script setup>
     import { ref, watch, onMounted, onUnmounted } from 'vue'
+
+    // Nav State
+    const navOpen = ref(false)
+    const headerHidden = ref(false)
 </script>
