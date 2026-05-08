@@ -101,4 +101,14 @@
     function closeNav() {
         navOpen.value = false
     }
+
+    // Close Menu Clicking Outside
+    function clickEvent(e) {
+        const navbar = document.querySelector('.navbar')
+        const hamburger = document.querySelector('.hamburger')
+
+        if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+            closeNav()
+        }
+    }
 </script>
