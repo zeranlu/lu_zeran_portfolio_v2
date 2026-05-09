@@ -18,36 +18,6 @@ header.slideUp {
     transform: translateY(-100%);
 }
 
-.navbar {
-    transform: translateY(-100%);
-    transition: transform a.$transition;
-
-    width: 100vw;
-    height: 100vh;
-    background-color: a.$color1;
-    display: flex;
-    flex-direction: column;
-    place-content: center;
-}
-
-.navbar.open {
-    transform: translateY(0);
-}
-
-.nav-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 1rem;
-
-    background-color: a.$color3;
-    height: 100%;
-    width: 75%;
-    margin: auto;
-}
-
 // HAMBURGER STYLING
 
 .hamburger {
@@ -109,11 +79,46 @@ header.slideUp {
     100% {right: -100%}
 }
 
+// MOBILE STYLING
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        transform: translateY(-100%);
+        transition: transform a.$transition;
+
+        width: 100vw;
+        height: 100vh;
+        background-color: a.$color1;
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+    }
+
+    .navbar.open {
+        transform: translateY(0);
+    }
+
+    .nav-ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+
+        background-color: a.$color3;
+        height: 100%;
+        width: 75%;
+        margin: auto;
+    }
+}
+
+// DESKTOP STYLING
+
 @media screen and (min-width: 768px) {
     .hamburger {
         display: none;
     }
-
     
     .navbar {
         display: flex;
@@ -151,6 +156,63 @@ header.slideUp {
             border-style: none solid;
             background-color: a.$color3;
             font-size: 1.5rem;
+        }
+
+        &:active {
+            font-size: 1rem;
+        }
+    }
+
+    // DROPDOWN NAV
+
+    .nav-dropdown {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .dropdown-nav {
+        display: flex;
+        flex-direction: column;
+        width: 200%;
+
+        position: absolute;
+        top: 100%;
+
+        // Centering Logic
+        left: 50%;
+        transform: translateX(-50%) translateY(-100%);
+
+        z-index: -1;
+        opacity: 0;
+        transition: a.$transition;
+    }
+
+    .nav-dropdown:hover .dropdown-nav {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .dropdown-li {
+        height: 10vh;
+        background: a.$color3;
+    }
+
+    .dropdown-a {
+        transition: a.$transition;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 100%;
+        width: 100%;
+        background-color: a.$color4;
+
+        &:hover {
+            border: 0.5px a.$color2;
+            border-style: none solid;
+            background-color: a.$color3;
+            font-size: 1.2rem;
         }
 
         &:active {
