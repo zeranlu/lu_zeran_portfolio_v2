@@ -1,7 +1,13 @@
 <template>
-    <div>
+    <main>
         <h1>Home</h1>
-    </div>
+
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <FeaturedProjects />
+        <ContactMini />
+    </main>
 </template>
 
 <script setup>
