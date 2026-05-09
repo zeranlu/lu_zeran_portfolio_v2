@@ -176,7 +176,7 @@ header.slideUp {
         width: 200%;
 
         position: absolute;
-        bottom: 0;
+        top: 100%;
 
         // Centering Logic
         left: 50%;
@@ -188,13 +188,13 @@ header.slideUp {
 
         &:hover {
             opacity: 1;
-            transform: translateX(-50%) translateY(100%);
+            transform: translateX(-50%);
         }
     }
 
     .nav-dropdown:hover .dropdown-nav {
         opacity: 1;
-        transform: translateX(-50%) translateY(100%);
+        transform: translateX(-50%);
     }
 
     .dropdown-li {
