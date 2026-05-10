@@ -3,10 +3,17 @@
 body {
     background-image: url(@/assets/images/bg-pattern-vector.svg);
     background-repeat: repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .content-con {
     background-color: a.$color5;
     margin: 5%;
+}
+
+.highlight {
+    color: a.$color3;
+    position: relative;
+
+    }
 }
