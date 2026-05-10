@@ -4,7 +4,6 @@
 
         <HeroSection />
         <AboutSection />
-        <SkillsSection />
         <FeaturedProjects />
         <ContactMini />
     </main>
