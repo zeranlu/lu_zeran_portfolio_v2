@@ -19,10 +19,13 @@
             </p>
         </div>
 
+        <SkillsSection />
     </section>
 </template>
 
 <script setup>
+import SkillsSection from './SkillsSection.vue';
+
 </script>
 
 <style scoped lang="scss">
