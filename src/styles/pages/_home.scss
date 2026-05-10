@@ -3,10 +3,31 @@
 body {
     background-image: url(@/assets/images/bg-pattern-vector.svg);
     background-repeat: repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .content-con {
     background-color: a.$color5;
     margin: 5%;
+}
+
+.highlight {
+    color: a.$color3;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: a.$color3;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        border-radius: 1px;
+        transition: width a.$transition;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
 }
