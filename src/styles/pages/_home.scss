@@ -1,24 +1,12 @@
 @use '../abstracts' as a;
 
-// RESET DEFAULT STYLINGS
-
 body {
-    margin: 0;
-    padding: 0;
-    color: a.$color2;
+    background-image: url(@/assets/images/bg-pattern-vector.svg);
+    background-repeat: repeat;
+    background-size: contain;
 }
 
-nav, ul, li, a {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: a.$color2;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
+.content-con {
+    background-color: a.$color5;
+    margin: 5%;
 }
