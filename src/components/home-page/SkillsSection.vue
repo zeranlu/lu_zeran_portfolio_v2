@@ -3,7 +3,12 @@
         <h2 class="hidden">Skills Section</h2>
 
         <div class="skills-con">
-            <Icon />
+            <Icon 
+                v-for="skill in skillsIcons"
+                :key="skill.name"
+                :name="skill.name"
+                :icon="skill.icon"
+            />
         </div>
     </section>
 </template>
