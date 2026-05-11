@@ -104,6 +104,12 @@
                 errors: responseJSON.errors || [],
                 message: responseJSON.message || ''
             }
+        } catch (error) {
+            console.error('Error during fetch:', error)
+            feedback.value = {
+                errors: ['Sorry, something went wrong. Please try again later.'],
+                message: ''
+            }
         }
     }
 </script>
