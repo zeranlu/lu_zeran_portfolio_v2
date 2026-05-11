@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import SkillsSection from './SkillsSection.vue';
+import SkillsSection from '@/components/home-page/SkillsSection.vue';
 
 </script>
 

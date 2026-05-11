@@ -4,18 +4,17 @@
 
         <HeroSection />
         <AboutSection />
-        <SkillsSection />
         <FeaturedProjects />
         <ContactMini />
     </main>
 </template>
 
 <script setup>
-    import HeroSection from '@/components/HeroSection.vue'
-    import AboutSection from '@/components/AboutSection.vue'
-    import SkillsSection from '@/components/SkillsSection.vue'
-    import FeaturedProjects from '@/components/FeaturedProjects.vue'
-    import ContactMini from '@/components/ContactMini.vue'
+    import HeroSection from '@/components/home-page/HeroSection.vue'
+    import AboutSection from '@/components/home-page/AboutSection.vue'
+    import SkillsSection from '@/components/home-page/SkillsSection.vue'
+    import FeaturedProjects from '@/components/home-page/FeaturedProjects.vue'
+    import ContactMini from '@/components/home-page/ContactMini.vue'
 </script>
 
 <style scoped lang="scss">
