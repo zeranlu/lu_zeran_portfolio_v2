@@ -23,6 +23,36 @@
 </template>
 
 <script setup>
+    const projects = [
+        {
+            id: 1,
+            title: 'Project 1',
+            placeholder: '/placeholder/placeholder1.png',
+            url: 'https://github.com/zeranlu',
+            cta: 'View Project >>'
+        },
+        {
+            id: 2,
+            title: 'Project 2',
+            placeholder: '/placeholder/placeholder2.png',
+            url: 'https://github.com/zeranlu',
+            cta: 'View Project >>'
+        },
+        {
+            id: 3,
+            title: 'Project 3',
+            placeholder: '/placeholder/placeholder3.png',
+            url: 'https://github.com/zeranlu',
+            cta: 'View Project >>'
+        },
+        {
+            id: 4,
+            title: 'Project 4',
+            placeholder: '/placeholder/placeholder4.png',
+            url: 'https://github.com/zeranlu',
+            cta: 'View Project >>'
+        },
+    ]
 </script>
 
 <style scoped lang="scss">
