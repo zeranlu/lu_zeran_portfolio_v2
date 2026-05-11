@@ -110,6 +110,11 @@
                 errors: ['Sorry, something went wrong. Please try again later.'],
                 message: ''
             }
+        } finally {
+            feedbackField.value?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end'
+            })
         }
     }
 </script>
