@@ -1,6 +1,6 @@
 <template>
     <main>
-        <h1>Home</h1>
+        <h1 class="hidden">Home</h1>
 
         <HeroSection />
         <AboutSection />

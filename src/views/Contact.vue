@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <h1>Contact</h1>
-    </div>
+    <main>
+        <h1 class="hidden">Contact Page</h1>
+
 </template>
 
 <script setup>
