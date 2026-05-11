@@ -5,7 +5,6 @@
         <HeroSection />
         <AboutSection />
         <FeaturedProjects />
-        <ContactMini />
     </main>
 </template>
 
@@ -13,7 +12,6 @@
     import HeroSection from '@/components/home-page/HeroSection.vue'
     import AboutSection from '@/components/home-page/AboutSection.vue'
     import FeaturedProjects from '@/components/home-page/FeaturedProjects.vue'
-    import ContactMini from '@/components/home-page/ContactMini.vue'
 </script>
 
 <style scoped lang="scss">
