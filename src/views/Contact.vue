@@ -82,6 +82,15 @@
     const feedbackField = ref(null)
 
     const handleSubmit = async () => {
+
+        
+        const formData = new URLSearchParams({
+            fname: form.value.fname,
+            lname: form.value.lname,
+            email: form.value.email,
+            message: form.value.message
+        })
+
         try {
             const response = await fetch('contact.php', {
                 method: 'POST',
