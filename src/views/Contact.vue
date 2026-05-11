@@ -17,13 +17,13 @@
             </div>
 
             <div class="contact-form-con">
-                <form class="contact-form">
+                <form class="contact-form" @submit.prevent="handleSubmit">
                     <div class="contact-field" id="first-name-field">
                         <label for="fname">
                             Enter your first name here
                         </label>
 
-                        <input type="text" id="fname" placeholder="What's your first name?" required>
+                        <input type="text" id="fname" v-model="form.fname" placeholder="What's your first name?" required>
                     </div>
 
                     <div class="contact-field" id="last-name-field">
@@ -31,7 +31,7 @@
                             Enter your last name here
                         </label>
 
-                        <input type="text" id="lname" placeholder="What's your last name?" required>
+                        <input type="text" id="lname" v-model="form.lname" placeholder="What's your last name?" required>
                     </div>
 
                     <div class="contact-field" id="email-field">
@@ -39,22 +39,22 @@
                             Enter your e-mail here
                         </label>
 
-                        <input type="email" id="email-field" placeholder="youremail@domain.com" required>
+                        <input type="email" id="email" v-model="form.email" placeholder="youremail@domain.com" required>
                     </div>
 
                     <div class="contact-field" id="message-field">
                         <label for="message">
                             Enter your message here
                         </label>
-                        <textarea id="message-field" placeholder="Let's get down to business..." required></textarea>
+
+                        <textarea id="message" v-model="form.message" placeholder="Let's get down to business..." required></textarea>
                     </div>
 
                     <input id="submit-button" type="submit" value="Submit Form!">
 
-                    <div class="contact-field" id="feedback-field">
-                        <p>
-                            Please fill out all required sections!
-                        </p>
+                    <div class="contact-field" id="feedback-field" v-if="feedback.errors.length || feedback.message" ref="feedbackField">
+                        <p v-if="feedback.message">{{ feedback.message }}</p>
+                        <p v-for="(error,index) in feedback.errors" :key="index">{{ error }}</p>
                     </div>
                 </form>
             </div>
