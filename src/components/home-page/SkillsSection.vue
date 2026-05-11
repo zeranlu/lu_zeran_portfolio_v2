@@ -3,18 +3,13 @@
         <h2 class="hidden">Skills Section</h2>
 
         <div class="skills-con">
-            <div class="skills-flex-con">
-
-            </div>
-
-            <div class="skills-flex-con">
-
-            </div>
+            <Icon />
         </div>
     </section>
 </template>
 
 <script setup>
+    import '@/components/home-page/Icon.vue'
 </script>
 
 <style scoped lang="scss">
