@@ -3,7 +3,7 @@
         <h2 class="hidden">Skills Section</h2>
 
         <div class="skills-con">
-            <Icon 
+            <Icon class="skills-item"
                 v-for="skill in skillsIcons"
                 :key="skill.name"
                 :name="skill.name"
@@ -48,4 +48,17 @@
 </script>
 
 <style scoped lang="scss">
+    @use '@/styles/abstracts' as a;
+
+    .skills-con {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills-item {
+        flex: 0 0 25%;
+    }
 </style>

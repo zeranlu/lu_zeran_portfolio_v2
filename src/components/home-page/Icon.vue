@@ -1,5 +1,5 @@
 <template>
-    <div class="skills-icon">
+    <div class="skills-item">
         <img :src="icon" :alt="name" />
         <p>{{ name }}</p>
     </div>
@@ -13,4 +13,10 @@
 </script>
 
 <style scoped lang="scss">
+    .skills-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
