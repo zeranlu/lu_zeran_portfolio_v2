@@ -1,14 +1,14 @@
 <template>
     <div class="skills-icon">
-        <img :src="icon" :alt="name" />
-        <p>{{ name }}</p>
+        <img :src="iconPath" :alt="skillName" />
+        <p>{{ skillName }}</p>
     </div>
 </template>
 
 <script setup>
     defineProps({
-        name: String,
-        icon: String
+        skillName: String,
+        iconPath: String
     })
 </script>
 
