@@ -81,6 +81,22 @@
 
     const feedbackField = ref(null)
 
+    const handleSubmit = async () => {
+        try {
+            const response = await fetch('contact.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: formData
+            })
+
+            const responseJSON = await response.json()
+
+            feedback.value = {
+                errors: responseJSON.errors || [],
+                message: responseJSON.message || ''
+            }
+        }
+    }
 </script>
 
 <style scoped lang="scss">
