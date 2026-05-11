@@ -1,14 +1,16 @@
 <template>
     <div class="skills-item">
-        <img :src="icon" :alt="name" />
+        <Icon :icon="icon" width="60" height="60" />
         <p>{{ name }}</p>
     </div>
 </template>
 
 <script setup>
+    import { Icon } from '@iconify/vue'
+
     defineProps({
         name: String,
-        icon: String
+        icon: Object
     })
 </script>
 

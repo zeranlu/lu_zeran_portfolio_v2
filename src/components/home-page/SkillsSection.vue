@@ -1,9 +1,9 @@
 <template>
-    <section class="hero-section">
+    <section>
         <h2 class="hidden">Skills Section</h2>
 
         <div class="skills-con">
-            <Icon class="skills-item"
+            <SkillIcon class="skills-item"
                 v-for="skill in skillsIcons"
                 :key="skill.name"
                 :name="skill.name"
@@ -15,35 +15,41 @@
 
 <script setup>
     // Import Component
-    import Icon from '@/components/home-page/Icon.vue'
+    import SkillIcon from '@/components/home-page/SkillIcon.vue'
 
     // Import Icon Paths
-    import vscodeIcon from '@/assets/icons/vscode-logo.svg'
-    import htmlIcon from '@/assets/icons/html-logo.svg'
-    import cssIcon from '@/assets/icons/css-logo.svg'
-    import jsIcon from '@/assets/icons/js-logo.svg'
-    import vueIcon from '@/assets/icons/vue-logo.svg'
-    import gsapIcon from '@/assets/icons/gsap-logo.svg'
-    import figmaIcon from '@/assets/icons/figma-logo.svg'
-    import mysqlIcon from '@/assets/icons/mysql-logo.svg'
-    import phpIcon from '@/assets/icons/php-logo.svg'
-    import githubIcon from '@/assets/icons/github-logo.svg'
-    import photoshopIcon from '@/assets/icons/photoshop-logo.svg'
-    import illustratorIcon from '@/assets/icons/illustrator-logo.svg'
+    import vscode from '@iconify-icons/logos/visual-studio-code'
+    import html from '@iconify-icons/skill-icons/html'
+    import css from '@iconify-icons/skill-icons/css'
+    import sass from '@iconify-icons/skill-icons/sass'
+    import javascript from '@iconify-icons/logos/javascript'
+    import vue from '@iconify-icons/logos/vue'
+    import greensock from '@iconify-icons/logos/greensock-icon'
+    import figma from '@iconify-icons/logos/figma'
+    import laravel from '@iconify-icons/skill-icons/laravel-light'
+    import mysql from '@iconify-icons/skill-icons/mysql-light'
+    import php from '@iconify-icons/logos/php'
+    import git from '@iconify-icons/skill-icons/git'
+    import github from '@iconify-icons/logos/github-icon'
+    import photoshop from '@iconify-icons/logos/adobe-photoshop'
+    import illustrator from '@iconify-icons/logos/adobe-illustrator'
 
     const skillsIcons = [
-        { name: 'VS Code', icon: vscodeIcon},
-        { name: 'HTML', icon: htmlIcon},
-        { name: 'CSS', icon: cssIcon},
-        { name: 'JavaScript', icon: jsIcon},
-        { name: 'Vue', icon: vueIcon},
-        { name: 'GreenSock', icon: gsapIcon},
-        { name: 'Figma', icon: figmaIcon},
-        { name: 'MySQL', icon: mysqlIcon},
-        { name: 'PHP', icon: phpIcon},
-        { name: 'GitHub', icon: githubIcon},
-        { name: 'Photoshop', icon: photoshopIcon},
-        { name: 'Illustrator', icon: illustratorIcon}
+        { name: 'VS Code', icon: vscode },
+        { name: 'HTML', icon: html },
+        { name: 'CSS', icon: css },
+        { name: 'JavaScript', icon: javascript },
+        { name: 'Sass', icon: sass },
+        { name: 'Vue', icon: vue },
+        { name: 'GreenSock', icon: greensock },
+        { name: 'Figma', icon: figma },
+        { name: 'Laravel', icon: laravel },
+        { name: 'MySQL', icon: mysql },
+        { name: 'PHP', icon: php },
+        { name: 'Git', icon: git },
+        { name: 'GitHub', icon: github },
+        { name: 'Photoshop', icon: photoshop },
+        { name: 'Illustrator', icon: illustrator }
     ]
 </script>
 
@@ -59,6 +65,12 @@
     }
 
     .skills-item {
-        flex: 0 0 25%;
+        flex: 0 0 33%;
+    }
+
+    @media screen and (min-width: 768px) {
+        .skills-item {
+            flex: 0 0 15%;
+        }
     }
 </style>
