@@ -10,6 +10,20 @@
 
 <script setup>
     import '@/components/home-page/Icon.vue'
+
+    // Import Icon Paths
+    import vscodeIcon from '@/assets/icons/vscode-logo.svg'
+    import htmlIcon from ''
+    import cssIcon from '@/assets/icons/css-logo.svg'
+    import jsIcon from '@/assets/icons/js-logo.svg'
+    import vueIcon from '@/assets/icons/vue-logo.svg'
+    import gsapIcon from '@/assets/icons/gsap-logo.svg'
+    import figmaIcon from '@/assets/icons/figma-logo.svg'
+    import mysqlIcon from '@/assets/icons/mysql-logo.svg'
+    import phpIcon from '@/assets/icons/php-logo.svg'
+    import githubIcon from '@/assets/icons/github-logo.svg'
+    import photoshopIcon from '@/assets/icons/photoshop-logo.svg'
+    import illustratorIcon from '@/assets/icons/illustrator-logo.svg'
 </script>
 
 <style scoped lang="scss">
