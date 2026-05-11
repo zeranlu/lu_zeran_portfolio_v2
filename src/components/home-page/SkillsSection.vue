@@ -27,6 +27,7 @@
     import greensock from '@iconify-icons/logos/greensock-icon'
     import figma from '@iconify-icons/logos/figma'
     import laravel from '@iconify-icons/skill-icons/laravel-light'
+    import postman from '@iconify-icons/logos/postman-icon'
     import mysql from '@iconify-icons/skill-icons/mysql-light'
     import php from '@iconify-icons/logos/php'
     import git from '@iconify-icons/skill-icons/git'
@@ -44,6 +45,7 @@
         { name: 'GreenSock', icon: greensock },
         { name: 'Figma', icon: figma },
         { name: 'Laravel', icon: laravel },
+        { name: 'Postman', icon: postman },
         { name: 'MySQL', icon: mysql },
         { name: 'PHP', icon: php },
         { name: 'Git', icon: git },
