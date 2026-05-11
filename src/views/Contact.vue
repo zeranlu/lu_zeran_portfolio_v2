@@ -65,7 +65,7 @@
 <script setup>
     import HeroSection from '@/components/home-page/HeroSection.vue'
 
-    import { ref, watch, onMounted, onUnmounted } from 'vue'
+    import { ref } from 'vue'
 
     const form = ref({
         fname: '',
