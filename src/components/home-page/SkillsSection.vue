@@ -10,11 +10,11 @@
 
 <script setup>
     // Import Component
-    import '@/components/home-page/Icon.vue'
+    import Icon from '@/components/home-page/Icon.vue'
 
     // Import Icon Paths
     import vscodeIcon from '@/assets/icons/vscode-logo.svg'
-    import htmlIcon from ''
+    import htmlIcon from '@/assets/icons/html-logo.svg'
     import cssIcon from '@/assets/icons/css-logo.svg'
     import jsIcon from '@/assets/icons/js-logo.svg'
     import vueIcon from '@/assets/icons/vue-logo.svg'
@@ -27,18 +27,18 @@
     import illustratorIcon from '@/assets/icons/illustrator-logo.svg'
 
     const skillsIcons = [
-        { name: 'VS Code', icon: 'vscodeIcon'},
-        { name: 'HTML', icon: 'htmlIcon'},
-        { name: 'CSS', icon: 'cssIcon'},
-        { name: 'JavaScript', icon: 'jsIcon'},
-        { name: 'Vue', icon: 'vueIcon'},
-        { name: 'GreenSock', icon: 'gsapIcon'},
-        { name: 'Figma', icon: 'figmaIcon'},
-        { name: 'MySQL', icon: 'mysqlIcon'},
-        { name: 'PHP', icon: 'phpIcon'},
-        { name: 'GitHub', icon: 'githubIcon'},
-        { name: 'Photoshop', icon: 'photoshopIcon'},
-        { name: 'Illustrator', icon: 'illustratorIcon'}
+        { name: 'VS Code', icon: vscodeIcon},
+        { name: 'HTML', icon: htmlIcon},
+        { name: 'CSS', icon: cssIcon},
+        { name: 'JavaScript', icon: jsIcon},
+        { name: 'Vue', icon: vueIcon},
+        { name: 'GreenSock', icon: gsapIcon},
+        { name: 'Figma', icon: figmaIcon},
+        { name: 'MySQL', icon: mysqlIcon},
+        { name: 'PHP', icon: phpIcon},
+        { name: 'GitHub', icon: githubIcon},
+        { name: 'Photoshop', icon: photoshopIcon},
+        { name: 'Illustrator', icon: illustratorIcon}
     ]
 </script>
 
