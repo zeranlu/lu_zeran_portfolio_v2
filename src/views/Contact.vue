@@ -64,6 +64,7 @@
 
 <script setup>
     import HeroSection from '@/components/home-page/HeroSection.vue'
+    import { ref, watch, onMounted, onUnmounted } from 'vue'
 </script>
 
 <style scoped lang="scss">
