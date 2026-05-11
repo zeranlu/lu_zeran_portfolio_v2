@@ -9,7 +9,7 @@
 
             <div class="contact-text-con">
                 <p>
-                    Thank you for taking the time to visit my portfolio. I would love to engage in future projects with you. To see more of my work, refer to my projects archives here: <a class="highlight" href="">www.github.com/zeranlu.</a>
+                    Thank you for taking the time to visit my portfolio. I would love to engage in future projects with you. To see more of my work, refer to my projects archives here: <a class="highlight" href="https://www.github.com/zeranlu">www.github.com/zeranlu.</a>
                     <br>
                     <br>
                     If you wish to contact me, please fill in the required fields below and I will get back to you within 24 hours of contact! Feel free to include any contact method you would prefer in the message below!
