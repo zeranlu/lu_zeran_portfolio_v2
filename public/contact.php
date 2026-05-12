@@ -1,6 +1,6 @@
 <?php
     // turn this off for future, only okay for dev
-    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Origin: https://zeranlu.ca");
     header("Content-Type: application/json; charset=UTF-8");
 
     $db_host = 'localhost';
