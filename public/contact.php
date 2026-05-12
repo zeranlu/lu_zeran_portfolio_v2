@@ -14,12 +14,12 @@
     $connection = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
     $errors = array();
 
-    $fname = mysqli_real_escape_string($connection, $_POST['fname']);
+    $fname = $_POST['fname'];
     if ($fname == NULL) {
         $errors[] = "First name field is empty.";
     }
 
-    $lname = mysqli_real_escape_string($connection, $_POST['lname']);
+    $lname = $_POST['lname'];
     if ($lname == NULL) {
         $errors[] = "Last name field is empty.";
     }
@@ -31,7 +31,7 @@
         $errors[] = "\"" . $email . "\" is not a valid email address.";
     }
 
-    $message = mysqli_real_escape_string($connection, $_POST['message']);
+    $message = $_POST['message'];
     if ($message == NULL) {
         $errors[] = "Please type out a message.";
     }
