@@ -50,8 +50,19 @@
                         <textarea id="message" v-model="form.message" placeholder="Let's get down to business..." required></textarea>
                     </div>
 
-                    <input id="submit-button" type="submit" value="Submit Form!">
-
+                    <div class="submit-con">
+                        <input id="submit-button" type="submit" value="Submit Form!" :disabled="isSubmitting">
+                        <div class="spinner" v-if="isSubmitting">
+                            
+                        </div>
+                        <div class="checkmark" v-if="isSubmitted">
+                            <svg viewBox="0 0 52 52">
+                                <circle cx="26" cy="26" r="25" fill="none"/>
+                                <path fill="none" d="M14 27 L22 35 L38 17"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
                     <div class="contact-field" id="feedback-field" v-if="feedback.errors.length || feedback.message" ref="feedbackField">
                         <p v-if="feedback.message">{{ feedback.message }}</p>
                         <p v-for="(error,index) in feedback.errors" :key="index">{{ error }}</p>
@@ -81,8 +92,15 @@
 
     const feedbackField = ref(null)
 
+    const isSubmitting = ref(false)
+
+    const isSubmitted = ref(false)
+
     const handleSubmit = async () => {
 
+        isSubmitting.value = true
+        
+        isSubmitted.value = false
         
         const formData = new URLSearchParams({
             fname: form.value.fname,
@@ -106,6 +124,9 @@
             }
 
             if (responseJSON.message) {
+
+                isSubmitted.value = true
+
                 form.value = {
                     fname: '',
                     lname: '',
@@ -120,6 +141,8 @@
                 message: ''
             }
         } finally {
+            isSubmitting.value = false
+
             feedbackField.value?.scrollIntoView({
                 behavior: 'smooth',
                 block: 'end'
@@ -129,4 +152,67 @@
 </script>
 
 <style scoped lang="scss">
+
+    @use '../styles/abstracts' as a;
+
+    .submit-con {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .spinner {
+        width: 24px;
+        height: 24px;
+        border: 5px solid transparent;
+        border-top-color: a.$color1;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .checkmark {
+        width: 32px;
+        height: 32px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            circle {
+                stroke: a.$color1;
+                stroke-width: 3;
+                stroke-dasharray: 166;
+                stroke-dashoffset: 166;
+                animation: drawCircle 0.5s ease forwards;
+            }
+
+            path {
+                stroke: a.$color1;
+                stroke-width: 3;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-dasharray: 48;
+                stroke-dashoffset: 48;
+                animation: drawCheck 0.5s ease 0.5s forwards;
+            }
+        }
+    }
+
+    @keyframes drawCircle {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes drawCheck {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
 </style>
