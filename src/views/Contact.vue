@@ -104,6 +104,15 @@
                 errors: responseJSON.errors || [],
                 message: responseJSON.message || ''
             }
+
+            if (responseJSON.message) {
+                form.value = {
+                    fname: '',
+                    lname: '',
+                    email: '',
+                    message: ''
+                }
+            }
         } catch (error) {
             console.error('Error during fetch:', error)
             feedback.value = {
