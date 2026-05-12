@@ -50,8 +50,13 @@
                         <textarea id="message" v-model="form.message" placeholder="Let's get down to business..." required></textarea>
                     </div>
 
-                    <input id="submit-button" type="submit" value="Submit Form!">
-
+                    <div class="submit-con">
+                        <input id="submit-button" type="submit" value="Submit Form!" :disabled="isSubmitting">
+                        <div class="spinner" v-if="isSubmitting">
+                            
+                        </div>
+                    </div>
+                    
                     <div class="contact-field" id="feedback-field" v-if="feedback.errors.length || feedback.message" ref="feedbackField">
                         <p v-if="feedback.message">{{ feedback.message }}</p>
                         <p v-for="(error,index) in feedback.errors" :key="index">{{ error }}</p>
