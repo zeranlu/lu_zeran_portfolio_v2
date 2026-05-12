@@ -61,7 +61,7 @@
 
     mysqli_stmt_execute($stmt);
         
-        if ($qpartner) {
+        if (mysqli_stmt_affected_rows($stmt) > 0) {
             $to = "zeranlu0326@gmail.com";
             $subject = "Portfolio Contact Form: New Message!";
             $body = "Name: $fullname\n";
