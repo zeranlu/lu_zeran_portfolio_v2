@@ -134,4 +134,26 @@
 </script>
 
 <style scoped lang="scss">
+
+    @use '../styles/abstracts' as a;
+    .submit-con {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .spinner {
+        width: 24px;
+        height: 24px;
+        border: 5px solid transparent;
+        border-top-color: a.$color1;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
 </style>
