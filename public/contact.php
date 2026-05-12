@@ -27,9 +27,7 @@
     $email = $_POST['email'];
     if ($email == NULL) {
         $errors[] = "Email field is empty.";
-    }
-
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "\"" . $email . "\" is not a valid email address.";
     }
 
