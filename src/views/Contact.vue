@@ -86,8 +86,11 @@
 
     const feedbackField = ref(null)
 
+    const isSubmitting = ref(false)
+
     const handleSubmit = async () => {
 
+        isSubmitting.value = true
         
         const formData = new URLSearchParams({
             fname: form.value.fname,
@@ -125,6 +128,8 @@
                 message: ''
             }
         } finally {
+            isSubmitting.value = false
+
             feedbackField.value?.scrollIntoView({
                 behavior: 'smooth',
                 block: 'end'
