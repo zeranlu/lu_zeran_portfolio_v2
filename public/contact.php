@@ -48,6 +48,11 @@
     // combining fname and lname for db column
 
     $fullname = $fname . ' ' . $lname;
+        
+    // UNSAFE PREVIOUS INJECTION
+    // $querystring = "INSERT INTO tbl_contact_form(contact_name, contact_email, contact_message) VALUES('$fullname', '$email', '$message')";
+
+    // $qpartner = mysqli_query($connection, $querystring);
 
         $querystring = "INSERT INTO tbl_contact_form(contact_name, contact_email, contact_message) VALUES('$fullname', '$email', '$message')";
 
