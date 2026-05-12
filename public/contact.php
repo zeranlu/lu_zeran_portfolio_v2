@@ -54,7 +54,8 @@
 
     // $qpartner = mysqli_query($connection, $querystring);
 
-        $querystring = "INSERT INTO tbl_contact_form(contact_name, contact_email, contact_message) VALUES('$fullname', '$email', '$message')";
+    // Updated Preventative Injection
+    $stmt = mysqli_prepare($connection, "INSERT INTO tbl_contact_form(contact_name, contact_email, contact_message) VALUES(?, ?, ?)");
 
         $qpartner = mysqli_query($connection, $querystring);
         
