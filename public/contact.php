@@ -57,7 +57,9 @@
     // Updated Preventative Injection
     $stmt = mysqli_prepare($connection, "INSERT INTO tbl_contact_form(contact_name, contact_email, contact_message) VALUES(?, ?, ?)");
 
-        $qpartner = mysqli_query($connection, $querystring);
+    mysqli_stmt_bind_param($stmt, "sss", $fullname, $email, $message);
+
+    mysqli_stmt_execute($stmt);
         
         if ($qpartner) {
             $to = "zeranlu0326@gmail.com";
