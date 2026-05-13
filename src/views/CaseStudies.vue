@@ -14,11 +14,11 @@
             <h2>Case studies of my projects!</h2>
 
             <div class="featured-case-studies">
-
+                <FeaturedCaseStudyCard />
             </div>
 
             <div class="all-case-studies">
-
+                <CaseStudyCard />
             </div>
         </section>
     </main>
@@ -27,6 +27,8 @@
 <script setup>
     import { ref, onMounted } from 'vue'
     import HeroSection from '@/components/home-page/HeroSection.vue'
+    import FeaturedCaseStudyCard from '@/components/case-studies-page/FeaturedCaseStudyCard.vue'
+    import CaseStudyCard from '@/components/case-studies-page/CaseStudyCard.vue'
 
     const caseStudies = ref([])
 
