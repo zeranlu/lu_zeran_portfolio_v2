@@ -12,6 +12,24 @@
     const isLoading = ref(false)
 
     const error = ref('')
+
+    const fetchCaseStudies = async () => {
+
+        isLoading.value = true
+
+        try {
+            const caseStudyList = await fetch('case_studies.php')
+
+            const caseStudyListJSON = await caseStudyList.json()
+
+            caseStudies.value = caseStudyListJSON.case_studies
+        } catch (err) {
+            console.error('Error during fetch:', err)
+            error.value = 'Sorry, something went wrong. Please try again later.'
+        } finally {
+            isLoading.value = false
+        }
+    }
 </script>
 
 <style scoped lang="scss">
