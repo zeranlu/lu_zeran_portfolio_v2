@@ -57,7 +57,11 @@
         isLoading.value = true
 
         try {
-            const caseStudyList = await fetch('case_studies.php')
+            // LIVE VERSION
+            // const caseStudyList = await fetch('case_studies.php')
+
+            // LOCAL VERSION
+            const caseStudyList = await fetch('http://localhost/lu_zeran_portfolio_v2/public/case_studies.php')
 
             const caseStudyListJSON = await caseStudyList.json()
 
