@@ -14,7 +14,7 @@
             <h2>Case studies of my projects!</h2>
 
             <div class="featured-case-studies">
-                <FeaturedCaseStudyCard 
+                <FeaturedCaseStudyCard
                     v-for="caseStudy in caseStudies.filter(s => s.proj_featured == 1)"
                     :key="caseStudy.case_study_id"
                     :id="caseStudy.case_study_id"
@@ -27,7 +27,7 @@
             </div>
 
             <div class="all-case-studies">
-                <CaseStudyCard 
+                <CaseStudyCard
                     v-for="caseStudy in caseStudies"
                     :key="caseStudy.case_study_id"
                     :id="caseStudy.case_study_id"
@@ -80,4 +80,13 @@
 </script>
 
 <style scoped lang="scss">
+    @use '../styles/abstracts' as a;
+
+    .featured-case-studies, .all-case-studies {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
 </style>
