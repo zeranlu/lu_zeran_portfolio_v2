@@ -4,7 +4,13 @@
         
         <HeroSection />
 
-        <section class="case-studies-section content-con">
+        <div v-if="isLoading">
+            Loading case studies
+        </div>
+
+        <div v-if="error">{{ error }}</div>
+        
+        <section class="case-studies-section content-con" v-if="!isLoading && !error">
             <h2>Case studies of my projects!</h2>
 
             <div class="featured-case-studies">
