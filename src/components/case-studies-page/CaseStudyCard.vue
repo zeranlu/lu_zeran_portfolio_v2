@@ -23,16 +23,25 @@
 
 <style scoped lang="scss">
     @use '../../styles/abstracts' as a;
-
     
     .case-study-card {
-        flex: 0 0 15%;
-        max-width: 20vw;
-        padding: 1rem;
+        flex: 0 0 30%;
 
         img {
             object-fit: contain;
             width: 100%;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .case-study-card {
+            flex: 0 0 22.5%;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .case-study-card {
+            flex: 0 0 17.5%;
         }
     }
 </style>

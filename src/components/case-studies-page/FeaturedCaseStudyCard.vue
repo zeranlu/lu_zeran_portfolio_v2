@@ -34,16 +34,16 @@
     @use '../../styles/abstracts' as a;
     
     .featured-case-study-card {
-        flex: 0 0 30%;
-        padding: 1rem;
-        max-width: 33vw;
+        flex: 0 0 100%;
     }
 
     .featured-case-study-card-img-con {
         position: relative;
+        width: 80%;
+        margin: auto;
 
         img {
-            width: 80%;
+            width: 100%;
             transition: transform a.$transition;
         }
 
@@ -70,4 +70,19 @@
             transform: translate(5%, 5%);
         }
     }
+
+    @media screen and (min-width: 768px) {
+        .featured-case-study-card {
+            flex: 0 0 45%;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+
+        .featured-case-study-card {
+            flex: 0 0 30%;
+        }
+
+    }
+
 </style>
