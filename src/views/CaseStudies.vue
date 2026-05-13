@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue'
+    import { ref, onMounted } from 'vue'
 
     const caseStudies = ref([])
 
@@ -30,6 +30,10 @@
             isLoading.value = false
         }
     }
+
+    onMounted(() => {
+        fetchCaseStudies()
+    })
 </script>
 
 <style scoped lang="scss">
