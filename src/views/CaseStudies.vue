@@ -7,7 +7,13 @@
         <section class="case-studies-section content-con">
             <h2>Case studies of my projects!</h2>
 
-            
+            <div class="featured-case-studies">
+
+            </div>
+
+            <div class="all-case-studies">
+
+            </div>
         </section>
     </main>
 </template>
