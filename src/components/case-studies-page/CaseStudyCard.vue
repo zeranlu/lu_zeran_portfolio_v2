@@ -22,4 +22,11 @@
 </script>
 
 <style scoped lang="scss">
+    @use '../../styles/abstracts' as a;
+
+    
+    .case-study-card {
+        flex: 0 0 20%;
+        width: 10%;
+    }
 </style>
