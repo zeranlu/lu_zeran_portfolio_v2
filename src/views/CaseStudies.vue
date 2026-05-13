@@ -1,11 +1,20 @@
 <template>
-    <div>
+    <main>
         <h1 class="hidden">Case Studies Landing Page</h1>
-    </div>
+        
+        <HeroSection />
+
+        <section class="case-studies-section content-con">
+            <h2>Case studies of my projects!</h2>
+
+            
+        </section>
+    </main>
 </template>
 
 <script setup>
     import { ref, onMounted } from 'vue'
+    import HeroSection from '@/components/home-page/HeroSection.vue'
 
     const caseStudies = ref([])
 
