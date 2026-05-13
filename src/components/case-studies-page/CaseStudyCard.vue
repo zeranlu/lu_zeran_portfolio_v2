@@ -26,9 +26,7 @@
 
     
     .case-study-card {
-        flex: 0 0 15%;
-        max-width: 20vw;
-        padding: 1rem;
+        flex: 0 0 17.5%;
 
         img {
             object-fit: contain;

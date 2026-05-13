@@ -35,15 +35,15 @@
     
     .featured-case-study-card {
         flex: 0 0 30%;
-        padding: 1rem;
-        max-width: 33vw;
     }
 
     .featured-case-study-card-img-con {
         position: relative;
+        width: 80%;
+        margin: auto;
 
         img {
-            width: 80%;
+            width: 100%;
             transition: transform a.$transition;
         }
 
