@@ -1,11 +1,21 @@
 <?php
-    header("Access-Control-Allow-Origin: https://zeranlu.ca");
+    // LIVE HEADER
+    // header("Access-Control-Allow-Origin: https://zeranlu.ca");
+    // LOCAL HEADER
+    header("Access-Control-Allow-Origin: http://localhost:5173");
     header("Content-Type: application/json; charset=UTF-8");
 
+    // LIVE DB CREDENTIALS
+    // $db_host = 'localhost';
+    // $db_user = 'zeran195_zeranlu';
+    // $db_pass = 'databasepass';
+    // $db_name = 'zeran195_db_portfolio_0225';
+
+    // LOCAL DB CREDENTIALS
     $db_host = 'localhost';
-    $db_user = 'zeran195_zeranlu';
-    $db_pass = 'databasepass';
-    $db_name = 'zeran195_db_portfolio_0225';
+    $db_user = 'root';
+    $db_pass = '';
+    $db_name = 'db_portfolio_local';
 
     $connection = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
