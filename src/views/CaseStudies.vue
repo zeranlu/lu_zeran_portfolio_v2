@@ -27,7 +27,14 @@
             </div>
 
             <div class="all-case-studies">
-                <CaseStudyCard />
+                <CaseStudyCard 
+                    v-for="caseStudy in caseStudies"
+                    :key="caseStudy.case_study_id"
+                    :id="caseStudy.case_study_id"
+                    :title="caseStudy.project_title"
+                    :desc="caseStudy.project_desc"
+                    :thumbnail="caseStudy.proj_image_link_1"
+                />
             </div>
         </section>
     </main>
