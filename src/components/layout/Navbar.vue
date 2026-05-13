@@ -31,7 +31,7 @@
                 <li class="nav-li nav-dropdown">
                     <!-- nav dropdown -->
 
-                    <RouterLink class="nav-a" to="/case-study">
+                    <RouterLink class="nav-a" to="/case-studies">
                         Case Studies
                     </RouterLink>
 
