@@ -14,11 +14,27 @@
             <h2>Case studies of my projects!</h2>
 
             <div class="featured-case-studies">
-
+                <FeaturedCaseStudyCard 
+                    v-for="caseStudy in caseStudies.filter(s => s.proj_featured == 1)"
+                    :key="caseStudy.case_study_id"
+                    :id="caseStudy.case_study_id"
+                    :title="caseStudy.project_title"
+                    :desc="caseStudy.project_desc"
+                    :prob="caseStudy.proj_problem"
+                    :fgImg="caseStudy.proj_image_link_1"
+                    :bgImg="caseStudy.proj_image_link_2"
+                />
             </div>
 
             <div class="all-case-studies">
-
+                <CaseStudyCard 
+                    v-for="caseStudy in caseStudies"
+                    :key="caseStudy.case_study_id"
+                    :id="caseStudy.case_study_id"
+                    :title="caseStudy.project_title"
+                    :desc="caseStudy.project_desc"
+                    :thumbnail="caseStudy.proj_image_link_1"
+                />
             </div>
         </section>
     </main>
@@ -27,6 +43,8 @@
 <script setup>
     import { ref, onMounted } from 'vue'
     import HeroSection from '@/components/home-page/HeroSection.vue'
+    import FeaturedCaseStudyCard from '@/components/case-studies-page/FeaturedCaseStudyCard.vue'
+    import CaseStudyCard from '@/components/case-studies-page/CaseStudyCard.vue'
 
     const caseStudies = ref([])
 
