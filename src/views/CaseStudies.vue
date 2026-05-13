@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Case Studies Landing Page</h1>
+        <h1 class="hidden">Case Studies Landing Page</h1>
     </div>
 </template>
 
