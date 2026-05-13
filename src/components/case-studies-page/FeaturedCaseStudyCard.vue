@@ -33,6 +33,11 @@
 
     @use '../../styles/abstracts' as a;
     
+    .featured-case-study-card {
+        flex: 0 0 33%;
+        width: 20vw;
+    }
+
     .featured-case-study-card-img-con {
         position: relative;
 
