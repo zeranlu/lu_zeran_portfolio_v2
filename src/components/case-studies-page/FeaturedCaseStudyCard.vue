@@ -34,8 +34,9 @@
     @use '../../styles/abstracts' as a;
     
     .featured-case-study-card {
-        flex: 0 0 33%;
-        width: 20vw;
+        flex: 0 0 30%;
+        padding: 1rem;
+        max-width: 33vw;
     }
 
     .featured-case-study-card-img-con {
@@ -62,11 +63,11 @@
     
     .featured-case-study-card:hover {
         .case-study-img-fg {
-            transform: translate(-1%, -1%);
+            transform: translate(-5%, -5%);
         }
 
         .case-study-img-bg {
-            transform: translate(1%, 1%);
+            transform: translate(5%, 5%);
         }
     }
 </style>
