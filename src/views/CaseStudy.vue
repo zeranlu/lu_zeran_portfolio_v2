@@ -8,11 +8,14 @@
 
 <script setup>
     import { ref, onMounted } from 'vue'
+    import { useRoute } from 'vue-router'
     import HeroSection from '@/components/home-page/HeroSection.vue'
 
     const caseStudyInfo = ref(null)
 
-    const caseStudyId = route.params.id
+    const caseStudyRoute = useRoute()
+
+    const caseStudyId = caseStudyRoute.params.id
 
     const isLoading = ref (false)
 
