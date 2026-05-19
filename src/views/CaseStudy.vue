@@ -3,6 +3,13 @@
         <h1 class="hidden">Specific Case Study</h1>
 
         <HeroSection />
+
+        <div v-if="isLoading">
+            Loading this case study
+        </div>
+
+        <div v-if="error">{{ error }}</div>
+        <section class="case-study-section content-con" v-if="!isLoading && !error &&caseStudyInfo">
     </div>
 </template>
 
