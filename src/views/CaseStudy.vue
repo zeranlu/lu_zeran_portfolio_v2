@@ -10,27 +10,38 @@
 
         <div v-if="error">{{ error }}</div>
 
-        <section class="case-study-section content-con" v-if="!isLoading && !error &&caseStudyInfo">
+        <section class="case-study-section" v-if="!isLoading && !error &&caseStudyInfo">
 
-            <h2>This is a case study of {{ caseStudyInfo.project_title }}</h2>
+            <div class="content-con">
+                <h2>This is a case study of {{ caseStudyInfo.project_title }}</h2>
 
-            <p>{{ caseStudyInfo.project_desc }}</p>
+                <p>{{ caseStudyInfo.project_desc }}</p>
 
-            <img :src="caseStudyInfo.proj_image_link_1" :alt="`${caseStudyInfo.project_title} final result`">
+                <img :src="caseStudyInfo.proj_image_link_1" :alt="`${caseStudyInfo.project_title} final result`">
+            </div>
 
-            <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
+            <div class="content-con">
+                <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
 
-            <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
+                <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
+            </div>
 
-            <img :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.project_title} problem`">
+            <div class="content-con">
+                <p>{{ caseStudyInfo.proj_problem }}</p>
+                
+                <img :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.project_title} problem`">
+            </div>
 
-            <p>{{ caseStudyInfo.proj_problem }}</p>
+            <div class="content-con">
+                <p>{{ caseStudyInfo.proj_solution }}</p>
 
-            <p>{{ caseStudyInfo.proj_solution }}</p>
+                <img :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.project_title}'s solution`">
+            </div>
 
-            <img :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.project_title}'s solution`">
-
-            <p>{{ caseStudyInfo.proj_result }}</p>
+            <div class="content-con">
+                <p>{{ caseStudyInfo.proj_result }}</p>
+            </div>
+            
         </section>
     </div>
 </template>
