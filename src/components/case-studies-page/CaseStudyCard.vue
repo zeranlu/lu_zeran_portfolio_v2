@@ -1,7 +1,7 @@
 <template>
 
     <div class="case-study-card">
-        <RouterLink :to="`/case-study/${id}`">
+        <RouterLink :to="`/case-studies/${id}`">
             <h3>{{ title }}</h3>
             <p>{{ desc }}</p>
             <img :src="thumbnail" :alt="title">
