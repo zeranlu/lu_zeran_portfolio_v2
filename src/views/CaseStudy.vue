@@ -100,5 +100,9 @@
 </script>
 
 <style scoped lang="scss">
-    
+    @use "../styles/abstracts" as a;
+
+    .case-study-img-con {
+        width: 80%;
+    }
 </style>
