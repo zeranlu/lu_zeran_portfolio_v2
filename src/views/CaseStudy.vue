@@ -104,5 +104,11 @@
 
     .case-study-img-con {
         width: 80%;
+        margin: auto;
+    }
+
+    .case-study-img {
+        object-fit: contain;
+        width: 100%;
     }
 </style>
