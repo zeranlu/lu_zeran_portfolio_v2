@@ -17,7 +17,7 @@
 
                 <p>{{ caseStudyInfo.project_desc }}</p>
 
-                <img :src="caseStudyInfo.proj_image_link_1" :alt="`${caseStudyInfo.project_title} final result`">
+                <img class="case-study-img" :src="caseStudyInfo.proj_image_link_1" :alt="`${caseStudyInfo.project_title} final result`">
             </div>
 
             <div class="content-con">
@@ -29,13 +29,13 @@
             <div class="content-con">
                 <p>{{ caseStudyInfo.proj_problem }}</p>
                 
-                <img :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.project_title} problem`">
+                <img class="case-study-img" :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.project_title} problem`">
             </div>
 
             <div class="content-con">
                 <p>{{ caseStudyInfo.proj_solution }}</p>
 
-                <img :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.project_title}'s solution`">
+                <img class="case-study-img" :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.project_title}'s solution`">
             </div>
 
             <div class="content-con">
@@ -91,4 +91,5 @@
 </script>
 
 <style scoped lang="scss">
+    
 </style>
