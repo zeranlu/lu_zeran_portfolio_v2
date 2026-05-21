@@ -17,7 +17,10 @@
 
                 <p>{{ caseStudyInfo.project_desc }}</p>
 
-                <img class="case-study-img" :src="caseStudyInfo.proj_image_link_1" :alt="`${caseStudyInfo.project_title} final result`">
+                <div class="case-study-img-con">
+                    <img class="case-study-img" :src="caseStudyInfo.proj_image_link_1" :alt="`${caseStudyInfo.project_title} final result`">
+                </div>
+                
             </div>
 
             <div class="content-con">
@@ -29,13 +32,19 @@
             <div class="content-con">
                 <p>{{ caseStudyInfo.proj_problem }}</p>
                 
-                <img class="case-study-img" :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.project_title} problem`">
+                <div class="case-study-img-con">
+                    <img class="case-study-img" :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.project_title} problem`">
+                </div>
+                
             </div>
 
             <div class="content-con">
                 <p>{{ caseStudyInfo.proj_solution }}</p>
 
-                <img class="case-study-img" :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.project_title}'s solution`">
+                <div class="case-study-img-con">
+                    <img class="case-study-img" :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.project_title}'s solution`">
+                </div>
+                
             </div>
 
             <div class="content-con">
