@@ -8,7 +8,10 @@ export function useParallax() {
     const runParallax = () => {
         gsap.registerPlugin(ScrollTrigger)
 
-        document.querySelectorAll('.parallax-section').forEach((section) => {
+        const sections = document.querySelectorAll('.parallax-con')
+        console.log('sections found:', sections.length)
+
+        document.querySelectorAll('.parallax-con').forEach((section) => {
             gsap.to(section, {
                 scrollTrigger: {
                     trigger: section,
