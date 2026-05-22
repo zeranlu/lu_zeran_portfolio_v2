@@ -56,7 +56,6 @@
 </template>
 
 <script setup>
-    import { ref, onMounted } from 'vue'
     import { ref, onMounted, nextTick } from 'vue'
     import { useRoute } from 'vue-router'
     import HeroSection from '@/components/home-page/HeroSection.vue'
@@ -89,8 +88,11 @@
 
             caseStudyInfo.value = caseStudyInfoJSON.case_study
 
+            isLoading.value = false
+            
             await nextTick()
             runParallax()
+
         } catch (err) {
             console.error('Error during fetch:', err)
 
