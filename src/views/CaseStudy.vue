@@ -59,6 +59,7 @@
     import { ref, onMounted } from 'vue'
     import { useRoute } from 'vue-router'
     import HeroSection from '@/components/home-page/HeroSection.vue'
+    import { useParallax } from '@/composables/useParallax'
 
     const caseStudyInfo = ref(null)
 
@@ -69,6 +70,8 @@
     const isLoading = ref (false)
 
     const error = ref('')
+
+    const { runParallax } = useParallax()
 
     const getCaseStudyInfo = async () => {
 
@@ -85,6 +88,8 @@
 
             caseStudyInfo.value = caseStudyInfoJSON.case_study
 
+            await nextTick()
+            runParallax()
         } catch (err) {
             console.error('Error during fetch:', err)
 
