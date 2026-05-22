@@ -20,4 +20,8 @@ export function useParallax() {
             })
         })
     }
+
+    onUnmounted(() => {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    })
 }
