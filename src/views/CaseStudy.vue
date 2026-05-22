@@ -12,7 +12,7 @@
 
         <section class="case-study-section" v-if="!isLoading && !error &&caseStudyInfo">
 
-            <div class="content-con">
+            <div class="content-con parallax-con">
                 <h2>This is a case study of {{ caseStudyInfo.project_title }}</h2>
 
                 <p>{{ caseStudyInfo.project_desc }}</p>
@@ -23,13 +23,13 @@
                 
             </div>
 
-            <div class="content-con">
+            <div class="content-con parallax-con">
                 <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
 
                 <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
             </div>
 
-            <div class="content-con">
+            <div class="content-con parallax-con">
                 <p>{{ caseStudyInfo.proj_problem }}</p>
                 
                 <div class="case-study-img-con">
@@ -38,7 +38,7 @@
                 
             </div>
 
-            <div class="content-con">
+            <div class="content-con parallax-con">
                 <p>{{ caseStudyInfo.proj_solution }}</p>
 
                 <div class="case-study-img-con">
@@ -47,7 +47,7 @@
                 
             </div>
 
-            <div class="content-con">
+            <div class="content-con parallax-con">
                 <p>{{ caseStudyInfo.proj_result }}</p>
             </div>
             
