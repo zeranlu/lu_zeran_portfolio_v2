@@ -57,6 +57,7 @@
 
 <script setup>
     import { ref, onMounted } from 'vue'
+    import { ref, onMounted, nextTick } from 'vue'
     import { useRoute } from 'vue-router'
     import HeroSection from '@/components/home-page/HeroSection.vue'
     import { useParallax } from '@/composables/useParallax'
