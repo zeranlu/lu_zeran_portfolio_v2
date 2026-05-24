@@ -18,7 +18,7 @@ export function useParallax() {
                     scale: 1,
                     scrollTrigger: {
                         trigger: section,
-                        start: 'top center',
+                        start: 'top bottom',
                         end: 'bottom center',
                         scrub: 1
                     }
