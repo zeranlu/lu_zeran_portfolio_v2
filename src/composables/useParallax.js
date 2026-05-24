@@ -12,15 +12,17 @@ export function useParallax() {
         console.log('sections found:', sections.length)
 
         document.querySelectorAll('.parallax-con').forEach((section) => {
-            gsap.to(section, {
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 20%',
-                    end: 'bottom center',
-                    pin: true,
-                    scrub: 3
-                }
-            })
+            gsap.fromTo(section, 
+                { scale: 0.8 },
+                {
+                    scale: 1,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top center',
+                        end: 'bottom center',
+                        scrub: 1
+                    }
+                })
         })
     }
 
