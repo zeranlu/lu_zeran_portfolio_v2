@@ -120,6 +120,10 @@
 <style scoped lang="scss">
     @use "../styles/abstracts" as a;
 
+    .parallax-con {
+        will-change: transform;
+    }
+    
     .case-study-img-con {
         width: 80%;
         margin: auto;
