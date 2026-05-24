@@ -8,9 +8,6 @@ export function useParallax() {
     const runParallax = () => {
         gsap.registerPlugin(ScrollTrigger)
 
-        const sections = document.querySelectorAll('.parallax-con')
-        console.log('sections found:', sections.length)
-
         document.querySelectorAll('.parallax-con').forEach((section) => {
             gsap.fromTo(section, 
                 { scale: 0.8 },
