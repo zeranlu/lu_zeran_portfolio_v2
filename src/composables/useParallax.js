@@ -15,10 +15,10 @@ export function useParallax() {
             gsap.to(section, {
                 scrollTrigger: {
                     trigger: section,
-                    start: 'top top',
-                    end: '+=500',
+                    start: 'top 20%',
+                    end: 'bottom center',
                     pin: true,
-                    scrub: 2
+                    scrub: 3
                 }
             })
         })
