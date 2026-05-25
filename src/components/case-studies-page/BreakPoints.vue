@@ -3,6 +3,11 @@
         <div class="breakpoint-main">
             <h2>{{ breakPoint }}</h2>
         </div>
+        <div class="breakpoint-anim">
+            <div class="red-square">
+
+            </div>
+        </div>
     </div>
 </template>
 
@@ -24,9 +29,16 @@
 <style scoped lang="scss">
     @use '../../styles/abstracts' as a;
 
-    .breakpoint-main {
+    .breakpoint-con {
         width: 100%;
         height: 100vh;
         background-color: black;
+    }
+
+    .red-square {
+        will-change: transform;
+        width: 20vw;
+        height: 20vw;
+        background-color: red;
     }
 </style>
