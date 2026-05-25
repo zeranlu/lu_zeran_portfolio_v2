@@ -8,8 +8,20 @@ export function useBreakPointAnimation() {
         gsap.registerPlugin(ScrollTrigger)
 
         document.querySelectorAll('.breakpoint-con').forEach((section) => {
+            gsap.fromTo(section.querySelector('.red-square'),
+                { x: '0vw' },
+                {
+                    x: '100vw',
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: 2
+                    }
+                })
+
             gsap.fromTo(section.querySelector('h2'),
-                {opacity: 0},
+                { opacity: 0 },
                 {
                     opacity: 1,
                     scrollTrigger: {
