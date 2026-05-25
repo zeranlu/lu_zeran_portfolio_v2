@@ -10,7 +10,7 @@
     import { onMounted } from 'vue'
     import { useBreakPointAnimation } from '@/composables/useBreakPointAnimation'
 
-    const breakPointsProps = defineProps({
+    defineProps({
         breakPoint: String
     })
 
