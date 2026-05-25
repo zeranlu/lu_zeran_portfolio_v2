@@ -10,13 +10,15 @@ export function useBreakPointAnimation() {
         document.querySelectorAll('.breakpoint-section').forEach((section) => {
             gsap.fromTo(section.querySelector('h2'),
                 {opacity: 0},
-            {
-                opacity: 1,
-                trigger: section,
-                start: 'top center',
-                end: 'bottom center',
-                scrub: 2
-            })
+                {
+                    opacity: 1,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top center',
+                        end: 'bottom center',
+                        scrub: 2
+                    }
+                })
         })
     }
 
