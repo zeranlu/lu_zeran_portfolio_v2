@@ -12,6 +12,8 @@
 
         <section class="case-study-section" v-if="!isLoading && !error &&caseStudyInfo">
 
+            <BreakPoints :breakPoint="breakPoints[0]" />
+
             <div class="parallax-con">
                 <div class="content-con">
                     <h2>This is a case study of {{ caseStudyInfo.project_title }}</h2>
@@ -25,6 +27,8 @@
                 </div>
             </div>
 
+            <BreakPoints :breakPoint="breakPoints[1]" />
+
             <div class="parallax-con">
                 <div class="content-con">
                     <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
@@ -33,6 +37,8 @@
                 </div>
             </div>
 
+            <BreakPoints :breakPoint="breakPoints[2]" />
+            
             <div class="parallax-con">
                 <div class="content-con">
                     <p>{{ caseStudyInfo.proj_problem }}</p>
@@ -43,6 +49,8 @@
                     
                 </div>
             </div>
+
+            <BreakPoints :breakPoint="breakPoints[3]" />
 
             <div class="parallax-con">
                 <div class="content-con">
@@ -55,11 +63,15 @@
                 </div>
             </div>
 
+            <BreakPoints :breakPoint="breakPoints[4]" />
+
             <div class="parallax-con">
                 <div class="content-con">
                     <p>{{ caseStudyInfo.proj_result }}</p>
                 </div>
             </div>
+
+            <BreakPoints :breakPoint="breakPoints[5]" />
 
         </section>
     </div>
@@ -69,6 +81,7 @@
     import { ref, onMounted, nextTick } from 'vue'
     import { useRoute } from 'vue-router'
     import HeroSection from '@/components/home-page/HeroSection.vue'
+    import BreakPoints from '@/components/case-studies-page/BreakPoints.vue'
     import { useParallax } from '@/composables/useParallax'
 
     const caseStudyInfo = ref(null)
