@@ -7,7 +7,7 @@ export function useBreakPointAnimation() {
     const runBreakPointAnimation = () => {
         gsap.registerPlugin(ScrollTrigger)
 
-        document.querySelectorAll('.breakpoint-section').forEach((section) => {
+        document.querySelectorAll('.breakpoint-con').forEach((section) => {
             gsap.fromTo(section.querySelector('h2'),
                 {opacity: 0},
                 {

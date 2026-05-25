@@ -1,6 +1,6 @@
 <template>
-    <div class="parallax-con">
-        <div class="breakpoint-con">
+    <div class="breakpoint-con">
+        <div class="breakpoint-main">
             <h2>{{ breakPoint }}</h2>
         </div>
     </div>
@@ -24,7 +24,7 @@
 <style scoped lang="scss">
     @use '../../styles/abstracts' as a;
 
-    .breakpoint-con {
+    .breakpoint-main {
         width: 100%;
         height: 100vh;
         background-color: black;
