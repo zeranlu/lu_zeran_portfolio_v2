@@ -10,15 +10,6 @@
     const breakPointsProps = defineProps({
         breakPoint: String
     })
-
-    const breakPoints = [
-        'Project Beginnings',
-        'Inspirational References',
-        'The Problem',
-        'The Solution',
-        'The Final Product',
-        'Project Retrospectives'
-    ]
 </script>
 
 <style scoped lang="scss">

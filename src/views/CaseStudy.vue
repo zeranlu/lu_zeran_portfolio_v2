@@ -83,6 +83,15 @@
 
     const { runParallax } = useParallax()
 
+    const breakPoints = [
+        'Project Beginnings',
+        'Inspirational References',
+        'The Problem',
+        'The Solution',
+        'The Final Product',
+        'Project Retrospectives'
+    ]
+
     const getCaseStudyInfo = async () => {
 
         isLoading.value = true
