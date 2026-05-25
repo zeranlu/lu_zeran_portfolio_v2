@@ -16,7 +16,7 @@
     @use '../../styles/abstracts' as a;
 
     .breakpoint-con {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         background-color: black;
     }
