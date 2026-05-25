@@ -1,6 +1,8 @@
 <template>
     <div class="parallax-con">
-        <h2>{{ breakPoint }}</h2>
+        <div class="breakpoint-con">
+            <h2>{{ breakPoint }}</h2>
+        </div>
     </div>
 </template>
 
