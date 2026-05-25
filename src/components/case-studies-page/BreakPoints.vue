@@ -22,4 +22,11 @@
 </script>
 
 <style scoped lang="scss">
+    @use '../../styles/abstracts' as a;
+
+    .breakpoint-con {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+    }
 </style>
