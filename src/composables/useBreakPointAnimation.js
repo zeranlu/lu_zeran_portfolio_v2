@@ -16,6 +16,18 @@ export function useBreakPointAnimation() {
                         trigger: section,
                         start: 'top bottom',
                         end: 'bottom top',
+                        scrub: 3
+                    }
+                })
+
+            gsap.fromTo(section.querySelector('.blue-square'),
+                { x: '0vw' },
+                {
+                    x: '80vw',
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top bottom',
+                        end: 'bottom top',
                         scrub: 2
                     }
                 })
@@ -28,7 +40,7 @@ export function useBreakPointAnimation() {
                         trigger: section,
                         start: 'top center',
                         end: 'bottom center',
-                        scrub: 2
+                        scrub: 1
                     }
                 })
         })

@@ -7,6 +7,10 @@
             <div class="red-square">
 
             </div>
+            
+            <div class="blue-square">
+
+            </div>
         </div>
     </div>
 </template>
@@ -32,7 +36,7 @@
     .breakpoint-con {
         width: 100%;
         height: 100vh;
-        background-color: black;
+        background-color: a.$color1;
     }
 
     .red-square {
@@ -40,5 +44,12 @@
         width: 20vw;
         height: 20vw;
         background-color: red;
+    }
+
+    .blue-square {
+        will-change: transform;
+        width: 10vw;
+        height: 10vw;
+        background-color: blue;
     }
 </style>
