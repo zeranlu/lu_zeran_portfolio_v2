@@ -7,8 +7,17 @@
 </template>
 
 <script setup>
+    import { onMounted } from 'vue'
+    import { useBreakPointAnimation } from '@/composables/useBreakPointAnimation'
+
     const breakPointsProps = defineProps({
         breakPoint: String
+    })
+
+    const { runBreakPointAnimation } = useBreakPointAnimation()
+
+    onMounted(() => {
+        runBreakPointAnimation()
     })
 </script>
 
