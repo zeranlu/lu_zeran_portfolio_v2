@@ -2,8 +2,6 @@
     <main>
         <h1 class="hidden">Case Studies Landing Page</h1>
         
-        <HeroSection />
-
         <div v-if="isLoading">
             Loading case studies
         </div>
@@ -42,7 +40,6 @@
 
 <script setup>
     import { ref, onMounted } from 'vue'
-    import HeroSection from '@/components/home-page/HeroSection.vue'
     import FeaturedCaseStudyCard from '@/components/case-studies-page/FeaturedCaseStudyCard.vue'
     import CaseStudyCard from '@/components/case-studies-page/CaseStudyCard.vue'
 
