@@ -37,6 +37,22 @@
         width: 100%;
         height: 100vh;
         background-color: a.$color1;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .breakpoint-main {
+        font-size: 4rem;
+    }
+
+    .breakpoint-anim {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .red-square {

@@ -1,13 +1,27 @@
 import { onUnmounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 
 export function useBreakPointAnimation() {
 
     const runBreakPointAnimation = () => {
-        gsap.registerPlugin(ScrollTrigger)
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
         document.querySelectorAll('.breakpoint-con').forEach((section) => {
+
+            ScrollTrigger.create({
+                trigger: section,
+                start: 'top 10%',
+                onEnter: () => {
+                    gsap.to(window, {
+                        scrollTo: section,
+                        duration: 0.5,
+                        ease: 'power2'
+                    })
+                }
+            })
+
             gsap.fromTo(section.querySelector('.red-square'),
                 { x: '0vw' },
                 {

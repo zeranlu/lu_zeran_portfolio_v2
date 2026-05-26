@@ -2,8 +2,6 @@
     <div>
         <h1 class="hidden">Specific Case Study</h1>
 
-        <HeroSection />
-
         <div v-if="isLoading">
             Loading this case study
         </div>
@@ -80,7 +78,6 @@
 <script setup>
     import { ref, onMounted, nextTick } from 'vue'
     import { useRoute } from 'vue-router'
-    import HeroSection from '@/components/home-page/HeroSection.vue'
     import BreakPoints from '@/components/case-studies-page/BreakPoints.vue'
     import { useParallax } from '@/composables/useParallax'
 
