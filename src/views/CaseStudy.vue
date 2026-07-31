@@ -112,10 +112,10 @@
         
         try {
             // LIVE VERSION
-            // const caseStudyInfoResponse = await fetch(`case_study.php?id=${caseStudyId}`)
+            // const caseStudyInfoResponse = await fetch(`case_study.php?id=${caseStudyId.value}`)
 
             // LOCAL VERSION
-            const caseStudyInfoResponse = await fetch(`http://localhost/lu_zeran_portfolio_v2/public/case_study.php?id=${caseStudyId}`)
+            const caseStudyInfoResponse = await fetch(`http://localhost/lu_zeran_portfolio_v2/public/case_study.php?id=${caseStudyId.value}`)
 
             const caseStudyInfoJSON = await caseStudyInfoResponse.json()
 
