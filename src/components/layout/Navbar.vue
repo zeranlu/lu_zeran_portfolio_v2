@@ -84,6 +84,7 @@
     // Nav State
     const navOpen = ref(false)
     const headerHidden = ref(false)
+    const caseStudies = ref([])
 
     // Scroll Tracking
     let lastScroll = 0
@@ -145,6 +146,14 @@
     onMounted(function() {
         window.addEventListener('scroll', handleScroll)
         document.addEventListener('mousemove', mouseProximity)
+
+        // Fetch Case Study ID
+        fetch('http://localhost/lu_zeran_portfolio_v2/public/case_studies.php')
+        .then(res => res.json())
+        .then(data => {
+            caseStudies.value = data.case_studies
+        })
+        .catch(err => console.error('Error fetching this case study:', err, 'Please, try again later.'));
     })
 
     onUnmounted(function() {
