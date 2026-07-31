@@ -76,7 +76,7 @@
 </template>
 
 <script setup>
-    import { ref, onMounted, nextTick } from 'vue'
+    import { ref, onMounted, nextTick, watch, computed } from 'vue'
     import { useRoute } from 'vue-router'
     import BreakPoints from '@/components/case-studies-page/BreakPoints.vue'
     import { useParallax } from '@/composables/useParallax'
@@ -85,7 +85,11 @@
 
     const caseStudyRoute = useRoute()
 
-    const caseStudyId = caseStudyRoute.params.id
+    const caseStudyId = computed(() => caseStudyRoute.params.id)
+
+    watch(caseStudyId, async () => {
+        await getCaseStudyInfo()
+    })
 
     const isLoading = ref (false)
 
@@ -108,10 +112,10 @@
         
         try {
             // LIVE VERSION
-            // const caseStudyInfoResponse = await fetch(`case_study.php?id=${caseStudyId}`)
+            // const caseStudyInfoResponse = await fetch(`case_study.php?id=${caseStudyId.value}`)
 
             // LOCAL VERSION
-            const caseStudyInfoResponse = await fetch(`http://localhost/lu_zeran_portfolio_v2/public/case_study.php?id=${caseStudyId}`)
+            const caseStudyInfoResponse = await fetch(`http://localhost/lu_zeran_portfolio_v2/public/case_study.php?id=${caseStudyId.value}`)
 
             const caseStudyInfoJSON = await caseStudyInfoResponse.json()
 
