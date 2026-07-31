@@ -76,7 +76,7 @@
 </template>
 
 <script setup>
-    import { ref, onMounted, nextTick } from 'vue'
+    import { ref, onMounted, nextTick, watch, computed } from 'vue'
     import { useRoute } from 'vue-router'
     import BreakPoints from '@/components/case-studies-page/BreakPoints.vue'
     import { useParallax } from '@/composables/useParallax'
