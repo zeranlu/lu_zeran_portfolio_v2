@@ -85,7 +85,11 @@
 
     const caseStudyRoute = useRoute()
 
-    const caseStudyId = caseStudyRoute.params.id
+    const caseStudyId = computed(() => caseStudyRoute.params.id)
+
+    watch(caseStudyId, async () => {
+        await getCaseStudyInfo()
+    })
 
     const isLoading = ref (false)
 
