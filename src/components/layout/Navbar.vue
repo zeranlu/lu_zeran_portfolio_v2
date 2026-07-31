@@ -36,35 +36,13 @@
                     </RouterLink>
 
                     <ul class="dropdown-nav">
-                        <li class="dropdown-li">
-                            <RouterLink class="dropdown-a" to="/case-studies/interactive-map">
-                                Interactive Map
-                            </RouterLink>
-                        </li>
 
-                        <li class="dropdown-li">
-                            <RouterLink class="dropdown-a" to="/case-studies/parallax-timeline">
-                                Parallax Timeline
+                        <li class="dropdown-li" v-for="caseStudy in caseStudies" :key="caseStudy.case_study_id">
+                            <RouterLink class="dropdown-a" :to="`/case-studies/${caseStudy.case_study_id}`">
+                                {{ caseStudy.project_title }}
                             </RouterLink>
                         </li>
-
-                        <li class="dropdown-li">
-                            <RouterLink class="dropdown-a" to="/case-studies/hero-selection">
-                                Hero Selection
-                            </RouterLink>
-                        </li>
-
-                        <li class="dropdown-li">
-                            <RouterLink class="dropdown-a" to="/case-studies/scrolling-sequence">
-                                Scrolling Sequence
-                            </RouterLink>
-                        </li>
-
-                        <li class="dropdown-li">
-                            <RouterLink class="dropdown-a" to="/case-studies/clickable-cards">
-                                Clickable Cards
-                            </RouterLink>
-                        </li>
+                        
                     </ul>
                 </li>
                 
