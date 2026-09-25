@@ -2,6 +2,8 @@
     <div class="project-beginning">
         <h2>Project Beginnings</h2>
 
+        <h3>{{ caseStudyInfo.project_title }}</h3>
+
         <div class="project-beginning-imgcon">
             <p>images goes here</p>
         </div>
