@@ -19,11 +19,7 @@
             <BreakPoints :breakPoint="breakPoints[1]" />
 
             <div class="parallax-con">
-                <div class="content-con">
-                    <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
-
-                    <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
-                </div>
+                <InspirationAndReferences :caseStudyInfo="caseStudyInfo" />
             </div>
 
             <BreakPoints :breakPoint="breakPoints[2]" />
@@ -74,6 +70,7 @@
 
     // IMPORTING CASE STUDY COMPONENTS
     import ProjectBeginnings from '@/components/case-study-components/ProjectBeginnings.vue'
+    import InspirationAndReferences from '@/components/case-study-components/Inspiration&References.vue'
 
     const caseStudyInfo = ref(null)
 
