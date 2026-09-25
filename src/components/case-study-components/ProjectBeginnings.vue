@@ -39,10 +39,12 @@
         </div>
     </div>
 
-
 </template>
 
-<script>
+<script setup>
+    defineProps({
+        caseStudyInfo: Object
+    })
 </script>
 
 <style>
