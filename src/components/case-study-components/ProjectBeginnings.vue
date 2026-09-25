@@ -1,5 +1,5 @@
 <template>
-    <div class="project-beginning">
+    <div class="project-beginning content-con">
         <h2>Project Beginnings</h2>
 
         <h3>{{ caseStudyInfo.project_title }}</h3>
