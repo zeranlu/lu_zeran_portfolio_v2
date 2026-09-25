@@ -1,8 +1,11 @@
 <template>
 </template>
 
-<script>
+<script setup>
+    defineProps({
+        caseStudyInfo: Object
+    })
 </script>
 
-<style>
+<style scoped lang="scss">
 </style>
