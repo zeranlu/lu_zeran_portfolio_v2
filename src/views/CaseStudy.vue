@@ -13,16 +13,7 @@
             <BreakPoints :breakPoint="breakPoints[0]" />
 
             <div class="parallax-con">
-                <div class="content-con">
-                    <h2>This is a case study of {{ caseStudyInfo.project_title }}</h2>
-
-                    <p>{{ caseStudyInfo.project_desc }}</p>
-
-                    <div class="case-study-img-con">
-                        <img class="case-study-img" :src="caseStudyInfo.proj_image_link_1" :alt="`${caseStudyInfo.project_title} final result`">
-                    </div>
-                    
-                </div>
+                <ProjectBeginnings :caseStudyInfo="caseStudyInfo" />
             </div>
 
             <BreakPoints :breakPoint="breakPoints[1]" />
@@ -80,6 +71,9 @@
     import { useRoute } from 'vue-router'
     import BreakPoints from '@/components/case-studies-page/BreakPoints.vue'
     import { useParallax } from '@/composables/useParallax'
+
+    // IMPORTING CASE STUDY COMPONENTS
+    import ProjectBeginnings from '@/components/case-study-components/ProjectBeginnings.vue'
 
     const caseStudyInfo = ref(null)
 
