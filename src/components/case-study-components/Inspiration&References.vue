@@ -19,17 +19,35 @@
         <div class="reference-cards-con">
             
             <div class="reference-card">
+                <h4>Reference 1</h4>
+
+                <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
+
+                <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
+
                 <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.project_title}`">
             </div>
 
             <div class="reference-card">
-                <img :src="caseStudyInfo.proj_inspiration_img_2" :alt="`Reference image 2 for ${caseStudyInfo.project_title}`">
+                <h4>Reference 2</h4>
+
+                <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
+
+                <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
+
+                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.project_title}`">
             </div>
 
             <div class="reference-card">
-                <img :src="caseStudyInfo.proj_inspiration_img_3" :alt="`Reference image 3 for ${caseStudyInfo.project_title}`">
+                <h4>Reference 3</h4>
+                
+                <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
+
+                <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
+
+                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.project_title}`">
             </div>
-            
+
         </div>
     </div>
 </template>
