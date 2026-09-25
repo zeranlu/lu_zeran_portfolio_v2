@@ -81,6 +81,9 @@
     import BreakPoints from '@/components/case-studies-page/BreakPoints.vue'
     import { useParallax } from '@/composables/useParallax'
 
+    // IMPORTING CASE STUDY COMPONENTS
+    import ProjectBeginnings from '@/components/case-study-components/ProjectBeginnings.vue'
+
     const caseStudyInfo = ref(null)
 
     const caseStudyRoute = useRoute()
