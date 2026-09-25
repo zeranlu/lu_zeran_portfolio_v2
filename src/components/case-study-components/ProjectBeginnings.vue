@@ -5,12 +5,14 @@
         <h3>{{ caseStudyInfo.project_title }}</h3>
 
         <div class="project-beginning-imgcon">
-            <img :src="caseStudyInfo.proj_image_link_1" :alt="`Sketch images of ${caseStudyInfo.project_title}`">
+            <img :src="caseStudyInfo.proj_image_link_1" :alt="`Sketch images of ${caseStudyInfo.project_title}`" class="hidden">
         </div>
 
         <div class="project-beginning-list-con">
 
             <div class="project-specs">
+                <h4>Project Specs</h4>
+
                 <ul class="project-specs-list">
                     <li class="project-specs-li">
                         {{ caseStudyInfo.project_desc }}
@@ -25,6 +27,8 @@
             </div>
 
             <div class="personal-goals">
+                <h4>Personal Goals</h4>
+
                 <ul class="personal-goals-list">
                     <li class="personal-goals-li">
                         {{ caseStudyInfo.project_desc }}
