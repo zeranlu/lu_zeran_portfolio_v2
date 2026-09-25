@@ -13,13 +13,13 @@
             <div class="project-specs">
                 <ul class="project-specs-list">
                     <li class="project-specs-li">
-                        Project Spec 1
+                        {{ caseStudyInfo.project_desc }}
                     </li>
                     <li class="project-specs-li">
-                        Project Spec 2
+                        {{ caseStudyInfo.project_desc }}
                     </li>
                     <li class="project-specs-li">
-                        Project Spec 3
+                        {{ caseStudyInfo.project_desc }}
                     </li>
                 </ul>
             </div>
@@ -27,13 +27,13 @@
             <div class="personal-goals">
                 <ul class="personal-goals-list">
                     <li class="personal-goals-li">
-                        Personal Goal 1
+                        {{ caseStudyInfo.project_desc }}
                     </li>
                     <li class="personal-goals-li">
-                        Personal Goal 2
+                        {{ caseStudyInfo.project_desc }}
                     </li>
                     <li class="personal-goals-li">
-                        Personal Goal 3
+                        {{ caseStudyInfo.project_desc }}
                     </li>
                 </ul>
             </div>
