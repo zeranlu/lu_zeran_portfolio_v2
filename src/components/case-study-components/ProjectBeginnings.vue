@@ -5,7 +5,7 @@
         <h3>{{ caseStudyInfo.project_title }}</h3>
 
         <div class="project-beginning-imgcon">
-            <p>images goes here</p>
+            <img :src="caseStudyInfo.proj_image_link_1" :alt="`Sketch images of ${caseStudyInfo.project_title}`">
         </div>
 
         <div class="project-beginning-list-con">
