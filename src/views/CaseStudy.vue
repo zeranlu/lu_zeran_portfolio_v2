@@ -31,9 +31,7 @@
             <BreakPoints :breakPoint="breakPoints[3]" />
 
             <div class="parallax-con">
-                <div class="content-con">
-                    <p>{{ caseStudyInfo.proj_result }}</p>
-                </div>
+                <ProjectRetrospective :caseStudyInfo="caseStudyInfo" />
             </div>
 
             <BreakPoints :breakPoint="breakPoints[5]" />
@@ -52,6 +50,8 @@
     import ProjectBeginnings from '@/components/case-study-components/ProjectBeginnings.vue'
     import InspirationAndReferences from '@/components/case-study-components/Inspiration&References.vue'
     import StrategicLimitations from '@/components/case-study-components/StrategicLimitations.vue'
+    import ProjectRetrospective from '@/components/case-study-components/ProjectRetrospective.vue'
+
 
     const caseStudyInfo = ref(null)
 
