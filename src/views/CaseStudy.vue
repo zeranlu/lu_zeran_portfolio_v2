@@ -31,12 +31,10 @@
             <BreakPoints :breakPoint="breakPoints[3]" />
 
             <div class="parallax-con">
-                <div class="content-con">
-                    <p>{{ caseStudyInfo.proj_result }}</p>
-                </div>
+                <ProjectRetrospective :caseStudyInfo="caseStudyInfo" />
             </div>
 
-            <BreakPoints :breakPoint="breakPoints[5]" />
+            <BreakPoints :breakPoint="breakPoints[4]" />
 
         </section>
     </div>
@@ -52,6 +50,8 @@
     import ProjectBeginnings from '@/components/case-study-components/ProjectBeginnings.vue'
     import InspirationAndReferences from '@/components/case-study-components/Inspiration&References.vue'
     import StrategicLimitations from '@/components/case-study-components/StrategicLimitations.vue'
+    import ProjectRetrospective from '@/components/case-study-components/ProjectRetrospective.vue'
+
 
     const caseStudyInfo = ref(null)
 
@@ -71,11 +71,10 @@
 
     const breakPoints = [
         'Project Beginnings',
-        'Inspirational References',
-        'The Problem',
-        'The Solution',
-        'The Final Product',
-        'Project Retrospectives'
+        'Inspirations and References',
+        'Strategic Limitations',
+        'Project Retrospectives',
+        'The End of This Case Study'
     ]
 
     const getCaseStudyInfo = async () => {
