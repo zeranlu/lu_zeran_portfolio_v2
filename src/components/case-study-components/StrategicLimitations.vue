@@ -27,7 +27,7 @@
                 </li>
 
                 <li>
-                    <a> Problem #1 </a>
+                    <a> Problem #2 </a>
 
                     <div class="problem-content hidden">
                         <div class="case-study-img-con">
@@ -43,7 +43,7 @@
                 </li>
 
                 <li>
-                    <a> Problem #1 </a>
+                    <a> Problem #3 </a>
 
                     <div class="problem-content hidden">
                         <div class="case-study-img-con">
