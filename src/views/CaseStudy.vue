@@ -31,12 +31,6 @@
             <BreakPoints :breakPoint="breakPoints[3]" />
 
             <div class="parallax-con">
-
-            </div>
-
-            <BreakPoints :breakPoint="breakPoints[4]" />
-
-            <div class="parallax-con">
                 <div class="content-con">
                     <p>{{ caseStudyInfo.proj_result }}</p>
                 </div>
