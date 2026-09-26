@@ -71,11 +71,10 @@
 
     const breakPoints = [
         'Project Beginnings',
-        'Inspirational References',
-        'The Problem',
-        'The Solution',
-        'The Final Product',
-        'Project Retrospectives'
+        'Inspirations and References',
+        'Strategic Limitations',
+        'Project Retrospectives',
+        'The End of This Case Study'
     ]
 
     const getCaseStudyInfo = async () => {
