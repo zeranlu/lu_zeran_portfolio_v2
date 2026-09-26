@@ -71,6 +71,7 @@
     // IMPORTING CASE STUDY COMPONENTS
     import ProjectBeginnings from '@/components/case-study-components/ProjectBeginnings.vue'
     import InspirationAndReferences from '@/components/case-study-components/Inspiration&References.vue'
+    import StrategicLimitations from '@/components/case-study-components/StrategicLimitations.vue'
 
     const caseStudyInfo = ref(null)
 
