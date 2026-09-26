@@ -34,7 +34,7 @@
                 <ProjectRetrospective :caseStudyInfo="caseStudyInfo" />
             </div>
 
-            <BreakPoints :breakPoint="breakPoints[5]" />
+            <BreakPoints :breakPoint="breakPoints[4]" />
 
         </section>
     </div>
