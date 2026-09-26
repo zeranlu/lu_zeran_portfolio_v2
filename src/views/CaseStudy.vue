@@ -118,7 +118,7 @@
     })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
     @use "../styles/abstracts" as a;
 
     .parallax-con {
