@@ -25,30 +25,10 @@
             <BreakPoints :breakPoint="breakPoints[2]" />
             
             <div class="parallax-con">
-                <div class="content-con">
-                    <p>{{ caseStudyInfo.proj_problem }}</p>
-                    
-                    <div class="case-study-img-con">
-                        <img class="case-study-img" :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.project_title} problem`">
-                    </div>
-                    
-                </div>
+                <StrategicLimitations :caseStudyInfo="caseStudyInfo" />
             </div>
 
             <BreakPoints :breakPoint="breakPoints[3]" />
-
-            <div class="parallax-con">
-                <div class="content-con">
-                    <p>{{ caseStudyInfo.proj_solution }}</p>
-
-                    <div class="case-study-img-con">
-                        <img class="case-study-img" :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.project_title}'s solution`">
-                    </div>
-                    
-                </div>
-            </div>
-
-            <BreakPoints :breakPoint="breakPoints[4]" />
 
             <div class="parallax-con">
                 <div class="content-con">
@@ -71,6 +51,7 @@
     // IMPORTING CASE STUDY COMPONENTS
     import ProjectBeginnings from '@/components/case-study-components/ProjectBeginnings.vue'
     import InspirationAndReferences from '@/components/case-study-components/Inspiration&References.vue'
+    import StrategicLimitations from '@/components/case-study-components/StrategicLimitations.vue'
 
     const caseStudyInfo = ref(null)
 
@@ -131,7 +112,7 @@
     })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
     @use "../styles/abstracts" as a;
 
     .parallax-con {
