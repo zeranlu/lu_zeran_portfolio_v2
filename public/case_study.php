@@ -31,21 +31,21 @@
 
     $id = intval($_GET['id']);
 
-    $stmt = mysqli_prepare($connection, "SELECT * FROM tbl_case_studies WHERE case_study_id = ?");
+    // $stmt = mysqli_prepare($connection, "SELECT * FROM tbl_case_studies WHERE case_study_id = ?");
 
-    mysqli_stmt_bind_param($stmt, "i", $id);
+    // mysqli_stmt_bind_param($stmt, "i", $id);
 
-    mysqli_stmt_execute($stmt);
+    // mysqli_stmt_execute($stmt);
 
-    $result = mysqli_stmt_get_result($stmt);
+    // $result = mysqli_stmt_get_result($stmt);
     
-    $case_study = mysqli_fetch_assoc($result);
+    // $case_study = mysqli_fetch_assoc($result);
 
-    if (!$case_study) {
-        echo json_encode(array("error" => "This case study was not found."));
-        exit;
-    }
+    // if (!$case_study) {
+    //     echo json_encode(array("error" => "This case study was not found."));
+    //     exit;
+    // }
 
-    echo json_encode(array("case_study" => $case_study));
+    // echo json_encode(array("case_study" => $case_study));
 
 ?>
