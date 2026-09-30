@@ -31,6 +31,15 @@
 
     $id = intval($_GET['id']);
 
+    function getRow($connection, $sql, $id) {
+        $stmt = mysqli_prepare($connection, $sql);
+        mysqli_stmt_bind_param($stmt, "i", $id);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+
+        return mysqli_fetch_assoc($result);
+    }
+
     // $stmt = mysqli_prepare($connection, "SELECT * FROM tbl_case_studies WHERE case_study_id = ?");
 
     // mysqli_stmt_bind_param($stmt, "i", $id);
