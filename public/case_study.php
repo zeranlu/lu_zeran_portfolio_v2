@@ -91,9 +91,11 @@
     // Project Retrospective Queries
     $retrospective = getRow($connection, "SELECT * FROM tbl_proj_retrospective WHERE case_study_id = ?", $id);
 
-    $metrics = getRows($connection, "SELECT * FROM tbl_proj_retrospective_metrics WHERE proj_retro_id = ?", $retrospective['proj_retro_id']);
-
-
+    $metrics = array();
+    
+    if ($retrospective) {
+        $metrics = getRows($connection, "SELECT * FROM tbl_proj_retrospective_metrics WHERE proj_retro_id = ?", $retrospective['proj_retro_id']);
+    }
 
 
     // $stmt = mysqli_prepare($connection, "SELECT * FROM tbl_case_studies WHERE case_study_id = ?");
