@@ -64,6 +64,15 @@
 
     // Project Reference Queries
     $references = getRows($connection, "SELECT * FROM tbl_proj_references WHERE case_study_id = ?", $id);
+    
+    forEach ($references as &$reference) {
+        // & symbol is used allow modifications to the original array directly
+
+        // Fetch the details for each reference detail and add them to the reference array
+        $reference['details'] = getRows($connection, "SELECT * FROM tbl_proj_references_details WHERE proj_reference_id = ?", $reference['proj_reference_id']);
+    }
+
+    unset($reference); // Break the reference by unsetting the reference variable
 
     // Project Limitation Queries
     $limitation = getRows($connection, "SELECT * FROM tbl_strategic_limitation WHERE case_study_id = ?", $id);
@@ -71,7 +80,7 @@
     // Project Retrospective Queries
     $retrospective = getRow($connection, "SELECT * FROM tbl_proj_retrospective WHERE case_study_id = ?", $id);
 
-    
+
     
 
 
