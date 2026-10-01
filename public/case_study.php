@@ -60,7 +60,7 @@
     // Project Beginning Queries
     $specs = getRows($connection, "SELECT * FROM tbl_proj_specs WHERE case_study_id = ?", $id);
     $goals = getRows($connection, "SELECT * FROM tbl_personal_goals WHERE case_study_id = ?", $id);
-    $sketches = getRows($connection, "SELECT * FROM tbl_sketches WHERE case_study_id = ?", $id);
+    $sketches = getRows($connection, "SELECT * FROM tbl_proj_sketches WHERE case_study_id = ?", $id);
 
     // Project Reference Queries
     $references = getRows($connection, "SELECT * FROM tbl_proj_references WHERE case_study_id = ?", $id);
@@ -89,7 +89,7 @@
     $metrics = getRows($connection, "SELECT * FROM tbl_proj_retrospective_metrics WHERE proj_retro_id = ?", $retrospective['proj_retro_id']);
 
 
-    
+
 
     // $stmt = mysqli_prepare($connection, "SELECT * FROM tbl_case_studies WHERE case_study_id = ?");
 
