@@ -75,7 +75,13 @@
     unset($reference); // Break the reference by unsetting the reference variable
 
     // Project Limitation Queries
-    $limitation = getRows($connection, "SELECT * FROM tbl_strategic_limitation WHERE case_study_id = ?", $id);
+    $limitations = getRows($connection, "SELECT * FROM tbl_strategic_limitations WHERE case_study_id = ?", $id);
+
+    forEach ($limitations as &$limitation) {
+        $limitation['details'] = getRows($connection, "SELECT * FROM tbl_strategic_limitations_details WHERE strategic_limitation_id = ?", $limitation['strategic_limitation_id']);
+    }
+
+    unset($limitation);
 
     // Project Retrospective Queries
     $retrospective = getRow($connection, "SELECT * FROM tbl_proj_retrospective WHERE case_study_id = ?", $id);
