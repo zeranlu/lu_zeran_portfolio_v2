@@ -54,6 +54,27 @@
         return $rows;
     }
 
+    // QUERIES
+    $case_study = getRow($connection, "SELECT * FROM tbl_case_studies WHERE case_study_id = ?", $id);
+
+    // Project Beginning Queries
+    $specs = getRows($connection, "SELECT * FROM tbl_proj_specs WHERE case_study_id = ?", $id);
+    $goals = getRows($connection, "SELECT * FROM tbl_personal_goals WHERE case_study_id = ?", $id);
+    $sketches = getRows($connection, "SELECT * FROM tbl_sketches WHERE case_study_id = ?", $id);
+
+    // Project Reference Queries
+    $references = getRows($connection, "SELECT * FROM tbl_proj_references WHERE case_study_id = ?", $id);
+
+    // Project Limitation Queries
+    $limitation = getRows($connection, "SELECT * FROM tbl_strategic_limitation WHERE case_study_id = ?", $id);
+
+    // Project Retrospective Queries
+    $retrospective = getRow($connection, "SELECT * FROM tbl_proj_retrospective WHERE case_study_id = ?", $id);
+
+    
+    
+
+
     // $stmt = mysqli_prepare($connection, "SELECT * FROM tbl_case_studies WHERE case_study_id = ?");
 
     // mysqli_stmt_bind_param($stmt, "i", $id);
