@@ -101,11 +101,11 @@
     
     // $case_study = mysqli_fetch_assoc($result);
 
-    // if (!$case_study) {
-    //     echo json_encode(array("error" => "This case study was not found."));
-    //     exit;
-    // }
+    if (!$case_study) {
+        echo json_encode(array("error" => "This case study was not found."));
+        exit;
+    }
 
-    // echo json_encode(array("case_study" => $case_study));
+    echo json_encode(array("case_study" => $case_study));
 
 ?>
