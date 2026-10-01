@@ -57,6 +57,11 @@
     // QUERIES
     $case_study = getRow($connection, "SELECT * FROM tbl_case_studies WHERE case_study_id = ?", $id);
 
+    if (!$case_study) {
+        echo json_encode(array("error" => "This case study was not found."));
+        exit;
+    }
+
     // Project Beginning Queries
     $specs = getRows($connection, "SELECT * FROM tbl_proj_specs WHERE case_study_id = ?", $id);
     $goals = getRows($connection, "SELECT * FROM tbl_personal_goals WHERE case_study_id = ?", $id);
@@ -100,11 +105,6 @@
     // $result = mysqli_stmt_get_result($stmt);
     
     // $case_study = mysqli_fetch_assoc($result);
-
-    if (!$case_study) {
-        echo json_encode(array("error" => "This case study was not found."));
-        exit;
-    }
 
     echo json_encode(array("case_study" => $case_study));
 
