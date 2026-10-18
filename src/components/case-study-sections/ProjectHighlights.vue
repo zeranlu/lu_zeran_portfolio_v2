@@ -15,7 +15,7 @@
 
 <script setup>
 
-    import YoutubeEmbed from '../case-study-sections/case-study-components/YoutubeEmbed.vue'
+    import YoutubeEmbed from '@/components/case-study-sections/case-study-components/YoutubeEmbed.vue'
 
     defineProps({
         caseStudyInfo: Object

@@ -66,8 +66,6 @@
 
 <script setup>
 
-    import YoutubeEmbed from './case-study-components/YoutubeEmbed.vue'
-
     defineProps({
         caseStudyInfo: Object
     })
