@@ -14,10 +14,18 @@
         </iframe>
 
     </div>
-    
+
 </template>
 
 <script setup>
+
+    defineProps({
+        videoId: String,
+        title: {
+            type: String,
+            default: 'Youtube Video Player'
+        }
+    })
 
 </script>
 
