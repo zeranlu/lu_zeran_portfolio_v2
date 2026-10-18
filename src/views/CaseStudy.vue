@@ -55,6 +55,7 @@
     // IMPORTING CASE STUDY COMPONENTS
     import ProjectBeginnings from '@/components/case-study-sections/ProjectBeginnings.vue'
     import InspirationAndReferences from '@/components/case-study-sections/Inspiration&References.vue'
+    import ProjectHighlights from '@/components/case-study-sections/ProjectHighlights.vue'
     import StrategicLimitations from '@/components/case-study-sections/StrategicLimitations.vue'
     import ProjectRetrospective from '@/components/case-study-sections/ProjectRetrospective.vue'
 

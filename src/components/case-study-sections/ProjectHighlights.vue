@@ -1,4 +1,5 @@
 <template>
+    
     <div class="project-highlights content-con">
         <h2>Project Highlights</h2>
 
