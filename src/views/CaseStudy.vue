@@ -25,16 +25,22 @@
             <BreakPoints :breakPoint="breakPoints[2]" />
             
             <div class="parallax-con">
-                <StrategicLimitations :caseStudyInfo="caseStudyInfo" />
+                <ProjectHighlights :caseStudyInfo="caseStudyInfo" />
             </div>
 
             <BreakPoints :breakPoint="breakPoints[3]" />
 
             <div class="parallax-con">
-                <ProjectRetrospective :caseStudyInfo="caseStudyInfo" />
+                <StrategicLimitations :caseStudyInfo="caseStudyInfo" />
             </div>
 
             <BreakPoints :breakPoint="breakPoints[4]" />
+
+            <div class="parallax-con">
+                <ProjectRetrospective :caseStudyInfo="caseStudyInfo" />
+            </div>
+
+            <BreakPoints :breakPoint="breakPoints[5]" />
 
         </section>
     </div>
@@ -72,6 +78,7 @@
     const breakPoints = [
         'Project Beginnings',
         'Inspirations and References',
+        'Project Highlights',
         'Strategic Limitations',
         'Project Retrospectives',
         'The End of This Case Study'
