@@ -79,6 +79,10 @@
 
     unset($reference); // Break the reference by unsetting the reference variable
 
+    // Project Highlights Queries
+
+    $highlights = getRows($connection, "SELECT * FROM tbl_proj_highlights WHERE case_study_id = ? ORDER BY proj_highlight_order, proj_highlight_id", $id);
+
     // Project Limitation Queries
     $limitations = getRows($connection, "SELECT * FROM tbl_strategic_limitations WHERE case_study_id = ?", $id);
 
@@ -115,6 +119,7 @@
         "sketches" => $sketches,
         "references" => $references,
         "limitations" => $limitations,
+        "highlights" => $highlights,
         "retrospective" => $retrospective,
         "metrics" => $metrics
     ));
