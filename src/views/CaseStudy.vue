@@ -25,16 +25,22 @@
             <BreakPoints :breakPoint="breakPoints[2]" />
             
             <div class="parallax-con">
-                <StrategicLimitations :caseStudyInfo="caseStudyInfo" />
+                <ProjectHighlights :caseStudyInfo="caseStudyInfo" />
             </div>
 
             <BreakPoints :breakPoint="breakPoints[3]" />
 
             <div class="parallax-con">
-                <ProjectRetrospective :caseStudyInfo="caseStudyInfo" />
+                <StrategicLimitations :caseStudyInfo="caseStudyInfo" />
             </div>
 
             <BreakPoints :breakPoint="breakPoints[4]" />
+
+            <div class="parallax-con">
+                <ProjectRetrospective :caseStudyInfo="caseStudyInfo" />
+            </div>
+
+            <BreakPoints :breakPoint="breakPoints[5]" />
 
         </section>
     </div>
@@ -49,6 +55,7 @@
     // IMPORTING CASE STUDY COMPONENTS
     import ProjectBeginnings from '@/components/case-study-sections/ProjectBeginnings.vue'
     import InspirationAndReferences from '@/components/case-study-sections/Inspiration&References.vue'
+    import ProjectHighlights from '@/components/case-study-sections/ProjectHighlights.vue'
     import StrategicLimitations from '@/components/case-study-sections/StrategicLimitations.vue'
     import ProjectRetrospective from '@/components/case-study-sections/ProjectRetrospective.vue'
 
@@ -72,6 +79,7 @@
     const breakPoints = [
         'Project Beginnings',
         'Inspirations and References',
+        'Project Highlights',
         'Strategic Limitations',
         'Project Retrospectives',
         'The End of This Case Study'

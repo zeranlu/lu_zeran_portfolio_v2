@@ -5,11 +5,6 @@
 
         <p> {{ caseStudyInfo.proj_problem }} </p>
 
-        <YoutubeEmbed
-            videoId="2o1rfo1XedA"
-            :title="`Youtube video of ${caseStudyInfo.project_title}`">
-        </YoutubeEmbed>
-
         <div class="limitation-list">
             
             <h3>Isolated Problems</h3>
@@ -70,8 +65,6 @@
 </template>
 
 <script setup>
-
-    import YoutubeEmbed from './case-study-components/YoutubeEmbed.vue'
 
     defineProps({
         caseStudyInfo: Object
