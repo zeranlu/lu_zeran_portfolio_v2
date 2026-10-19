@@ -79,6 +79,10 @@
 
     unset($reference); // Break the reference by unsetting the reference variable
 
+    // Project Highlights Queries
+
+    $highlight = getRows($connection, "SELECT * FROM tbl_proj_highlights WHERE case_study_id = ?", $id);
+
     // Project Limitation Queries
     $limitations = getRows($connection, "SELECT * FROM tbl_strategic_limitations WHERE case_study_id = ?", $id);
 
