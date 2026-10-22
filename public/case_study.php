@@ -101,6 +101,12 @@
         $metrics = getRows($connection, "SELECT * FROM tbl_proj_retrospective_metrics WHERE proj_retro_id = ?", $retrospective['proj_retro_id']);
     }
 
+    $criticisms = array();
+
+    if ($retrospective) {
+        $criticisms = getRows($connection, "SELECT * FROM tbl_proj_retrospective_criticisms WHERE proj_retro_id = ? ORDER BY proj_criticism_order, proj_criticism_id", $retrospective['proj_retro_id']);
+    }
+
 
     // $stmt = mysqli_prepare($connection, "SELECT * FROM tbl_case_studies WHERE case_study_id = ?");
 
