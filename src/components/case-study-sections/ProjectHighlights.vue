@@ -18,7 +18,7 @@
     import { onMounted } from 'vue'
     import { useYouTubeApi } from '@/composables/useYouTubeApi'
 
-    import YoutubeEmbed from '@/components/case-study-sections/case-study-components/YouTubeEmbed.vue'
+    import YouTubeEmbed from '@/components/case-study-sections/case-study-components/YouTubeEmbed.vue'
 
     defineProps({
         caseStudyInfo: Object
