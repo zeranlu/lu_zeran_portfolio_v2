@@ -16,7 +16,7 @@
 
 <script setup>
     import { onMounted } from 'vue'
-    import { useYouTubeApi } from '@/composables/useYouTubeAPI'
+    import { useYouTubeApi } from '@/composables/useYouTubeApi'
 
     import YoutubeEmbed from '@/components/case-study-sections/case-study-components/YoutubeEmbed.vue'
 
