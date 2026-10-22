@@ -15,11 +15,20 @@
 </template>
 
 <script setup>
+    import { onMounted } from 'vue'
+    import { useYouTubeApi } from '@/composables/useYouTubeAPI'
 
     import YoutubeEmbed from '@/components/case-study-sections/case-study-components/YoutubeEmbed.vue'
 
     defineProps({
         caseStudyInfo: Object
+    })
+
+    const { loadYouTubeApi } = useYouTubeApi()
+
+    onMounted(async () => {
+        const YT = await loadYouTubeApi()
+        console.log('YouTube Api ready:', YT)
     })
 </script>
 
