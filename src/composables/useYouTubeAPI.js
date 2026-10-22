@@ -15,8 +15,9 @@ export function useYouTubeApi() {
             }
 
             // Place for YouTube to callback to
+            // NOTE: 'onYouTubeIframeAPIReady' MUST be exactly this name, as it is called by YouTube's Api script when it is loaded
 
-            window.onYouTubeIframeApiReady = () => {
+            window.onYouTubeIframeAPIReady = () => {
                 resolve(window.YT)
             }
 
