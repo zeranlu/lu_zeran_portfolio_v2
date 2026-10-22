@@ -127,7 +127,8 @@
         "limitations" => $limitations,
         "highlights" => $highlights,
         "retrospective" => $retrospective,
-        "metrics" => $metrics
+        "metrics" => $metrics,
+        "criticisms" => $criticisms
     ));
 
 ?>
