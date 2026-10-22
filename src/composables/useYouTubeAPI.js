@@ -24,7 +24,7 @@ export function useYouTubeApi() {
             // Add YouTube's Api script to the page
             const YouTubeScript = document.createElement('script')
 
-            YouTubeScript.src = 'https://www.youtube.com/iframe_Api'
+            YouTubeScript.src = 'https://www.youtube.com/iframe_api'
 
             // If the scripts fails to load, reject with error message
             YouTubeScript.onerror = () => {
@@ -41,5 +41,5 @@ export function useYouTubeApi() {
     return {
         loadYouTubeApi
     }
-    
+
 }
