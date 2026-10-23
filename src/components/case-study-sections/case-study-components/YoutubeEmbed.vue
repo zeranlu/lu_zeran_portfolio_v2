@@ -25,6 +25,13 @@
         }
     })
 
+    const playerElement = ref(null)
+
+    let player = null
+
+    let isPlayerReady = false
+
+    let isUnmounted = false
 </script>
 
 <style scoped lang="scss">
