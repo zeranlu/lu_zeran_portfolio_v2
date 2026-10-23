@@ -69,6 +69,11 @@
         player.playVideo()
 
     }
+
+    defineExpose({
+        seekTo
+    })
+
 </script>
 
 <style scoped lang="scss">
