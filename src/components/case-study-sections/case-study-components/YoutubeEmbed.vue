@@ -43,6 +43,23 @@
 
         // Called a "Race condition". This is a failsafe in case a user leaves while the API is loading. Otherwise a player created now would never be destroyed.
         if (isUnmounted) return
+
+        player = new YT.Player(playerElement.value, {
+            videoId: props.YouTubeVideoId,
+            host: 'https://www.youtube-nocookie.com',
+            playerVars: {
+                rel: 0,
+                // Lets videos play (on IOS) w/o needing to go full screen.
+                playsinline: 1,
+            },
+            events: {
+                onReady: () => {
+                    isPlayerReady = true
+                    player.getIframe().title = props.YouTubeTitle
+                }
+            }
+        })
+    })
 </script>
 
 <style scoped lang="scss">
