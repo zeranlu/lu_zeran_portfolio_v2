@@ -6,8 +6,8 @@
         <h3>{{ caseStudyInfo.project_title }}</h3>
 
         <YoutubeEmbed
-            YouTubeVideoId="2o1rfo1XedA"
-            :YouTubeTitle="`Youtube video of ${caseStudyInfo.project_title}`">
+            youTubeVideoId="2o1rfo1XedA"
+            :youTubeTitle="`Youtube video of ${caseStudyInfo.project_title}`">
         </YoutubeEmbed>
 
     </div>

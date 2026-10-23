@@ -18,8 +18,8 @@
     import { useYoutubeApi } from '@/composables/useYouTubeApi'
 
     defineProps({
-        YouTubeVideoId: String,
-        YouTubeTitle: {
+        youTubeVideoId: String,
+        youTubeTitle: {
             type: String,
             default: 'Youtube Video Player'
         }
