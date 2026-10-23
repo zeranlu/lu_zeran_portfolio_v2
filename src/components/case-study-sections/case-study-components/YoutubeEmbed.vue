@@ -74,6 +74,12 @@
         seekTo
     })
 
+    watch(() => props.youTubeVideoId, (newVideoId) => {
+
+        if (isPlayerReady && newVideoId) {
+            player.cueVideoById(newVideoId)
+        }
+    })
 </script>
 
 <style scoped lang="scss">
