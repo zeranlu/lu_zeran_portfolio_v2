@@ -32,6 +32,9 @@
     let isPlayerReady = false
 
     let isUnmounted = false
+
+    // Get the loading function from useYouTubeApi.js
+    const { loadYouTubeApi } = useYouTubeApi()
 </script>
 
 <style scoped lang="scss">
