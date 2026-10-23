@@ -35,6 +35,9 @@
 
     // Get the loading function from useYouTubeApi.js
     const { loadYouTubeApi } = useYouTubeApi()
+
+    onMounted(async () => {
+
 </script>
 
 <style scoped lang="scss">
