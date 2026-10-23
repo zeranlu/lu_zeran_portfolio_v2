@@ -45,7 +45,7 @@
         if (isUnmounted) return
 
         player = new YT.Player(playerElement.value, {
-            videoId: props.YouTubeVideoId,
+            videoId: props.youTubeVideoId,
             host: 'https://www.youtube-nocookie.com',
             playerVars: {
                 rel: 0,
@@ -55,7 +55,7 @@
             events: {
                 onReady: () => {
                     isPlayerReady = true
-                    player.getIframe().title = props.YouTubeTitle
+                    player.getIframe().title = props.youTubeTitle
                 }
             }
         })
