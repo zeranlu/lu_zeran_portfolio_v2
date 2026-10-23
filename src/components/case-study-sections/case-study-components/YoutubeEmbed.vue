@@ -41,6 +41,8 @@
         // Waits for YouTube's API to be ready and then stores in variable YT
         const YT = await loadYouTubeApi()
 
+        // Called a "Race condition". This is a failsafe in case a user leaves while the API is loading. Otherwise a player created now would never be destroyed.
+        if (isUnmounted) return
 </script>
 
 <style scoped lang="scss">
