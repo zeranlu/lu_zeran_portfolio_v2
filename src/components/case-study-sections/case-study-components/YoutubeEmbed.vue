@@ -60,6 +60,15 @@
             }
         })
     })
+
+    const seekTo = (seconds) => {
+
+        if (!isPlayerReady) return
+
+        player.seekTo(seconds, true)
+        player.playVideo()
+
+    }
 </script>
 
 <style scoped lang="scss">
