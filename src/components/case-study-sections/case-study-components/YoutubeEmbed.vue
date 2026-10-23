@@ -80,6 +80,18 @@
             player.cueVideoById(newVideoId)
         }
     })
+
+    // Destroy the player when the component is unmounted
+    onBeforeUnmount(() => {
+
+        isUnmounted = true
+
+        if (player) {
+            player.destroy()
+        }
+
+    })
+
 </script>
 
 <style scoped lang="scss">
