@@ -61,6 +61,7 @@
         })
     })
 
+    // SeekTo if player is ready
     const seekTo = (seconds) => {
 
         if (!isPlayerReady) return
@@ -70,10 +71,12 @@
 
     }
 
+    // Encapsulate the seekTo function
     defineExpose({
         seekTo
     })
 
+    // Watch for if the prop "youTubeVideoId" changes, if so play the new video
     watch(() => props.youTubeVideoId, (newVideoId) => {
 
         if (isPlayerReady && newVideoId) {
