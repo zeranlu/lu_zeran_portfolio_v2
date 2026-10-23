@@ -38,6 +38,9 @@
 
     onMounted(async () => {
 
+        // Waits for YouTube's API to be ready and then stores in variable YT
+        const YT = await loadYouTubeApi()
+
 </script>
 
 <style scoped lang="scss">
