@@ -2,16 +2,11 @@
     
     <div class="youtube-embed-con">
 
-        <iframe
-            class="youtube-embed"
-            :src="`https://www.youtube-nocookie.com/embed/${videoId}`"
-            :title="title"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-        >
-        </iframe>
+        <div class="youtube-embed">
+
+            <div ref="playerElement"></div>
+
+        </div>
 
     </div>
 
@@ -19,12 +14,85 @@
 
 <script setup>
 
+    import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
+    import { useYoutubeApi } from '@/composables/useYouTubeApi'
+
     defineProps({
-        videoId: String,
-        title: {
+        youTubeVideoId: String,
+        youTubeTitle: {
             type: String,
             default: 'Youtube Video Player'
         }
+    })
+
+    const playerElement = ref(null)
+
+    let player = null
+
+    let isPlayerReady = false
+
+    let isUnmounted = false
+
+    // Get the loading function from useYouTubeApi.js
+    const { loadYouTubeApi } = useYouTubeApi()
+
+    onMounted(async () => {
+
+        // Waits for YouTube's API to be ready and then stores in variable YT
+        const YT = await loadYouTubeApi()
+
+        // Called a "Race condition". This is a failsafe in case a user leaves while the API is loading. Otherwise a player created now would never be destroyed.
+        if (isUnmounted) return
+
+        player = new YT.Player(playerElement.value, {
+            videoId: props.youTubeVideoId,
+            host: 'https://www.youtube-nocookie.com',
+            playerVars: {
+                rel: 0,
+                // Lets videos play (on IOS) w/o needing to go full screen.
+                playsinline: 1,
+            },
+            events: {
+                onReady: () => {
+                    isPlayerReady = true
+                    player.getIframe().title = props.youTubeTitle
+                }
+            }
+        })
+    })
+
+    // SeekTo if player is ready
+    const seekTo = (seconds) => {
+
+        if (!isPlayerReady) return
+
+        player.seekTo(seconds, true)
+        player.playVideo()
+
+    }
+
+    // Encapsulate the seekTo function
+    defineExpose({
+        seekTo
+    })
+
+    // Watch for if the prop "youTubeVideoId" changes, if so play the new video
+    watch(() => props.youTubeVideoId, (newVideoId) => {
+
+        if (isPlayerReady && newVideoId) {
+            player.cueVideoById(newVideoId)
+        }
+    })
+
+    // Destroy the player when the component is unmounted
+    onBeforeUnmount(() => {
+
+        isUnmounted = true
+
+        if (player) {
+            player.destroy()
+        }
+
     })
 
 </script>

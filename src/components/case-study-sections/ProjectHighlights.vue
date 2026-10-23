@@ -6,8 +6,8 @@
         <h3>{{ caseStudyInfo.project_title }}</h3>
 
         <YoutubeEmbed
-            videoId="2o1rfo1XedA"
-            :title="`Youtube video of ${caseStudyInfo.project_title}`">
+            youTubeVideoId="2o1rfo1XedA"
+            :youTubeTitle="`Youtube video of ${caseStudyInfo.project_title}`">
         </YoutubeEmbed>
 
     </div>
@@ -18,7 +18,7 @@
     import { onMounted } from 'vue'
     import { useYouTubeApi } from '@/composables/useYouTubeApi'
 
-    import YoutubeEmbed from '@/components/case-study-sections/case-study-components/YoutubeEmbed.vue'
+    import YouTubeEmbed from '@/components/case-study-sections/case-study-components/YouTubeEmbed.vue'
 
     defineProps({
         caseStudyInfo: Object
