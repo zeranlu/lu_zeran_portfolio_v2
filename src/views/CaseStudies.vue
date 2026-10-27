@@ -16,7 +16,7 @@
                     v-for="caseStudy in caseStudies.filter(s => s.proj_featured == 1)"
                     :key="caseStudy.case_study_id"
                     :id="caseStudy.case_study_id"
-                    :title="caseStudy.project_title"
+                    :title="caseStudy.proj_name"
                     :desc="caseStudy.project_desc"
                     :prob="caseStudy.proj_problem"
                     :fgImg="caseStudy.proj_image_link_1"
@@ -29,7 +29,7 @@
                     v-for="caseStudy in caseStudies"
                     :key="caseStudy.case_study_id"
                     :id="caseStudy.case_study_id"
-                    :title="caseStudy.project_title"
+                    :title="caseStudy.proj_name"
                     :desc="caseStudy.project_desc"
                     :thumbnail="caseStudy.proj_image_link_1"
                 />

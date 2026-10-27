@@ -39,7 +39,7 @@
 
                         <li class="dropdown-li" v-for="caseStudy in caseStudies" :key="caseStudy.case_study_id">
                             <RouterLink class="dropdown-a" :to="`/case-studies/${caseStudy.case_study_id}`">
-                                {{ caseStudy.project_title }}
+                                {{ caseStudy.proj_name }}
                             </RouterLink>
                         </li>
                         

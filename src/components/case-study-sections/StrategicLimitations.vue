@@ -15,13 +15,13 @@
 
                     <div class="problem-content hidden">
                         <div class="case-study-img-con">
-                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.project_title} problem`">
+                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.proj_name} problem`">
                         </div>
 
                         <p>{{ caseStudyInfo.proj_solution }}</p>
 
                         <div class="case-study-img-con">
-                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.project_title}'s solution`">
+                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.proj_name}'s solution`">
                         </div>
                     </div>
                 </li>
@@ -31,13 +31,13 @@
 
                     <div class="problem-content hidden">
                         <div class="case-study-img-con">
-                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.project_title} problem`">
+                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.proj_name} problem`">
                         </div>
 
                         <p>{{ caseStudyInfo.proj_solution }}</p>
 
                         <div class="case-study-img-con">
-                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.project_title}'s solution`">
+                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.proj_name}'s solution`">
                         </div>
                     </div>
                 </li>
@@ -47,13 +47,13 @@
 
                     <div class="problem-content hidden">
                         <div class="case-study-img-con">
-                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.project_title} problem`">
+                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_2" :alt="`picture of ${caseStudyInfo.proj_name} problem`">
                         </div>
 
                         <p>{{ caseStudyInfo.proj_solution }}</p>
 
                         <div class="case-study-img-con">
-                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.project_title}'s solution`">
+                            <img class="case-study-img" :src="caseStudyInfo.proj_image_link_3" :alt="`picture of ${caseStudyInfo.proj_name}'s solution`">
                         </div>
                     </div>
                 </li>

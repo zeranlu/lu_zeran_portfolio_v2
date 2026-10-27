@@ -2,10 +2,10 @@
     <div class="project-beginning content-con">
         <h2>Project Beginnings</h2>
 
-        <h3>{{ caseStudyInfo.project_title }}</h3>
+        <h3>{{ caseStudyInfo.proj_name }}</h3>
 
         <div class="project-beginning-imgcon">
-            <img :src="caseStudyInfo.proj_image_link_1" :alt="`Sketch images of ${caseStudyInfo.project_title}`" class="hidden">
+            <img :src="caseStudyInfo.proj_image_link_1" :alt="`Sketch images of ${caseStudyInfo.proj_name}`" class="hidden">
         </div>
 
         <div class="project-beginning-list-con">
