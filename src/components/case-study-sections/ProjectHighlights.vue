@@ -8,7 +8,7 @@
         <YoutubeEmbed
             youTubeVideoId="2o1rfo1XedA"
             :youTubeTitle="`Youtube video of ${caseStudyInfo.project_title}`">
-        </YoutubeEmbed>
+        </YouTubeEmbed>
 
     </div>
 
