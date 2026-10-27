@@ -27,6 +27,11 @@
                         v-for="spec in caseStudyInfo.specs"
                         :key="spec.proj_spec_id">
                         {{ spec.proj_spec }}
+
+                        <br>
+                        <br>
+
+                        {{ spec.proj_spec_expanded }}
                     </li>
                     
                 </ul>
