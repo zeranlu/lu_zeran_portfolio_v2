@@ -38,6 +38,11 @@
                         v-for="goal in caseStudyInfo.goals"
                         :key="goal.personal_goal_id">
                         {{ goal.personal_goal }}
+
+                        <br>
+                        <br>
+
+                        {{ goal.personal_goal_expanded }}
                     </li>
 
                 </ul>
