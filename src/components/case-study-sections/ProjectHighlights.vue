@@ -3,11 +3,11 @@
     <div class="project-highlights content-con">
         <h2>Project Highlights</h2>
 
-        <h3>{{ caseStudyInfo.project_title }}</h3>
+        <h3>{{ caseStudyInfo.project_name }}</h3>
 
-        <YoutubeEmbed
+        <YouTubeEmbed
             youTubeVideoId="2o1rfo1XedA"
-            :youTubeTitle="`Youtube video of ${caseStudyInfo.project_title}`">
+            :youTubeTitle="`Youtube video of ${caseStudyInfo.project_name}`">
         </YouTubeEmbed>
 
     </div>
