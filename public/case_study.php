@@ -118,17 +118,28 @@
     
     // $case_study = mysqli_fetch_assoc($result);
 
-    echo json_encode(array(
-        "case_study" => $case_study,
-        "specs" => $specs,
-        "goals" => $goals,
-        "sketches" => $sketches,
-        "references" => $references,
-        "limitations" => $limitations,
-        "highlights" => $highlights,
-        "retrospective" => $retrospective,
-        "metrics" => $metrics,
-        "criticisms" => $criticisms
-    ));
+    // echo json_encode(array(
+    //     "case_study" => $case_study,
+    //     "specs" => $specs,
+    //     "goals" => $goals,
+    //     "sketches" => $sketches,
+    //     "references" => $references,
+    //     "limitations" => $limitations,
+    //     "highlights" => $highlights,
+    //     "retrospective" => $retrospective,
+    //     "metrics" => $metrics,
+    //     "criticisms" => $criticisms
+    // ));
 
+    $case_study['specs'] = $specs;
+    $case_study['goals'] = $goals;
+    $case_study['sketches'] = $sketches;
+    $case_study['references'] = $references;
+    $case_study['limitations'] = $limitations;
+    $case_study['highlights'] = $highlights;
+    $case_study['retrospective'] = $retrospective;
+    $case_study['metrics'] = $metrics;
+    $case_study['criticisms'] = $criticisms;
+
+    echo json_encode($case_study);
 ?>
