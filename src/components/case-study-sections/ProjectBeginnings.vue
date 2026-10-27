@@ -14,14 +14,6 @@
                 <h4>Project Specs</h4>
 
                 <ul class="project-specs-list">
-                    <li class="project-specs-li">
-                        {{ caseStudyInfo.project_desc }}
-                    </li>
-                    <li class="project-specs-li">
-                        {{ caseStudyInfo.project_desc }}
-                    </li>
-                    <li class="project-specs-li">
-                        {{ caseStudyInfo.project_desc }}
 
                     <li class="project-specs-li"
                         v-for="spec in caseStudyInfo.specs"
