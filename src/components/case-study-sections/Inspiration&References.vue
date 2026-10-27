@@ -25,7 +25,7 @@
 
                 <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
 
-                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.project_title}`">
+                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.proj_name}`">
             </div>
 
             <div class="reference-card">
@@ -35,7 +35,7 @@
 
                 <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
 
-                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.project_title}`">
+                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.proj_name}`">
             </div>
 
             <div class="reference-card">
@@ -45,7 +45,7 @@
 
                 <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
 
-                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.project_title}`">
+                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.proj_name}`">
             </div>
 
         </div>
