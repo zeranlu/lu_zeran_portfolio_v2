@@ -22,7 +22,13 @@
                     </li>
                     <li class="project-specs-li">
                         {{ caseStudyInfo.project_desc }}
+
+                    <li class="project-specs-li"
+                        v-for="spec in caseStudyInfo.specs"
+                        :key="spec.proj_spec_id">
+                        {{ spec.proj_spec }}
                     </li>
+                    
                 </ul>
             </div>
 
