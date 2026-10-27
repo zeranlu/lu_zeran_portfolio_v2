@@ -20,7 +20,7 @@
 
     import YouTubeEmbed from '@/components/case-study-sections/case-study-components/YouTubeEmbed.vue'
 
-    defineProps({
+    const props = defineProps({
         caseStudyInfo: Object
     })
 
