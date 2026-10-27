@@ -98,7 +98,7 @@
 
             const caseStudyInfoJSON = await caseStudyInfoResponse.json()
 
-            caseStudyInfo.value = caseStudyInfoJSON.case_study
+            caseStudyInfo.value = caseStudyInfoJSON
 
             isLoading.value = false
 
