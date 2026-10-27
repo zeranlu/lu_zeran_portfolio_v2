@@ -131,4 +131,15 @@
     //     "criticisms" => $criticisms
     // ));
 
+    $case_study['specs'] = $specs;
+    $case_study['goals'] = $goals;
+    $case_study['sketches'] = $sketches;
+    $case_study['references'] = $references;
+    $case_study['limitations'] = $limitations;
+    $case_study['highlights'] = $highlights;
+    $case_study['retrospective'] = $retrospective;
+    $case_study['metrics'] = $metrics;
+    $case_study['criticisms'] = $criticisms;
+
+    echo json_encode($case_study);
 ?>
