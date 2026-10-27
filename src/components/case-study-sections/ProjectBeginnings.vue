@@ -33,15 +33,13 @@
                 <h4>Personal Goals</h4>
 
                 <ul class="personal-goals-list">
-                    <li class="personal-goals-li">
-                        {{ caseStudyInfo.project_desc }}
+                    
+                    <li class="personal-goals-li"
+                        v-for="goal in caseStudyInfo.goals"
+                        :key="goal.personal_goal_id">
+                        {{ goal.personal_goal }}
                     </li>
-                    <li class="personal-goals-li">
-                        {{ caseStudyInfo.project_desc }}
-                    </li>
-                    <li class="personal-goals-li">
-                        {{ caseStudyInfo.project_desc }}
-                    </li>
+
                 </ul>
             </div>
 
