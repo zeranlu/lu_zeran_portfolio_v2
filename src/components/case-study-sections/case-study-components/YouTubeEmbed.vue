@@ -15,7 +15,7 @@
 <script setup>
 
     import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
-    import { useYoutubeApi } from '@/composables/useYouTubeApi'
+    import { useYouTubeApi } from '@/composables/useYouTubeApi'
 
     defineProps({
         youTubeVideoId: String,
