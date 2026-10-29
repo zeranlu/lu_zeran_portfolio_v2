@@ -3,15 +3,18 @@
         <h2>Inspirational References</h2>
 
         <ul class="reference-counter">
-            <li>
-                &#9679
+
+            <li class="project-reference-li"
+                v-for="reference in caseStudyInfo.references"
+                :key="reference.case_study_id">
+                
+                {{ reference.proj_reference }}
+
+                <br>
+                <br>
+
             </li>
-            <li>
-                &#9679
-            </li>
-            <li>
-                &#9679
-            </li>
+
         </ul>
 
         <p> {{ caseStudyInfo.proj_inspiration }} </p>
