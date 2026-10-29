@@ -4,12 +4,48 @@
         
         <h2>Project Highlights</h2>
 
-        <h3>{{ caseStudyInfo.project_name }}</h3>
+        <h3>{{ caseStudyInfo.proj_name }}</h3>
 
         <YouTubeEmbed
-            youTubeVideoId="2o1rfo1XedA"
-            :youTubeTitle="`Youtube video of ${caseStudyInfo.project_name}`">
+            :youTubeVideoId="caseStudyInfo.proj_video_id"
+            :youTubeTitle="`Youtube video of ${caseStudyInfo.proj_name}`">
         </YouTubeEmbed>
+
+        <div class="proj_highlights-con">
+
+            <ul class="proj_highlights-ul">
+
+                <li class="proj-highlights-li"
+                    v-for="highlight in caseStudyInfo.highlights"
+                    :key="highlight.proj_highlight_id">
+
+                    <a class="proj-highlights-a">
+
+                        {{ highlight.proj_highlight }}
+
+                        <div>
+
+                            {{ highlight.proj_highlight_summary }}
+
+                            <br>
+                            <br>
+
+                            {{ highlight.proj_highlight_start }}
+
+                            <br>
+                            <br>
+
+                            {{ highlight.proj_highlight_end }}
+
+                        </div>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
 
     </div>
 
