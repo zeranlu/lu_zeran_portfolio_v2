@@ -1,54 +1,71 @@
 <template>
-    <div class="inspiration&references content-con">
+    <div class="inspiration-references content-con">
+
         <h2>Inspirational References</h2>
 
-        <ul class="reference-counter">
-            <li>
-                &#9679
-            </li>
-            <li>
-                &#9679
-            </li>
-            <li>
-                &#9679
-            </li>
-        </ul>
+        <div class="reference-counter-con">
 
-        <p> {{ caseStudyInfo.proj_inspiration }} </p>
+            <ul class="reference-counter">
+
+                <li class="reference-counter-li"
+                    v-for="reference in caseStudyInfo.references"
+                    :key="reference.proj_reference_id">
+
+                    <a>
+
+                        {{ reference.proj_reference_id }}
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
 
         <div class="reference-cards-con">
             
-            <div class="reference-card">
-                <h4>Reference 1</h4>
+            <ul class="reference-card-list">
 
-                <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
+                <li class="reference-card-li"
+                    v-for="reference in caseStudyInfo.references"
+                    :key="reference.proj_reference_id">
 
-                <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
+                    <a class="reference-card-a">
 
-                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.proj_name}`">
-            </div>
+                        {{ reference.proj_reference }}
 
-            <div class="reference-card">
-                <h4>Reference 2</h4>
+                        <img :src="reference.proj_reference_thumbnail" :alt="`Reference image 1 for ${reference.proj_reference}`">
 
-                <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
+                    </a>
 
-                <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
+                    <div
+                        v-for="detail in reference.details"
+                        :key="detail.proj_reference_id">
 
-                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.proj_name}`">
-            </div>
+                        {{ detail.proj_reference_link }}
 
-            <div class="reference-card">
-                <h4>Reference 3</h4>
-                
-                <p>This project was inspired by: {{ caseStudyInfo.proj_reference_link }}</p>
+                        <br>
+                        <br>
 
-                <p>{{ caseStudyInfo.proj_reference_explanation }}</p>
+                        {{ detail.proj_reference_explanation }}
 
-                <img :src="caseStudyInfo.proj_inspiration_img_1" :alt="`Reference image 1 for ${caseStudyInfo.proj_name}`">
-            </div>
+                        <br>
+                        <br>
+
+                        {{ detail.proj_reference_video_link }}
+
+                        <br>
+                        <br>
+
+                    </div>
+
+                </li>
+
+            </ul>
 
         </div>
+
     </div>
 </template>
 
