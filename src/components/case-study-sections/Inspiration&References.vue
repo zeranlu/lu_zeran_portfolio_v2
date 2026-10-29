@@ -1,5 +1,6 @@
 <template>
-    <div class="inspiration&references content-con">
+    <div class="inspiration-references content-con">
+
         <h2>Inspirational References</h2>
 
         <div class="reference-counter-con">

@@ -1,6 +1,7 @@
 <template>
     
     <div class="project-highlights content-con">
+        
         <h2>Project Highlights</h2>
 
         <h3>{{ caseStudyInfo.project_name }}</h3>
