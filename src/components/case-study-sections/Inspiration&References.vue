@@ -9,7 +9,7 @@
 
                 <li class="reference-counter-li"
                     v-for="reference in caseStudyInfo.references"
-                    :key="reference.case_study_id">
+                    :key="reference.proj_reference_id">
 
                     <a>
 
@@ -29,7 +29,7 @@
 
                 <li class="reference-card-li"
                     v-for="reference in caseStudyInfo.references"
-                    :key="reference.case_study_id">
+                    :key="reference.proj_reference_id">
 
                     <a class="reference-card-a">
 
