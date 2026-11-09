@@ -50,16 +50,16 @@ button {
   display: none;
 }
 
-.clickable-anchor {
+.clickable-button {
   display: inline-block;
   color: #333;
   cursor: pointer;
   transition: 0.1s ease;
 }
-.clickable-anchor:hover {
+.clickable-button:hover {
   transform: scale(105%);
 }
-.clickable-anchor:active {
+.clickable-button:active {
   transform: scale(100%);
 }
 

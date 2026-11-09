@@ -15,13 +15,13 @@
                 <li class="proj-highlights-li"
                     v-for="highlight in caseStudyInfo.highlights"
                     :key="highlight.proj_highlight_id">
-                    <a class="proj-highlights-a clickable-anchor">
+                    <button class="proj-highlights-a clickable-button">
                         {{ highlight.proj_highlight }}
 
                         <p class="hidden-text">
                             {{ highlight.proj_highlight_summary }}
                         </p>
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>

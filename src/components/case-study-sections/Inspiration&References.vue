@@ -8,9 +8,9 @@
                 <li class="reference-counter-li"
                     v-for="reference in caseStudyInfo.references"
                     :key="reference.proj_reference_id">
-                    <a class="clickable-anchor">
+                    <button class="clickable-button">
                         {{ reference.proj_reference_id }}
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -20,11 +20,11 @@
                 <li class="reference-card-li"
                     v-for="reference in caseStudyInfo.references"
                     :key="reference.proj_reference_id">
-                    <a class="reference-card-a clickable-anchor">
+                    <button class="reference-card-a clickable-button">
                         {{ reference.proj_reference }}
 
                         <img :src="reference.proj_reference_thumbnail" :alt="`Reference image 1 for ${reference.proj_reference}`">
-                    </a>
+                    </button>
 
                     <div
                         v-for="detail in reference.details"

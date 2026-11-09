@@ -16,10 +16,10 @@
                     <li class="project-specs-li"
                         v-for="spec in caseStudyInfo.specs"
                         :key="spec.proj_spec_id">
-                        <a class="clickable-anchor">
+                        <button class="clickable-button">
                             {{ spec.proj_spec }}
                             <p class="hidden-text">{{ spec.proj_spec_expanded }}</p>
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -31,10 +31,10 @@
                     <li class="personal-goals-li"
                         v-for="goal in caseStudyInfo.goals"
                         :key="goal.personal_goal_id">
-                        <a class="clickable-anchor">
+                        <button class="clickable-button">
                             {{ goal.personal_goal }}
                             <p class="hidden-text">{{ goal.personal_goal_expanded }}</p>
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </div>
