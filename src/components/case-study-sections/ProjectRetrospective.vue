@@ -16,7 +16,7 @@
                         v-for="metric in caseStudyInfo.metrics"
                         :key="metric.success_metric_id">
                         <a>
-                            {{ metric.proj_metric }}
+                            <span v-html="metric.proj_metric"></span>
                             <p class="hidden-text">{{ metric.proj_metric_expanded }}</p>
                         </a>
                     </li>
