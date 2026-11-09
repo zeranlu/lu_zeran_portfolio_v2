@@ -1,3 +1,28 @@
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.hidden-text {
+  display: none;
+}
+
+.num-highlight {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   padding: 0;
