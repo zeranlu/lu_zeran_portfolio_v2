@@ -8,37 +8,62 @@
 
         <div v-if="error">{{ error }}</div>
 
-        <section class="case-study-section" v-if="!isLoading && !error &&caseStudyInfo">
+        <section class="case-study-section" v-if="!isLoading && !error && caseStudyInfo">
 
-            <BreakPoints :breakPoint="breakPoints[0]" />
+            <template
+                v-if="caseStudyInfo.goals.length || caseStudyInfo.specs.length">
 
-            <div class="parallax-con">
-                <ProjectBeginnings :caseStudyInfo="caseStudyInfo" />
-            </div>
+                <BreakPoints :breakPoint="breakPoints[0]" />
 
-            <BreakPoints :breakPoint="breakPoints[1]" />
+                <div class="parallax-con">
+                    <ProjectBeginnings :caseStudyInfo="caseStudyInfo" />
+                </div>
 
-            <div class="parallax-con">
-                <InspirationAndReferences :caseStudyInfo="caseStudyInfo" />
-            </div>
+            </template>
 
-            <BreakPoints :breakPoint="breakPoints[2]" />
-            
-            <div class="parallax-con">
-                <ProjectHighlights :caseStudyInfo="caseStudyInfo" />
-            </div>
+            <template
+                v-if="caseStudyInfo.references.length">
 
-            <BreakPoints :breakPoint="breakPoints[3]" />
+                <BreakPoints :breakPoint="breakPoints[1]" />
 
-            <div class="parallax-con">
-                <StrategicLimitations :caseStudyInfo="caseStudyInfo" />
-            </div>
+                <div class="parallax-con">
+                    <InspirationAndReferences :caseStudyInfo="caseStudyInfo" />
+                </div>
 
-            <BreakPoints :breakPoint="breakPoints[4]" />
+            </template>
 
-            <div class="parallax-con">
-                <ProjectRetrospective :caseStudyInfo="caseStudyInfo" />
-            </div>
+            <template
+                v-if="caseStudyInfo.highlights.length">
+
+                <BreakPoints :breakPoint="breakPoints[2]" />
+                
+                <div class="parallax-con">
+                    <ProjectHighlights :caseStudyInfo="caseStudyInfo" />
+                </div>
+
+            </template>
+
+            <template
+                v-if="caseStudyInfo.limitations.length">
+
+                <BreakPoints :breakPoint="breakPoints[3]" />
+
+                <div class="parallax-con">
+                    <StrategicLimitations :caseStudyInfo="caseStudyInfo" />
+                </div>
+
+            </template>
+
+            <template
+                v-if="caseStudyInfo.retrospective || caseStudyInfo.metrics.length || caseStudyInfo.criticisms.length">
+    
+                <BreakPoints :breakPoint="breakPoints[4]" />
+
+                <div class="parallax-con">
+                    <ProjectRetrospective :caseStudyInfo="caseStudyInfo" />
+                </div>
+                
+            </template>
 
             <BreakPoints :breakPoint="breakPoints[5]" />
 

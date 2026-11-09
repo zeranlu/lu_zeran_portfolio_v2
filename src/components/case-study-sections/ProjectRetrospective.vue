@@ -3,72 +3,39 @@
 
         <h2>Project Retrospective</h2>
 
-        <p>{{ caseStudyInfo.proj_result }}</p>
+        <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
-        <div class="project-retrospective-list-con">
+        <div class="project-retrospective-lists">
 
-            <div class="project-specs-retro">
+            <div class="project-retro-list-con">
                 
-                <h4>Project Specs</h4>
-
-                <p>5/5</p>
-
-                <h4>Success Metrics</h4>
+                <h3>Success Metrics</h3>
                 
-                <ul>
-
-                    <li>
-                        <a>Metric #1</a>
-
-                        <p class="metric-explanation hidden">Description for Metric #1, expanded information upon clicking on the metric. Highlight the whole text box and contrast the text colours with the background.</p>
+                <ul class="project-retro-list-ul">
+                    <li class="project-retro-list-li"
+                        v-for="metric in caseStudyInfo.metrics"
+                        :key="metric.success_metric_id">
+                        <a>
+                            {{ metric.proj_metric }}
+                            <p class="hidden-text">{{ metric.proj_metric_expanded }}</p>
+                        </a>
                     </li>
-                     <li>
-                        <a>Metric #2</a>
-
-                        <p class="metric-explanation hidden">Description for Metric #2, expanded information upon clicking on the metric. Highlight the whole text box and contrast the text colours with the background.</p>
-                    </li>
-                     <li>
-                        <a>Metric #3</a>
-
-                        <p class="metric-explanation hidden">Description for Metric #3, expanded information upon clicking on the metric. Highlight the whole text box and contrast the text colours with the background.</p>
-                    </li>
-                    
                 </ul>
-
-                <p>Summary of project success and triumphs. Overall satisfaction with the project and general reflection.</p>
-
             </div>
 
-            <div class="personal-goals-retro">
-
-                <h4>Personal Goals</h4>
-
-                <p>5/5</p>
-
-                <h4>Success Metrics</h4>
-
-                <ul>
-
-                    <li>
-                        <a>Metric #1</a>
-
-                        <p class="metric-explanation hidden">Description for Metric #1, expanded information upon clicking on the metric. Highlight the whole text box and contrast the text colours with the background.</p>
+            <div class="project-retro-list-con">
+                <h3>Project Criticism</h3>
+                
+                <ul class="project-retro-list-ul">
+                    <li class="project-retro-list-li"
+                        v-for="criticism in caseStudyInfo.criticisms"
+                        :key="criticism.proj_criticism_id">
+                        <a>
+                            {{ criticism.proj_criticism }}
+                            <p class="hidden-text">{{ criticism.proj_criticism_expanded }}</p>
+                        </a>
                     </li>
-                     <li>
-                        <a>Metric #2</a>
-
-                        <p class="metric-explanation hidden">Description for Metric #2, expanded information upon clicking on the metric. Highlight the whole text box and contrast the text colours with the background.</p>
-                    </li>
-                     <li>
-                        <a>Metric #3</a>
-
-                        <p class="metric-explanation hidden">Description for Metric #3, expanded information upon clicking on the metric. Highlight the whole text box and contrast the text colours with the background.</p>
-                    </li>
-                    
                 </ul>
-
-                <p>Summary of project success and triumphs. Overall satisfaction with the project and general reflection.</p>
-
             </div>
 
         </div>
@@ -83,4 +50,5 @@
 </script>
 
 <style scoped lang="scss">
+
 </style>
