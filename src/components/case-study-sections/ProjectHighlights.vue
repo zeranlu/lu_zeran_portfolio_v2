@@ -18,13 +18,9 @@
                     <a class="proj-highlights-a clickable-anchor">
                         {{ highlight.proj_highlight }}
 
-                        <div>
+                        <p class="hidden-text">
                             {{ highlight.proj_highlight_summary }}
-
-                            {{ highlight.proj_highlight_start }}
-
-                            {{ highlight.proj_highlight_end }}
-                        </div>
+                        </p>
                     </a>
                 </li>
             </ul>

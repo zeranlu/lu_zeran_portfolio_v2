@@ -13,7 +13,7 @@
                     <li class="project-retro-list-li"
                         v-for="metric in caseStudyInfo.metrics"
                         :key="metric.success_metric_id">
-                        <a class="clickable-anchor">
+                        <a>
                             <span v-html="metric.proj_metric"></span>
                             <p class="hidden-text">{{ metric.proj_metric_expanded }}</p>
                         </a>
