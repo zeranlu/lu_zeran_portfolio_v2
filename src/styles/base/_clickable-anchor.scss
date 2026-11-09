@@ -1,0 +1,16 @@
+@use '../abstracts' as a;
+
+.clickable-anchor {
+    display: inline-block;
+    color: a.$color3;
+    cursor: pointer;
+    transition: a.$transition;
+
+    &:hover {
+        transform: a.$scale-up;
+    }
+
+    &:active {
+        transform: a.$scale-down;
+    }
+}
