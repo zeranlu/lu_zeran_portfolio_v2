@@ -52,9 +52,5 @@
 </script>
 
 <style scoped lang="scss">
-
-    .hidden-text {
-        display: none;
-    }
     
 </style>
