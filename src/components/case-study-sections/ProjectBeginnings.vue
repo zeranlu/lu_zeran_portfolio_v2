@@ -9,7 +9,6 @@
         </div>
 
         <div class="project-beginning-lists-con">
-
             <div class="project-beginning-list-wrapper" id="project-specs">
                 <h4>Project Specs</h4>
 
@@ -17,7 +16,7 @@
                     <li class="project-specs-li"
                         v-for="spec in caseStudyInfo.specs"
                         :key="spec.proj_spec_id">
-                        <a>
+                        <a class="clickable-anchor">
                             {{ spec.proj_spec }}
                             <p class="hidden-text">{{ spec.proj_spec_expanded }}</p>
                         </a>
@@ -32,14 +31,13 @@
                     <li class="personal-goals-li"
                         v-for="goal in caseStudyInfo.goals"
                         :key="goal.personal_goal_id">
-                        <a>
+                        <a class="clickable-anchor">
                             {{ goal.personal_goal }}
                             <p class="hidden-text">{{ goal.personal_goal_expanded }}</p>
                         </a>
                     </li>
                 </ul>
             </div>
-
         </div>
     </div>
 
