@@ -3,7 +3,7 @@
 
         <h2>Project Retrospective</h2>
 
-        <p>{{ caseStudyInfo.proj_result }}</p>
+        <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
         <div class="project-retrospective-list-con">
 
