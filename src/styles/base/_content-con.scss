@@ -1,0 +1,6 @@
+@use '../abstracts' as a;
+
+.content-con {
+    background-color: a.$color5;
+    margin: 2rem;
+}

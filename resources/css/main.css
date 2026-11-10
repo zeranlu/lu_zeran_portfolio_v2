@@ -63,6 +63,16 @@ button {
   transform: scale(100%);
 }
 
+.parallax-con {
+  will-change: transform;
+  background-color: red;
+}
+
+.content-con {
+  background-color: #999;
+  margin: 2rem;
+}
+
 header {
   z-index: 1000;
   position: fixed;
@@ -252,17 +262,6 @@ header.slideUp {
     font-size: 1rem;
   }
 }
-body {
-  background-image: url(@/assets/images/bg-pattern-vector.svg);
-  background-repeat: repeat;
-  background-size: 2500px;
-}
-
-.content-con {
-  background-color: #999;
-  margin: 5%;
-}
-
 .highlight {
   color: #333;
   position: relative;

@@ -146,10 +146,6 @@
 
 <style lang="scss">
     @use "../styles/abstracts" as a;
-
-    .parallax-con {
-        will-change: transform;
-    }
     
     .case-study-img-con {
         width: 80%;
