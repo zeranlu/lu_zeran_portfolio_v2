@@ -55,6 +55,9 @@ button {
   display: inline-block;
   color: #333;
   cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transform-origin: left;
   transition: 0.1s ease;
 }
 .case-study-button:hover {
@@ -280,4 +283,35 @@ header.slideUp {
 }
 .highlight:hover::after {
   width: 100%;
+}
+
+.case-study-lists-con {
+  background-color: red;
+  margin: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5%;
+}
+
+.case-study-list-wrapper {
+  background-color: blue;
+  border: 2px solid black;
+  margin: 5%;
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+}
+
+.case-study-list-ul {
+  background-color: green;
+  margin: 5%;
+}
+
+.case-study-list-li {
+  background-color: yellow;
+  margin: 5%;
+}
+
+.case-study-h4 {
+  margin: 1rem;
 }/*# sourceMappingURL=main.css.map */
