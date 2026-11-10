@@ -15,7 +15,8 @@ p {
 }
 
 .hidden-text {
-  display: none;
+  display: block;
+  text-align: left;
 }
 
 .num-highlight {

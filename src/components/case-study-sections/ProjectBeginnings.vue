@@ -16,9 +16,11 @@
                     <li class="case-study-list-li"
                         v-for="spec in caseStudyInfo.specs"
                         :key="spec.proj_spec_id">
-                        <button class="case-study-button">
+                        <button class="case-study-button"
+                            @click="spec.open = !spec.open">
                             {{ spec.proj_spec }}
-                            <p class="hidden-text">{{ spec.proj_spec_expanded }}</p>
+                            <span class="hidden-text"
+                                v-show="spec.open">{{ spec.proj_spec_expanded }}</span>
                         </button>
                     </li>
                 </ul>
@@ -31,9 +33,11 @@
                     <li class="case-study-list-li"
                         v-for="goal in caseStudyInfo.goals"
                         :key="goal.personal_goal_id">
-                        <button class="case-study-button">
+                        <button class="case-study-button"
+                            @click="goal.open = !goal.open">
                             {{ goal.personal_goal }}
-                            <p class="hidden-text">{{ goal.personal_goal_expanded }}</p>
+                            <span class="hidden-text"
+                                v-show="goal.open">{{ goal.personal_goal_expanded }}</span>
                         </button>
                     </li>
                 </ul>
@@ -47,6 +51,8 @@
     defineProps({
         caseStudyInfo: Object
     })
+
+
 </script>
 
 <style scoped lang="scss">
