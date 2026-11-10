@@ -5,6 +5,8 @@
     color: a.$color3;
     cursor: pointer;
     transition: a.$transition;
+    text-align: left;
+    width: 100%;
 
     &:hover {
         transform: a.$scale-up;
