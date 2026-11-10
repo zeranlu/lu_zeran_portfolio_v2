@@ -16,7 +16,7 @@
                     <li class="project-specs-li"
                         v-for="spec in caseStudyInfo.specs"
                         :key="spec.proj_spec_id">
-                        <button class="clickable-button">
+                        <button class="case-study-button">
                             {{ spec.proj_spec }}
                             <p class="hidden-text">{{ spec.proj_spec_expanded }}</p>
                         </button>
@@ -31,7 +31,7 @@
                     <li class="personal-goals-li"
                         v-for="goal in caseStudyInfo.goals"
                         :key="goal.personal_goal_id">
-                        <button class="clickable-button">
+                        <button class="case-study-button">
                             {{ goal.personal_goal }}
                             <p class="hidden-text">{{ goal.personal_goal_expanded }}</p>
                         </button>

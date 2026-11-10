@@ -15,7 +15,7 @@
                 <li class="proj-highlights-li"
                     v-for="highlight in caseStudyInfo.highlights"
                     :key="highlight.proj_highlight_id">
-                    <button class="proj-highlights-a clickable-button">
+                    <button class="proj-highlights-a case-study-button">
                         {{ highlight.proj_highlight }}
 
                         <p class="hidden-text">

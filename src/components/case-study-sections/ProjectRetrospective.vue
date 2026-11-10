@@ -28,7 +28,7 @@
                     <li class="project-retro-list-li"
                         v-for="criticism in caseStudyInfo.criticisms"
                         :key="criticism.proj_criticism_id">
-                        <button class="clickable-button">
+                        <button class="case-study-button">
                             {{ criticism.proj_criticism }}
                             <p class="hidden-text">{{ criticism.proj_criticism_expanded }}</p>
                         </button>
