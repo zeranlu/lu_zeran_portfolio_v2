@@ -1,0 +1,7 @@
+@use '../abstracts' as a;
+
+.parallax-con {
+    will-change: transform;
+    
+    background-color: red;
+}

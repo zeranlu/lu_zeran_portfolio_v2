@@ -6,9 +6,7 @@
         <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
         <div class="project-retrospective-lists">
-
             <div class="project-retro-list-con">
-                
                 <h3>Success Metrics</h3>
                 
                 <ul class="project-retro-list-ul">
@@ -30,16 +28,14 @@
                     <li class="project-retro-list-li"
                         v-for="criticism in caseStudyInfo.criticisms"
                         :key="criticism.proj_criticism_id">
-                        <a>
+                        <button class="case-study-button">
                             {{ criticism.proj_criticism }}
                             <p class="hidden-text">{{ criticism.proj_criticism_expanded }}</p>
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </div>
-
         </div>
-
     </div>
 </template>
 

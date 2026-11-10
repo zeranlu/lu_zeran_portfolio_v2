@@ -1,0 +1,21 @@
+@use '../abstracts' as a;
+
+.case-study-button {
+    display: inline-block;
+    color: a.$color3;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    
+    transform-origin: left;
+    transition: a.$transition;
+
+    &:hover {
+        transform: a.$scale-up;
+    }
+
+    &:active {
+        transform: a.$scale-down;
+    }
+    
+}

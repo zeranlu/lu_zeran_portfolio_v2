@@ -1,5 +1,4 @@
 <template>
-    
     <div class="project-highlights content-con">
         
         <h2>Project Highlights</h2>
@@ -12,43 +11,21 @@
         </YouTubeEmbed>
 
         <div class="proj_highlights-con">
-
             <ul class="proj_highlights-ul">
-
                 <li class="proj-highlights-li"
                     v-for="highlight in caseStudyInfo.highlights"
                     :key="highlight.proj_highlight_id">
-
-                    <a class="proj-highlights-a">
-
+                    <button class="proj-highlights-a case-study-button">
                         {{ highlight.proj_highlight }}
 
-                        <div>
-
+                        <p class="hidden-text">
                             {{ highlight.proj_highlight_summary }}
-
-                            <br>
-                            <br>
-
-                            {{ highlight.proj_highlight_start }}
-
-                            <br>
-                            <br>
-
-                            {{ highlight.proj_highlight_end }}
-
-                        </div>
-
-                    </a>
-
+                        </p>
+                    </button>
                 </li>
-
             </ul>
-
         </div>
-
     </div>
-
 </template>
 
 <script setup>

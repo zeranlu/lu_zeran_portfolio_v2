@@ -4,42 +4,44 @@
 
         <h3>{{ caseStudyInfo.proj_name }}</h3>
 
-        <div class="project-beginning-imgcon">
+        <div class="project-beginning-img-con">
             <img :src="caseStudyInfo.proj_image_link_1" :alt="`Sketch images of ${caseStudyInfo.proj_name}`" class="hidden">
         </div>
 
-        <div class="project-beginning-lists-con">
+        <div class="case-study-lists-con">
+            <div class="case-study-list-wrapper" id="project-specs">
+                <h4 class="case-study-h4">Project Specs</h4>
 
-            <div class="project-beginning-list-wrapper" id="project-specs">
-                <h4>Project Specs</h4>
-
-                <ul class="project-specs-list">
-                    <li class="project-specs-li"
+                <ul class="case-study-list-ul">
+                    <li class="case-study-list-li"
                         v-for="spec in caseStudyInfo.specs"
                         :key="spec.proj_spec_id">
-                        <a>
+                        <button class="case-study-button"
+                            @click="spec.open = !spec.open">
                             {{ spec.proj_spec }}
-                            <p class="hidden-text">{{ spec.proj_spec_expanded }}</p>
-                        </a>
+                            <span class="hidden-text"
+                                v-show="spec.open">{{ spec.proj_spec_expanded }}</span>
+                        </button>
                     </li>
                 </ul>
             </div>
 
-            <div class="project-beginning-list-wrapper" id="personal-goals">
-                <h4>Personal Goals</h4>
+            <div class="case-study-list-wrapper" id="personal-goals">
+                <h4 class="case-study-h4">Personal Goals</h4>
 
-                <ul class="personal-goals-list">
-                    <li class="personal-goals-li"
+                <ul class="case-study-list-ul">
+                    <li class="case-study-list-li"
                         v-for="goal in caseStudyInfo.goals"
                         :key="goal.personal_goal_id">
-                        <a>
+                        <button class="case-study-button"
+                            @click="goal.open = !goal.open">
                             {{ goal.personal_goal }}
-                            <p class="hidden-text">{{ goal.personal_goal_expanded }}</p>
-                        </a>
+                            <span class="hidden-text"
+                                v-show="goal.open">{{ goal.personal_goal_expanded }}</span>
+                        </button>
                     </li>
                 </ul>
             </div>
-
         </div>
     </div>
 
@@ -49,8 +51,43 @@
     defineProps({
         caseStudyInfo: Object
     })
+
+
 </script>
 
 <style scoped lang="scss">
+
+.case-study-lists-con {
+    background-color: red;
+    margin: 5%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+}
+
+.case-study-list-wrapper {
+    background-color: blue;
+    border: 2px solid black;
+    margin: 5%;
+
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+}
+
+.case-study-list-ul {
+    background-color: green;
+    margin: 5%;
+}
+
+.case-study-list-li {
+    background-color: yellow;
+    margin: 5%;
+}
+
+.case-study-h4 {
+    margin: 1rem;
+}
     
 </style>

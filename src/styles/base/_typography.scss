@@ -1,24 +1,26 @@
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 2rem;
-}
-
-h4 {
     font-size: 1.75rem;
 }
 
-p {
+h4 {
     font-size: 1.5rem;
 }
 
+p {
+    font-size: 1rem;
+}
+
 .hidden-text {
-    display: none;
+    display: block;
+    text-align: left;
 }
 
 .num-highlight {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    color: red;
 }

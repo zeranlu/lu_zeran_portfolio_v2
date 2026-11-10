@@ -1,0 +1,15 @@
+.case-study-button {
+  display: inline-block;
+  color: #333;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transform-origin: left;
+  transition: 0.1s ease;
+}
+.case-study-button:hover {
+  transform: scale(105%);
+}
+.case-study-button:active {
+  transform: scale(100%);
+}/*# sourceMappingURL=case-study-button.css.map */
