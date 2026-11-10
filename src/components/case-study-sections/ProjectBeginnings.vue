@@ -57,10 +57,12 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
 }
 
 .case-study-list-wrapper {
     background-color: blue;
+    border: 2px solid black;
     margin: 5%;
 
     display: grid;
