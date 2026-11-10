@@ -2,9 +2,10 @@
   display: inline-block;
   color: #333;
   cursor: pointer;
-  transition: 0.1s ease;
   text-align: left;
   width: 100%;
+  transform-origin: left;
+  transition: 0.1s ease;
 }
 .case-study-button:hover {
   transform: scale(105%);
