@@ -50,16 +50,16 @@ button {
   display: none;
 }
 
-.clickable-button {
+.case-study-button {
   display: inline-block;
   color: #333;
   cursor: pointer;
   transition: 0.1s ease;
 }
-.clickable-button:hover {
+.case-study-button:hover {
   transform: scale(105%);
 }
-.clickable-button:active {
+.case-study-button:active {
   transform: scale(100%);
 }
 
