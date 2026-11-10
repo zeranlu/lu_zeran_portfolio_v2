@@ -10,7 +10,7 @@
 
         <div class="case-study-lists-con">
             <div class="case-study-list-wrapper" id="project-specs">
-                <h4>Project Specs</h4>
+                <h4 class="case-study-h4">Project Specs</h4>
 
                 <ul class="case-study-list-ul">
                     <li class="case-study-list-li"
@@ -25,10 +25,10 @@
             </div>
 
             <div class="case-study-list-wrapper" id="personal-goals">
-                <h4>Personal Goals</h4>
+                <h4 class="case-study-h4">Personal Goals</h4>
 
-                <ul class="personal-goals-list">
-                    <li class="personal-goals-li"
+                <ul class="case-study-list-ul">
+                    <li class="case-study-list-li"
                         v-for="goal in caseStudyInfo.goals"
                         :key="goal.personal_goal_id">
                         <button class="case-study-button">
@@ -55,18 +55,17 @@
     background-color: red;
     margin: 5%;
 
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .case-study-list-wrapper {
     background-color: blue;
     margin: 5%;
 
-    flex: 1;
-
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
 }
 
 .case-study-list-ul {
@@ -77,6 +76,10 @@
 .case-study-list-li {
     background-color: yellow;
     margin: 5%;
+}
+
+.case-study-h4 {
+    margin: 1rem;
 }
     
 </style>
