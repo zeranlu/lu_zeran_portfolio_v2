@@ -57,37 +57,4 @@
 
 <style scoped lang="scss">
 
-.case-study-lists-con {
-    background-color: red;
-    margin: 5%;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5%;
-}
-
-.case-study-list-wrapper {
-    background-color: blue;
-    border: 2px solid black;
-    margin: 5%;
-
-    display: grid;
-    grid-row: span 2;
-    grid-template-rows: subgrid;
-}
-
-.case-study-list-ul {
-    background-color: green;
-    margin: 5%;
-}
-
-.case-study-list-li {
-    background-color: yellow;
-    margin: 5%;
-}
-
-.case-study-h4 {
-    margin: 1rem;
-}
-    
 </style>

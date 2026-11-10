@@ -5,12 +5,12 @@
 
         <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
-        <div class="project-retrospective-lists">
-            <div class="project-retro-list-con">
-                <h3>Success Metrics</h3>
+        <div class="case-study-lists-con">
+            <div class="case-study-list-wrapper">
+                <h4 class="case-study-h4">Success Metrics</h4>
                 
-                <ul class="project-retro-list-ul">
-                    <li class="project-retro-list-li"
+                <ul class="case-study-list-ul">
+                    <li class="case-study-list-li"
                         v-for="metric in caseStudyInfo.metrics"
                         :key="metric.success_metric_id">
                         <a>
@@ -21,11 +21,11 @@
                 </ul>
             </div>
 
-            <div class="project-retro-list-con">
-                <h3>Project Criticism</h3>
-                
-                <ul class="project-retro-list-ul">
-                    <li class="project-retro-list-li"
+            <div class="case-study-list-wrapper">
+                <h4 class="case-study-h4">Project Criticism</h4>
+
+                <ul class="case-study-list-ul">
+                    <li class="case-study-list-li"
                         v-for="criticism in caseStudyInfo.criticisms"
                         :key="criticism.proj_criticism_id">
                         <button class="case-study-button">

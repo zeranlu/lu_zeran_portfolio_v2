@@ -15,29 +15,35 @@
             </ul>
         </div>
 
-        <div class="reference-cards-con">
-            <ul class="reference-card-list">
-                <li class="reference-card-li"
-                    v-for="reference in caseStudyInfo.references"
-                    :key="reference.proj_reference_id">
-                    <button class="reference-card-a case-study-button">
-                        {{ reference.proj_reference }}
+        <div class="case-study-lists-con">
+            <div class="case-study-list-wrapper">
 
-                        <img :src="reference.proj_reference_thumbnail" :alt="`Reference image 1 for ${reference.proj_reference}`">
-                    </button>
+                <h4 class="case-study-h4">Project Inspirations</h4>
 
-                    <div
-                        v-for="detail in reference.details"
-                        :key="detail.proj_reference_id">
-                        {{ detail.proj_reference_link }}
+                <ul class="case-study-list-ul">
+                    <li class="case-study-list-li"
+                        v-for="reference in caseStudyInfo.references"
+                        :key="reference.proj_reference_id">
+                        <button class="case-study-button">
+                            {{ reference.proj_reference }}
 
-                        {{ detail.proj_reference_explanation }}
+                            <img :src="reference.proj_reference_thumbnail" :alt="`Reference image 1 for ${reference.proj_reference}`">
+                        </button>
 
-                        {{ detail.proj_reference_video_link }}
-                    </div>
-                </li>
-            </ul>
+                        <div
+                            v-for="detail in reference.details"
+                            :key="detail.proj_reference_id">
+                            {{ detail.proj_reference_link }}
+
+                            {{ detail.proj_reference_explanation }}
+
+                            {{ detail.proj_reference_video_link }}
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
+
     </div>
 </template>
 
