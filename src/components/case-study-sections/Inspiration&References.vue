@@ -15,13 +15,13 @@
             </ul>
         </div>
 
-        <div class="case-study-lists-con">
-            <div class="case-study-list-wrapper">
+        <div class="case-study-lists-con" id="references-lists-con">
+            <div class="case-study-list-wrapper" id="references-list-wrapper">
 
                 <h4 class="case-study-h4">Project Inspirations</h4>
 
-                <ul class="case-study-list-ul">
-                    <li class="case-study-list-li"
+                <ul class="case-study-list-ul" id="references-list-ul">
+                    <li class="case-study-list-li" id="references-list-li"
                         v-for="reference in caseStudyInfo.references"
                         :key="reference.proj_reference_id">
                         <button class="case-study-button">
@@ -54,4 +54,16 @@
 </script>
 
 <style scoped lang="scss">
+
+    #references-lists-con {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #references-list-ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5%;
+        grid-column: 1 / -1;
+    }
+
 </style>
