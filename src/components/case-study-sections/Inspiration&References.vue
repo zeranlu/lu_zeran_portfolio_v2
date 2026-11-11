@@ -24,21 +24,27 @@
                     <li class="case-study-list-li" id="references-list-li"
                         v-for="reference in caseStudyInfo.references"
                         :key="reference.proj_reference_id">
-                        <button class="case-study-button">
+                        <button class="case-study-button"
+                            @click="reference.open = !reference.open">
                             {{ reference.proj_reference }}
 
-                            <img :src="reference.proj_reference_thumbnail" :alt="`Reference image 1 for ${reference.proj_reference}`">
+                            <img :src="reference.proj_reference_thumbnail" :alt="`Reference image 1 for ${reference.proj_reference}`"> 
+
+                            <span class="hidden-text"
+                            v-for="detail in reference.details"
+                            :key="detail.proj_reference_id"
+                            v-show="reference.open">
+
+                                {{ detail.
+                                proj_reference_link }}
+
+                                {{ detail.proj_reference_explanation }}
+
+                                {{ detail.proj_reference_video_link }}
+                            </span>
+
                         </button>
 
-                        <div
-                            v-for="detail in reference.details"
-                            :key="detail.proj_reference_id">
-                            {{ detail.proj_reference_link }}
-
-                            {{ detail.proj_reference_explanation }}
-
-                            {{ detail.proj_reference_video_link }}
-                        </div>
                     </li>
                 </ul>
             </div>
