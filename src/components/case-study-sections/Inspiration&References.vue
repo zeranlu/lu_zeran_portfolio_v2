@@ -15,8 +15,8 @@
             </ul>
         </div>
 
-        <div class="case-study-lists-con" id="references-lists-con">
-            <div class="case-study-list-wrapper" id="references-list-wrapper">
+        <div class="case-study-content-con" id="references-lists-con">
+            <div class="case-study-content-wrapper" id="references-list-wrapper">
 
                 <h4 class="case-study-h4">Project Inspirations</h4>
 

@@ -285,7 +285,7 @@ header.slideUp {
   width: 100%;
 }
 
-.case-study-lists-con {
+.case-study-content-con {
   background-color: red;
   margin: 5%;
   display: grid;
@@ -293,7 +293,7 @@ header.slideUp {
   column-gap: 5%;
 }
 
-.case-study-list-wrapper {
+.case-study-content-wrapper {
   background-color: blue;
   border: 2px solid black;
   margin: 5%;
@@ -317,7 +317,7 @@ header.slideUp {
 }
 
 @media (min-width: 768px) {
-  .case-study-lists-con {
+  .case-study-content-con {
     grid-template-columns: 1fr 1fr;
   }
 }/*# sourceMappingURL=main.css.map */
