@@ -5,8 +5,8 @@
 
         <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
-        <div class="case-study-lists-con">
-            <div class="case-study-list-wrapper">
+        <div class="case-study-content-con">
+            <div class="case-study-content-wrapper">
                 <h4 class="case-study-h4">Success Metrics</h4>
                 
                 <ul class="case-study-list-ul">
@@ -21,7 +21,7 @@
                 </ul>
             </div>
 
-            <div class="case-study-list-wrapper">
+            <div class="case-study-content-wrapper">
                 <h4 class="case-study-h4">Project Criticism</h4>
 
                 <ul class="case-study-list-ul">

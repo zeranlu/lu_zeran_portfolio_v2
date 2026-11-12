@@ -1,16 +1,16 @@
 @use '../abstracts' as a;
 
 
-.case-study-lists-con {
+.case-study-content-con {
     background-color: red;
     margin: 5%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 5%;
 }
 
-.case-study-list-wrapper {
+.case-study-content-wrapper {
     background-color: blue;
     border: 2px solid black;
     margin: 5%;
@@ -33,4 +33,9 @@
 .case-study-h4 {
     margin: 1rem;
 }
-    
+
+@media (min-width: 768px) {
+    .case-study-content-con {
+        grid-template-columns: 1fr 1fr;
+    }
+}
