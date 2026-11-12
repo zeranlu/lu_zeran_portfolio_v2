@@ -1,13 +1,9 @@
 <template>
     
-    <div class="youtube-embed-con">
-
-        <div class="youtube-embed">
-
+    <div class="video-player-con">
+        <div class="video-player-wrapper">
             <div ref="playerElement"></div>
-
         </div>
-
     </div>
 
 </template>
