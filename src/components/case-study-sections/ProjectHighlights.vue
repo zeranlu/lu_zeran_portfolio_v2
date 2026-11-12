@@ -24,7 +24,7 @@
                         v-for="highlight in caseStudyInfo.highlights"
                         :key="highlight.proj_highlight_id">
                         <button class="case-study-button"
-                            @click="highlight.open = !highlight.open">
+                            @click="highlight.open = !highlight.open; youTubeEmbedRef.seekTo(highlight.proj_highlight_start)">
                             {{ highlight.proj_highlight }}
                         </button>
                         
