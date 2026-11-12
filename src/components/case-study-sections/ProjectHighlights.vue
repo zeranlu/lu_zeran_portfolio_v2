@@ -3,27 +3,35 @@
         
         <h2>Project Highlights</h2>
 
-        <h3>{{ caseStudyInfo.proj_name }}</h3>
+        <div class="case-study-content-con">
+            <div class="case-study-content-wrapper">
+                <h4 class="case-study-h4">Scroll Through Video of {{ caseStudyInfo.proj_name }}</h4>
 
-        <YouTubeEmbed
-            :youTubeVideoId="caseStudyInfo.proj_video_id"
-            :youTubeTitle="`Youtube video of ${caseStudyInfo.proj_name}`">
-        </YouTubeEmbed>
+                <YouTubeEmbed
+                    :youTubeVideoId="caseStudyInfo.proj_video_id"
+                    :youTubeTitle="`Youtube video of ${caseStudyInfo.proj_name}`">
+                </YouTubeEmbed>
+            </div>
+        </div>
 
-        <div class="proj_highlights-con">
-            <ul class="proj_highlights-ul">
-                <li class="proj-highlights-li"
-                    v-for="highlight in caseStudyInfo.highlights"
-                    :key="highlight.proj_highlight_id">
-                    <button class="proj-highlights-a case-study-button">
-                        {{ highlight.proj_highlight }}
+        <div class="case-study-content-con">
+            <div class="case-study-content-wrapper">
+                <h4 class="case-study-h4">Project Highlights</h4>
 
-                        <p class="hidden-text">
-                            {{ highlight.proj_highlight_summary }}
-                        </p>
-                    </button>
-                </li>
-            </ul>
+                <ul class="case-study-list-ul">
+                    <li class="case-study-list-li"
+                        v-for="highlight in caseStudyInfo.highlights"
+                        :key="highlight.proj_highlight_id">
+                        <button class="case-study-button">
+                            {{ highlight.proj_highlight }}
+
+                            <p class="hidden-text">
+                                {{ highlight.proj_highlight_summary }}
+                            </p>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
