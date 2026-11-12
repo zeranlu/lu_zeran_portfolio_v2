@@ -30,13 +30,14 @@
 
                             <img :src="reference.proj_reference_thumbnail" :alt="`Reference image 1 for ${reference.proj_reference}`"> 
 
-                            <span class="hidden-text"
+                            <span class="reference-card-con hidden-text"
                             v-for="detail in reference.details"
                             :key="detail.proj_reference_id"
                             v-show="reference.open">
 
-                                {{ detail.
-                                proj_reference_link }}
+                                <div class="reference-card-box">
+                                    {{ detail.proj_reference_link }}
+                                </div>
 
                                 {{ detail.proj_reference_explanation }}
 
@@ -70,6 +71,17 @@
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 5%;
         grid-column: 1 / -1;
+    }
+
+    .reference-card-con {
+        background-color: magenta;
+        margin: 5%;
+    }
+
+    .reference-card-box {
+        background-color: pink;
+        margin: 5%;
+        display: flex;
     }
 
 </style>
