@@ -19,9 +19,11 @@
                         <button class="case-study-button"
                             @click="spec.open = !spec.open">
                             {{ spec.proj_spec }}
-                            <span class="hidden-text"
-                                v-show="spec.open">{{ spec.proj_spec_expanded }}</span>
                         </button>
+                        
+                        <span class="hidden-text"
+                            v-show="spec.open">{{ spec.proj_spec_expanded }}
+                        </span>
                     </li>
                 </ul>
             </div>

@@ -22,13 +22,15 @@
                     <li class="case-study-list-li"
                         v-for="highlight in caseStudyInfo.highlights"
                         :key="highlight.proj_highlight_id">
-                        <button class="case-study-button">
+                        <button class="case-study-button"
+                            @click="highlight.open = !highlight.open">
                             {{ highlight.proj_highlight }}
-
-                            <p class="hidden-text">
-                                {{ highlight.proj_highlight_summary }}
-                            </p>
                         </button>
+                        
+                        <span class="hidden-text"
+                            v-show="highlight.open">
+                            {{ highlight.proj_highlight_summary }}
+                        </span>
                     </li>
                 </ul>
             </div>
