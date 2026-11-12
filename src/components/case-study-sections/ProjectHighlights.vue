@@ -8,6 +8,7 @@
                 <h4 class="case-study-h4">Scroll Through Video of {{ caseStudyInfo.proj_name }}</h4>
 
                 <YouTubeEmbed
+                    ref="youTubeEmbedRef"
                     :youTubeVideoId="caseStudyInfo.proj_video_id"
                     :youTubeTitle="`Youtube video of ${caseStudyInfo.proj_name}`">
                 </YouTubeEmbed>
@@ -39,7 +40,7 @@
 </template>
 
 <script setup>
-    import { onMounted } from 'vue'
+    import { ref, onMounted } from 'vue'
     import { useYouTubeApi } from '@/composables/useYouTubeApi'
 
     import YouTubeEmbed from '@/components/case-study-sections/case-study-components/YouTubeEmbed.vue'
@@ -48,12 +49,15 @@
         caseStudyInfo: Object
     })
 
+    const youTubeEmbedRef = ref(null);
+
     const { loadYouTubeApi } = useYouTubeApi()
 
     onMounted(async () => {
         const YT = await loadYouTubeApi()
         console.log('YouTube Api ready:', YT)
     })
+
 </script>
 
 <style scoped lang="scss">
