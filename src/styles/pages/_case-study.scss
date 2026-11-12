@@ -6,7 +6,7 @@
     margin: 5%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 5%;
 }
 
@@ -33,4 +33,9 @@
 .case-study-h4 {
     margin: 1rem;
 }
-    
+
+@media (min-width: 768px) {
+    .case-study-lists-con {
+        grid-template-columns: 1fr 1fr;
+    }
+}

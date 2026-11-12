@@ -34,16 +34,14 @@
                             v-for="detail in reference.details"
                             :key="detail.proj_reference_id"
                             v-show="reference.open">
-
                                 <div class="reference-card-box">
                                     {{ detail.proj_reference_link }}
+                                    
+                                    {{ detail.proj_reference_explanation }}
+
+                                    {{ detail.proj_reference_video_link }}
                                 </div>
-
-                                {{ detail.proj_reference_explanation }}
-
-                                {{ detail.proj_reference_video_link }}
                             </span>
-
                         </button>
 
                     </li>
@@ -68,7 +66,7 @@
 
     #references-list-ul {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 5%;
         grid-column: 1 / -1;
     }
@@ -82,6 +80,18 @@
         background-color: pink;
         margin: 5%;
         display: flex;
+    }
+
+    @media (min-width: 768px) {
+        #references-list-ul {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        #references-list-ul {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 
 </style>
