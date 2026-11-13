@@ -3,9 +3,9 @@
         
         <h2>Project Highlights</h2>
 
-        <div class="case-study-content-con">
-            <div class="case-study-content-wrapper">
                 <h4 class="case-study-h4">Scroll Through Video of {{ caseStudyInfo.proj_name }}</h4>
+        <div class="case-study-content-con project-highlights-con">
+            <div class="case-study-content-wrapper project-highlights-wrapper">
 
                 <YouTubeEmbed
                     ref="youTubeEmbedRef"
@@ -61,4 +61,25 @@
 </script>
 
 <style scoped lang="scss">
+
+.project-highlights-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.video-chapters-con {
+    background-color: purple;
+    margin: 5%;
+}
+
+.video-chapters-wrapper {
+    background-color: indigo;
+    margin: 5%;
+}
+
+@media screen and (min-width: 768px) {
+    .project-highlights-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 </style>
