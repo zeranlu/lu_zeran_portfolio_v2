@@ -7,6 +7,7 @@
             <div class="case-study-content-wrapper project-highlights-wrapper">
 
                 <YouTubeEmbed
+                    class="youTubeEmbed-con"
                     ref="youTubeEmbedRef"
                     :youTubeVideoId="caseStudyInfo.proj_video_id"
                     :youTubeTitle="`Youtube video of ${caseStudyInfo.proj_name}`">
@@ -78,7 +79,17 @@
 
 @media screen and (min-width: 768px) {
     .project-highlights-wrapper {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .project-highlights-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .youTubeEmbed-con {
+        grid-column: span 3;
     }
 }
 </style>
