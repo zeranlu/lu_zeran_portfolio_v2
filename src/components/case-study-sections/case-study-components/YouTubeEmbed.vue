@@ -106,6 +106,11 @@
 
     width: 100%;
     aspect-ratio: 16 / 9;
+
+    :deep(iframe) {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 </style>
