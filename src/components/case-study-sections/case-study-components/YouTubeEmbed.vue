@@ -95,4 +95,14 @@
 
 <style scoped lang="scss">
 
+.video-player-con {
+    margin: 5%;
+    background-color: turquoise;
+}
+
+.video-player-wrapper {
+    background-color: maroon;
+    margin: 5%;
+}
+
 </style>
