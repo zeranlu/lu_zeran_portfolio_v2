@@ -13,9 +13,9 @@
                     :youTubeTitle="`Youtube video of ${caseStudyInfo.proj_name}`">
                 </YouTubeEmbed>
 
-                <div class="case-study-content-con">
-                    <div class="case-study-content-wrapper">
-                        <h4 class="case-study-h4">Project Highlights</h4>
+                <div class="video-chapters-con">
+                    <div class="video-chapters-wrapper">
+                        <h5 class="case-study-h4">Project Highlights</h5>
 
                         <ul class="case-study-list-ul">
                             <li class="case-study-list-li"
