@@ -12,28 +12,28 @@
                     :youTubeVideoId="caseStudyInfo.proj_video_id"
                     :youTubeTitle="`Youtube video of ${caseStudyInfo.proj_name}`">
                 </YouTubeEmbed>
-            </div>
-        </div>
 
-        <div class="case-study-content-con">
-            <div class="case-study-content-wrapper">
-                <h4 class="case-study-h4">Project Highlights</h4>
+                <div class="case-study-content-con">
+                    <div class="case-study-content-wrapper">
+                        <h4 class="case-study-h4">Project Highlights</h4>
 
-                <ul class="case-study-list-ul">
-                    <li class="case-study-list-li"
-                        v-for="highlight in caseStudyInfo.highlights"
-                        :key="highlight.proj_highlight_id">
-                        <button class="case-study-button"
-                            @click="highlight.open = !highlight.open; youTubeEmbedRef.seekTo(highlight.proj_highlight_start)">
-                            {{ highlight.proj_highlight }}
-                        </button>
-                        
-                        <span class="hidden-text"
-                            v-show="highlight.open">
-                            {{ highlight.proj_highlight_summary }}
-                        </span>
-                    </li>
-                </ul>
+                        <ul class="case-study-list-ul">
+                            <li class="case-study-list-li"
+                                v-for="highlight in caseStudyInfo.highlights"
+                                :key="highlight.proj_highlight_id">
+                                <button class="case-study-button"
+                                    @click="highlight.open = !highlight.open; youTubeEmbedRef.seekTo(highlight.proj_highlight_start)">
+                                    {{ highlight.proj_highlight }}
+                                </button>
+                                
+                                <span class="hidden-text"
+                                    v-show="highlight.open">
+                                    {{ highlight.proj_highlight_summary }}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
