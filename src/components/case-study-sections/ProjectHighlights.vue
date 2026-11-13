@@ -3,7 +3,6 @@
         
         <h2>Project Highlights</h2>
 
-                <h4 class="case-study-h4">Scroll Through Video of {{ caseStudyInfo.proj_name }}</h4>
         <div class="case-study-content-con project-highlights-con">
             <div class="case-study-content-wrapper project-highlights-wrapper">
 
@@ -15,7 +14,7 @@
 
                 <div class="video-chapters-con">
                     <div class="video-chapters-wrapper">
-                        <h5 class="case-study-h4">Project Highlights</h5>
+                        <h5>Project Highlights for {{ caseStudyInfo.proj_name }}</h5>
 
                         <ul class="case-study-list-ul">
                             <li class="case-study-list-li"
