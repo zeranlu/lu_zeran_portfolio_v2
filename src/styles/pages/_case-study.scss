@@ -1,23 +1,28 @@
 @use '../abstracts' as a;
 
-
-.case-study-content-con {
-    background-color: red;
-    margin: 5%;
-
+// Grid List Styles
+.grid-list-con {
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 5%;
+}
+
+.grid-list-wrapper {
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+}
+
+// Case Study Box Styles
+.case-study-content-con {
+    background-color: red;
+    margin: 5%;
 }
 
 .case-study-content-wrapper {
     background-color: blue;
     border: 2px solid black;
     margin: 5%;
-
-    display: grid;
-    grid-row: span 2;
-    grid-template-rows: subgrid;
 }
 
 .case-study-list-ul {
@@ -35,7 +40,7 @@
 }
 
 @media (min-width: 768px) {
-    .case-study-content-con {
+    .grid-list-con {
         grid-template-columns: 1fr 1fr;
     }
 }
