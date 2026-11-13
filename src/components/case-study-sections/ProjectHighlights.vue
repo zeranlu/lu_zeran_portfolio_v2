@@ -85,11 +85,15 @@
 
 @media screen and (min-width: 1024px) {
     .project-highlights-wrapper {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 
     .youTubeEmbed-con {
-        grid-column: span 3;
+        grid-column: span 4;
+    }
+
+    .video-chapters-con {
+        grid-column: span 2;
     }
 }
 </style>
