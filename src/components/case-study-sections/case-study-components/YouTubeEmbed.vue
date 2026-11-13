@@ -103,6 +103,9 @@
 .video-player-wrapper {
     background-color: maroon;
     margin: 5%;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 </style>
