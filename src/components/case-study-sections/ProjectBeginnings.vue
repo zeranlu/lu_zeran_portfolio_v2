@@ -8,8 +8,8 @@
             <img :src="caseStudyInfo.proj_image_link_1" :alt="`Sketch images of ${caseStudyInfo.proj_name}`" class="hidden">
         </div>
 
-        <div class="case-study-content-con">
-            <div class="case-study-content-wrapper" id="project-specs">
+        <div class="case-study-content-con grid-list-con">
+            <div class="case-study-content-wrapper grid-list-wrapper" id="project-specs">
                 <h4 class="case-study-h4">Project Specs</h4>
 
                 <ul class="case-study-list-ul">
@@ -28,7 +28,7 @@
                 </ul>
             </div>
 
-            <div class="case-study-content-wrapper" id="personal-goals">
+            <div class="case-study-content-wrapper grid-list-wrapper" id="personal-goals">
                 <h4 class="case-study-h4">Personal Goals</h4>
 
                 <ul class="case-study-list-ul">
