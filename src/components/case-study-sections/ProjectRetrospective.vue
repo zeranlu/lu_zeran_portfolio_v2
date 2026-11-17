@@ -3,13 +3,17 @@
 
         <h2>Project Retrospective</h2>
 
-        <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
-
         <div class="case-study-content-con">
             <div class="case-study-content-wrapper">
                 <h4 class="case-study-h4">Success Metrics</h4>
-                
-                <ul class="case-study-list-ul">
+
+                <ul class="case-study-list-ul">     
+                    <div>
+                        <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
+
+                        <p>{{ caseStudyInfo.retrospective.proj_link_github }}</p>
+                    </div>
+
                     <li class="case-study-list-li"
                         v-for="metric in caseStudyInfo.metrics"
                         :key="metric.success_metric_id">
@@ -22,6 +26,10 @@
 
             <div class="case-study-content-wrapper">
                 <h4 class="case-study-h4">Project Criticism</h4>
+
+                <div>
+                    <p>{{ caseStudyInfo.retrospective.proj_personal_review }}</p>
+                </div>
 
                 <ul class="case-study-list-ul">
                     <li class="case-study-list-li"
