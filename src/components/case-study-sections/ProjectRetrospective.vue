@@ -27,11 +27,11 @@
             <div class="case-study-content-wrapper">
                 <h4 class="case-study-h4">Project Criticism</h4>
 
-                <div>
-                    <p>{{ caseStudyInfo.retrospective.proj_personal_review }}</p>
-                </div>
-
                 <ul class="case-study-list-ul">
+                    <div>
+                        <p>{{ caseStudyInfo.retrospective.proj_personal_review }}</p>
+                    </div>
+                    
                     <li class="case-study-list-li"
                         v-for="criticism in caseStudyInfo.criticisms"
                         :key="criticism.proj_criticism_id">
