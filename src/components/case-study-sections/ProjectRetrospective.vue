@@ -16,7 +16,7 @@
         </a>
 
         <div class="case-study-content-con grid-list-con">
-            <div class="case-study-content-wrapper" grid-list-wrapper>
+            <div class="case-study-content-wrapper grid-list-wrapper">
                 <h4 class="case-study-h4">Project Specs</h4>
 
                 <ul class="case-study-list-ul">
@@ -28,8 +28,16 @@
                         </button>
                     </li>
 
-                    <h4 class="case-study-h4">Personal Goals</h4>
+                    <span>
+                        <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
+                    </span>
+                </ul>
+            </div>
 
+            <div class="case-study-content-wrapper grid-list-wrapper">
+                <h4 class="case-study-h4">Personal Goals</h4>
+
+                <ul class="case-study-list-ul">
                     <li class="case-study-list-li"
                         v-for="goal in caseStudyInfo.goals"
                         :key="goal.personal_goal_id">
@@ -38,14 +46,16 @@
                         </button>
                     </li>
                     
-                    <div>
+                    <span>
                         <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
+                    </span>
+                </ul>
+            </div>
 
-                        <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
-                    </div>
-                    
-                    <h4 class="case-study-h4">Success Metrics</h4>
-                    
+            <div class="case-study-content-wrapper">
+                <h4 class="case-study-h4">Success Metrics</h4>
+
+                <ul class="case-study-list-ul">
                     <li class="case-study-list-li"
                         v-for="metric in caseStudyInfo.metrics"
                         :key="metric.success_metric_id">
