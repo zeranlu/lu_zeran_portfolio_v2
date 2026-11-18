@@ -28,7 +28,7 @@
                         </button>
                     </li>
 
-                    <span>
+                    <span class="completion-box">
                         <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
                     </span>
                 </ul>
@@ -46,7 +46,7 @@
                         </button>
                     </li>
                     
-                    <span>
+                    <span class="completion-box">
                         <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
                     </span>
                 </ul>
