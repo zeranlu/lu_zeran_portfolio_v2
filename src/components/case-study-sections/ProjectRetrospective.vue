@@ -9,9 +9,9 @@
 
                 <ul class="case-study-list-ul">     
                     <div>
-                        <p>{{ goalsCompleted }}</p>
+                        <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
 
-                        <p>{{ specsCompleted }}</p>
+                        <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
 
                         <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
@@ -66,9 +66,18 @@
         return props.caseStudyInfo.goals.filter((goal) => Number(goal.personal_goal_completed) === 1).length
     })
 
+    const totalGoals = computed(() => {
+        return props.caseStudyInfo.goals.length
+    })
+
     const specsCompleted = computed(() => {
         return props.caseStudyInfo.specs.filter((spec) => Number(spec.proj_spec_completed) === 1).length
     })
+
+    const totalSpecs = computed(() => {
+        return props.caseStudyInfo.specs.length
+    })
+
 </script>
 
 <style scoped lang="scss">
