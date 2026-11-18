@@ -7,7 +7,17 @@
             <div class="case-study-content-wrapper">
                 <h4 class="case-study-h4">Success Metrics</h4>
 
-                <ul class="case-study-list-ul">     
+                <ul class="case-study-list-ul">
+                    <h4 class="case-study-h4">Project Specs</h4>
+
+                    <li class="case-study-list-li"
+                        v-for="spec in caseStudyInfo.specs"
+                        :key="spec.proj_spec_id">
+                        <button class="case-study-button">
+                            {{ spec.proj_spec }}
+                        </button>
+                    </li>
+                    
                     <div>
                         <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
 
