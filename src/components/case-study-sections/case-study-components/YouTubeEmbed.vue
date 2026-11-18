@@ -95,4 +95,22 @@
 
 <style scoped lang="scss">
 
+.video-player-con {
+    margin: 5%;
+    background-color: turquoise;
+}
+
+.video-player-wrapper {
+    background-color: maroon;
+    margin: 5%;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    :deep(iframe) {
+        width: 100%;
+        height: 100%;
+    }
+}
+
 </style>
