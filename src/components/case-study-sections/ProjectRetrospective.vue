@@ -31,7 +31,7 @@
                     <div>
                         <p>{{ caseStudyInfo.retrospective.proj_personal_review }}</p>
                     </div>
-                    
+
                     <li class="case-study-list-li"
                         v-for="criticism in caseStudyInfo.criticisms"
                         :key="criticism.proj_criticism_id">
@@ -52,8 +52,9 @@
 </template>
 
 <script setup>
-    defineProps({
     import { computed } from 'vue'
+
+    const props = defineProps({
         caseStudyInfo: Object
     })
 </script>
