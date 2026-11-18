@@ -27,17 +27,9 @@
                             {{ goal.personal_goal }}
                         </button>
                     </li>
-
-                    <div>
-                        <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
-
-                        <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
-
-                        <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
-
-                        <p>{{ caseStudyInfo.retrospective.proj_link_github }}</p>
-                    </div>
-
+                    
+                    <h4 class="case-study-h4">Success Metrics</h4>
+                    
                     <li class="case-study-list-li"
                         v-for="metric in caseStudyInfo.metrics"
                         :key="metric.success_metric_id">
@@ -45,6 +37,12 @@
                             <span v-html="metric.proj_metric"></span>
                         </a>
                     </li>
+
+                    <div>
+                        <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
+
+                        <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
+                    </div>
                 </ul>
             </div>
 
