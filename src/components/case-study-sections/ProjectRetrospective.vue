@@ -11,6 +11,8 @@
                     <div>
                         <p>{{ goalsCompleted }}</p>
 
+                        <p>{{ specsCompleted }}</p>
+
                         <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
                         <p>{{ caseStudyInfo.retrospective.proj_link_github }}</p>
@@ -62,6 +64,10 @@
 
     const goalsCompleted = computed(() => {
         return props.caseStudyInfo.goals.filter((goal) => Number(goal.personal_goal_completed) === 1).length
+    })
+
+    const specsCompleted = computed(() => {
+        return props.caseStudyInfo.specs.filter((spec) => Number(spec.proj_spec_completed) === 1).length
     })
 </script>
 
