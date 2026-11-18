@@ -10,6 +10,10 @@
                 <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
                 <a :href="caseStudyInfo.retrospective.proj_link_github">View the GitHub Repo Here</a>
+                <a :href="caseStudyInfo.retrospective.proj_link_github"
+                    v-if="caseStudyInfo.retrospective.proj_link_github">
+                    View the GitHub Repo Here
+                </a>
 
                 <ul class="case-study-list-ul">
                     <h4 class="case-study-h4">Project Specs</h4>
