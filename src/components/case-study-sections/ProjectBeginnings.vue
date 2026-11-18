@@ -38,10 +38,11 @@
                         <button class="case-study-button"
                             @click="goal.open = !goal.open">
                             {{ goal.personal_goal }}
-                            <span class="hidden-text"
-                                v-show="goal.open">{{ goal.personal_goal_expanded }}
-                            </span>
                         </button>
+
+                        <span class="hidden-text"
+                            v-show="goal.open">{{ goal.personal_goal_expanded }}
+                        </span>
                     </li>
                 </ul>
             </div>
