@@ -9,6 +9,8 @@
 
                 <ul class="case-study-list-ul">     
                     <div>
+                        <p>{{ goalsCompleted }}</p>
+
                         <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
                         <p>{{ caseStudyInfo.retrospective.proj_link_github }}</p>
