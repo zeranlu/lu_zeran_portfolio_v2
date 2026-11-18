@@ -3,25 +3,23 @@
 
         <h2>Project Retrospective</h2>
 
-        <div class="case-study-content-con">
-            <div class="case-study-content-wrapper">
-                <h4 class="case-study-h4">Project Review</h4>
-                
-                <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
+        <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
-                <a :href="caseStudyInfo.retrospective.proj_link_github"
-                    v-if="caseStudyInfo.retrospective.proj_link_github">
-                    View the GitHub Repo Here
-                </a>
+        <a :href="caseStudyInfo.retrospective.proj_link_github"
+            v-if="caseStudyInfo.retrospective.proj_link_github">
+            View the GitHub Repo Here
+        </a>
 
-                <a :href="caseStudyInfo.retrospective.proj_link_live"
-                    v-if="caseStudyInfo.retrospective.proj_link_live">
-                    View the Live Link Here
-                </a>
+        <a :href="caseStudyInfo.retrospective.proj_link_live"
+            v-if="caseStudyInfo.retrospective.proj_link_live">
+            View the Live Link Here
+        </a>
+
+        <div class="case-study-content-con grid-list-con">
+            <div class="case-study-content-wrapper" grid-list-wrapper>
+                <h4 class="case-study-h4">Project Specs</h4>
 
                 <ul class="case-study-list-ul">
-                    <h4 class="case-study-h4">Project Specs</h4>
-
                     <li class="case-study-list-li"
                         v-for="spec in caseStudyInfo.specs"
                         :key="spec.proj_spec_id">
@@ -40,6 +38,12 @@
                         </button>
                     </li>
                     
+                    <div>
+                        <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
+
+                        <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
+                    </div>
+                    
                     <h4 class="case-study-h4">Success Metrics</h4>
                     
                     <li class="case-study-list-li"
@@ -49,12 +53,6 @@
                             <span v-html="metric.proj_metric"></span>
                         </a>
                     </li>
-
-                    <div>
-                        <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
-
-                        <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
-                    </div>
                 </ul>
             </div>
 
