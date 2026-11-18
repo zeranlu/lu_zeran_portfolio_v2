@@ -5,7 +5,11 @@
 
         <div class="case-study-content-con">
             <div class="case-study-content-wrapper">
-                <h4 class="case-study-h4">Success Metrics</h4>
+                <h4 class="case-study-h4">Project Review</h4>
+                
+                <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
+
+                <a :href="caseStudyInfo.retrospective.proj_link_github">View the GitHub Repo Here</a>
 
                 <ul class="case-study-list-ul">
                     <h4 class="case-study-h4">Project Specs</h4>
