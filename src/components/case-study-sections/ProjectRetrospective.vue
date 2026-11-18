@@ -32,28 +32,9 @@
 </template>
 
 <script setup>
-    import { computed } from 'vue'
-
     const props = defineProps({
         caseStudyInfo: Object
     })
-
-    const goalsCompleted = computed(() => {
-        return props.caseStudyInfo.goals.filter((goal) => Number(goal.personal_goal_completed) === 1).length
-    })
-
-    const totalGoals = computed(() => {
-        return props.caseStudyInfo.goals.length
-    })
-
-    const specsCompleted = computed(() => {
-        return props.caseStudyInfo.specs.filter((spec) => Number(spec.proj_spec_completed) === 1).length
-    })
-
-    const totalSpecs = computed(() => {
-        return props.caseStudyInfo.specs.length
-    })
-
 </script>
 
 <style scoped lang="scss">
