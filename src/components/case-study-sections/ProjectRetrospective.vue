@@ -17,7 +17,17 @@
                             {{ spec.proj_spec }}
                         </button>
                     </li>
-                    
+
+                    <h4 class="case-study-h4">Personal Goals</h4>
+
+                    <li class="case-study-list-li"
+                        v-for="goal in caseStudyInfo.goals"
+                        :key="goal.personal_goal_id">
+                        <button class="case-study-button">
+                            {{ goal.personal_goal }}
+                        </button>
+                    </li>
+
                     <div>
                         <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
 
