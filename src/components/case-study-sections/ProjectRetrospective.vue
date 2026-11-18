@@ -3,53 +3,30 @@
 
         <h2>Project Retrospective</h2>
 
-        <a :href="caseStudyInfo.retrospective.proj_link_github"
-            v-if="caseStudyInfo.retrospective.proj_link_github">
-            View the GitHub Repo Here
-        </a>
+        <div class="case-study-content-wrapper">
+            <h4 class="case-study-h4">Success Metrics</h4>
 
-        <a :href="caseStudyInfo.retrospective.proj_link_live"
-            v-if="caseStudyInfo.retrospective.proj_link_live">
-            View the Live Link Here
-        </a>
+            <ul class="case-study-list-ul">
+                <li class="case-study-list-li"
+                    v-for="metric in caseStudyInfo.metrics"
+                    :key="metric.success_metric_id">
+                    <a>
+                        <span v-html="metric.proj_metric"></span>
+                    </a>
+                </li>
+            </ul>
+            
+            <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
+            
+            <a :href="caseStudyInfo.retrospective.proj_link_github"
+                v-if="caseStudyInfo.retrospective.proj_link_github">
+                View the GitHub Repo Here
+            </a>
 
-        <div class="case-study-content-con grid-list-con">
-            <div class="case-study-content-wrapper grid-list-wrapper">
-                <h4 class="case-study-h4">Project Specs</h4>
-
-                <ul class="case-study-list-ul">
-                    <li class="case-study-list-li"
-                        v-for="spec in caseStudyInfo.specs"
-                        :key="spec.proj_spec_id">
-                        <button class="case-study-button">
-                            {{ spec.proj_spec }}
-                        </button>
-                    </li>
-
-                    <span class="completion-box">
-                        <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
-                    </span>
-                </ul>
-            </div>
-
-            <div class="case-study-content-wrapper grid-list-wrapper">
-                <h4 class="case-study-h4">Personal Goals</h4>
-
-                <ul class="case-study-list-ul">
-                    <li class="case-study-list-li"
-                        v-for="goal in caseStudyInfo.goals"
-                        :key="goal.personal_goal_id">
-                        <button class="case-study-button">
-                            {{ goal.personal_goal }}
-                        </button>
-                    </li>
-                    
-                    <span class="completion-box">
-                        <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
-                    </span>
-                </ul>
-            </div>
-
+            <a :href="caseStudyInfo.retrospective.proj_link_live"
+                v-if="caseStudyInfo.retrospective.proj_link_live">
+                View the Live Link Here
+            </a>
         </div>
     </div>
 </template>
