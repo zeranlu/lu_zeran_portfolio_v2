@@ -53,6 +53,7 @@
 
 <script setup>
     defineProps({
+    import { computed } from 'vue'
         caseStudyInfo: Object
     })
 </script>
