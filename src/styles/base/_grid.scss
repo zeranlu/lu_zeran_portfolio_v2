@@ -1,1 +1,18 @@
 @use '../abstracts' as a;
+
+.grid-con {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (min-width: 768px) {
+    .grid-con {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid-con {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
