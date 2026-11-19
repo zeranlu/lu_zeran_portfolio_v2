@@ -8,8 +8,8 @@
             <img :src="caseStudyInfo.proj_image_link_1" :alt="`Sketch images of ${caseStudyInfo.proj_name}`" class="hidden">
         </div>
 
-        <div class="case-study-content-con grid-list-con">
-            <div class="case-study-content-wrapper grid-list-wrapper" id="project-specs">
+        <div class="case-study-content-con grid-con">
+            <div class="case-study-content-wrapper col-span-all m-col-span-3 l-col-span-6">
                 <h4 class="case-study-h4">Project Specs</h4>
 
                 <ul class="case-study-list-ul">
@@ -28,7 +28,7 @@
                 </ul>
             </div>
 
-            <div class="case-study-content-wrapper grid-list-wrapper" id="personal-goals">
+            <div class="case-study-content-wrapper col-span-all m-col-span-3 l-col-span-6">
                 <h4 class="case-study-h4">Personal Goals</h4>
 
                 <ul class="case-study-list-ul">
@@ -61,21 +61,21 @@
 
 <style scoped lang="scss">
 // Grid List Styles
-.grid-list-con {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 5%;
-}
+// .grid-list-con {
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     column-gap: 5%;
+// }
 
-.grid-list-wrapper {
-    display: grid;
-    grid-row: span 2;
-    grid-template-rows: subgrid;
-}
+// .grid-list-wrapper {
+//     display: grid;
+//     grid-row: span 2;
+//     grid-template-rows: subgrid;
+// }
 
-@media (min-width: 768px) {
-    .grid-list-con {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+// @media (min-width: 768px) {
+//     .grid-list-con {
+//         grid-template-columns: 1fr 1fr;
+//     }
+// }
 </style>
