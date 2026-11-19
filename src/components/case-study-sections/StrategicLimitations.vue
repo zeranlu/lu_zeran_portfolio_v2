@@ -95,32 +95,4 @@
 
 <style scoped lang="scss">
 
-.criticism-con {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-@media screen and (min-width: 768px) {
-    
-    .criticism-con {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .limitations-specs-goals-wrapper {
-        grid-column: span 3;
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .criticisms-wrapper {
-        grid-column: span 3;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .criticism-con {
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
 </style>
