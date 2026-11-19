@@ -13,7 +13,7 @@
             <template
                 v-if="caseStudyInfo.goals.length || caseStudyInfo.specs.length">
 
-                <BreakPoints :breakPoint="breakPoints[0]" />
+                <!-- <BreakPoints :breakPoint="breakPoints[0]" /> -->
 
                 <div class="parallax-con">
                     <ProjectBeginnings :caseStudyInfo="caseStudyInfo" />
@@ -24,7 +24,7 @@
             <template
                 v-if="caseStudyInfo.references.length">
 
-                <BreakPoints :breakPoint="breakPoints[1]" />
+                <!-- <BreakPoints :breakPoint="breakPoints[1]" /> -->
 
                 <div class="parallax-con">
                     <InspirationAndReferences :caseStudyInfo="caseStudyInfo" />
@@ -35,7 +35,7 @@
             <template
                 v-if="caseStudyInfo.highlights.length">
 
-                <BreakPoints :breakPoint="breakPoints[2]" />
+                <!-- <BreakPoints :breakPoint="breakPoints[2]" /> -->
                 
                 <div class="parallax-con">
                     <ProjectHighlights :caseStudyInfo="caseStudyInfo" />
@@ -44,9 +44,9 @@
             </template>
 
             <template
-                v-if="caseStudyInfo.limitations.length">
+                v-if="caseStudyInfo.retrospective || caseStudyInfo.criticisms.length || caseStudyInfo.goals.length || caseStudyInfo.specs.length">
 
-                <BreakPoints :breakPoint="breakPoints[3]" />
+                <!-- <BreakPoints :breakPoint="breakPoints[3]" /> -->
 
                 <div class="parallax-con">
                     <StrategicLimitations :caseStudyInfo="caseStudyInfo" />
@@ -55,9 +55,9 @@
             </template>
 
             <template
-                v-if="caseStudyInfo.retrospective || caseStudyInfo.metrics.length || caseStudyInfo.criticisms.length">
+                v-if="caseStudyInfo.retrospective || caseStudyInfo.metrics.length">
     
-                <BreakPoints :breakPoint="breakPoints[4]" />
+                <!-- <BreakPoints :breakPoint="breakPoints[4]" /> -->
 
                 <div class="parallax-con">
                     <ProjectRetrospective :caseStudyInfo="caseStudyInfo" />
@@ -65,7 +65,7 @@
                 
             </template>
 
-            <BreakPoints :breakPoint="breakPoints[5]" />
+            <!-- <BreakPoints :breakPoint="breakPoints[5]" /> -->
 
         </section>
     </div>
@@ -74,7 +74,7 @@
 <script setup>
     import { ref, onMounted, nextTick, watch, computed } from 'vue'
     import { useRoute } from 'vue-router'
-    import BreakPoints from '@/components/case-studies-page/BreakPoints.vue'
+    // import BreakPoints from '@/components/case-studies-page/BreakPoints.vue'
     import { useParallax } from '@/composables/useParallax'
 
     // IMPORTING CASE STUDY COMPONENTS

@@ -84,11 +84,11 @@
     $highlights = getRows($connection, "SELECT * FROM tbl_proj_highlights WHERE case_study_id = ? ORDER BY proj_highlight_order, proj_highlight_id", $id);
 
     // Project Limitation Queries
-    $limitations = getRows($connection, "SELECT * FROM tbl_strategic_limitations WHERE case_study_id = ?", $id);
+    // $limitations = getRows($connection, "SELECT * FROM tbl_strategic_limitations WHERE case_study_id = ?", $id);
 
-    forEach ($limitations as &$limitation) {
-        $limitation['details'] = getRows($connection, "SELECT * FROM tbl_strategic_limitations_details WHERE strategic_limitation_id = ?", $limitation['strategic_limitation_id']);
-    }
+    // forEach ($limitations as &$limitation) {
+    //     $limitation['details'] = getRows($connection, "SELECT * FROM tbl_strategic_limitations_details WHERE strategic_limitation_id = ?", $limitation['strategic_limitation_id']);
+    // }
 
     unset($limitation);
 
@@ -138,7 +138,7 @@
     $case_study['goals'] = $goals;
     $case_study['sketches'] = $sketches;
     $case_study['references'] = $references;
-    $case_study['limitations'] = $limitations;
+    // $case_study['limitations'] = $limitations;
     $case_study['highlights'] = $highlights;
     $case_study['retrospective'] = $retrospective;
     $case_study['metrics'] = $metrics;
