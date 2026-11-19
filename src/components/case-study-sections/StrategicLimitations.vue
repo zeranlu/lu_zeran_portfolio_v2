@@ -3,8 +3,8 @@
 
         <h2>Strategic Limitations</h2>
         
-        <div class="case-study-content-con grid-list-con grid-list-con-thirds">
-            <div class="case-study-content-wrapper grid-list-wrapper">
+        <div class="case-study-content-con grid-list-con-thirds">
+            <div class="case-study-content-wrapper">
                 <h4 class="case-study-h4">Project Specs</h4>
 
                 <ul class="case-study-list-ul">
@@ -22,7 +22,7 @@
                 </ul>
             </div>
 
-            <div class="case-study-content-wrapper grid-list-wrapper">
+            <div class="case-study-content-wrapper">
                 <h4 class="case-study-h4">Personal Goals</h4>
 
                 <ul class="case-study-list-ul">
@@ -40,7 +40,7 @@
                 </ul>
             </div>
 
-            <div class="case-study-content-wrapper grid-list-wrapper">
+            <div class="case-study-content-wrapper">
                 <h4 class="case-study-h4">Project Criticism</h4>
                 
                 <div>
