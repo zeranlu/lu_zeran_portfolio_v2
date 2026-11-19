@@ -44,7 +44,7 @@
             </template>
 
             <template
-                v-if="caseStudyInfo.retrospective || caseStudyInfo.metrics.length || caseStudyInfo.criticisms.length">
+                v-if="caseStudyInfo.retrospective || caseStudyInfo.criticisms.length || caseStudyInfo.goals.length || caseStudyInfo.specs.length">
 
                 <!-- <BreakPoints :breakPoint="breakPoints[3]" /> -->
 
@@ -55,7 +55,7 @@
             </template>
 
             <template
-                v-if="caseStudyInfo.retrospective">
+                v-if="caseStudyInfo.retrospective || caseStudyInfo.metrics.length">
     
                 <!-- <BreakPoints :breakPoint="breakPoints[4]" /> -->
 
