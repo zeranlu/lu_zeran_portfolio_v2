@@ -3,6 +3,9 @@
 .grid-con {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    
+    gap: 5%;
+    margin: 5%;
 }
 
 @media screen and (min-width: 768px) {
