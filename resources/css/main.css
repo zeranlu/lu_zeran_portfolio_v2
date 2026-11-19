@@ -58,7 +58,7 @@ button {
   margin: 5%;
 }
 
-.col-span-all {
+.col-span-full {
   grid-column: 1/-1;
 }
 

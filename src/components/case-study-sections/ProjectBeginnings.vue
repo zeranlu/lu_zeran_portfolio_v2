@@ -9,7 +9,7 @@
         </div>
 
         <div class="case-study-content-con grid-con">
-            <div class="case-study-content-wrapper col-span-all m-col-span-3 l-col-span-6">
+            <div class="case-study-content-wrapper col-span-full m-col-span-3 l-col-span-6">
                 <h4 class="case-study-h4">Project Specs</h4>
 
                 <ul class="case-study-list-ul">
@@ -28,7 +28,7 @@
                 </ul>
             </div>
 
-            <div class="case-study-content-wrapper col-span-all m-col-span-3 l-col-span-6">
+            <div class="case-study-content-wrapper col-span-full m-col-span-3 l-col-span-6">
                 <h4 class="case-study-h4">Personal Goals</h4>
 
                 <ul class="case-study-list-ul">
