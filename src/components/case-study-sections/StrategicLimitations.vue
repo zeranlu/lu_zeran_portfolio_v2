@@ -3,7 +3,7 @@
 
         <h2>Strategic Limitations</h2>
         
-        <div class="case-study-content-con grid-list-con">
+        <div class="case-study-content-con grid-list-con grid-list-con-thirds">
             <div class="case-study-content-wrapper grid-list-wrapper">
                 <h4 class="case-study-h4">Project Specs</h4>
 
@@ -92,4 +92,9 @@
 </script>
 
 <style scoped lang="scss">
+
+    .grid-list-con-thirds {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 </style>
