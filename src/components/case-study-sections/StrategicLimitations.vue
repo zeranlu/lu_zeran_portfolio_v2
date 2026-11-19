@@ -92,9 +92,16 @@
 </script>
 
 <style scoped lang="scss">
-
-    .grid-list-con-thirds {
-        grid-template-columns: 1fr 1fr 1fr;
+    @media screen and (min-width: 768px) {
+        
+        .grid-list-con-thirds {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
+    @media screen and (min-width: 1024px) {
+        .grid-list-con-thirds {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 </style>
