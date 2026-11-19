@@ -3,44 +3,46 @@
 
         <h2>Strategic Limitations</h2>
         
-        <div class="case-study-content-con grid-list-con-thirds">
-            <div class="case-study-content-wrapper">
-                <h4 class="case-study-h4">Project Specs</h4>
+        <div class="case-study-content-con criticism-con">
+            <div class="case-study-content-wrapper limitations-specs-goals-wrapper">
+                <div class="limitations-specs-wrapper">
+                    <h4 class="case-study-h4">Project Specs</h4>
 
-                <ul class="case-study-list-ul">
-                    <li class="case-study-list-li"
-                        v-for="spec in caseStudyInfo.specs"
-                        :key="spec.proj_spec_id">
-                        <button class="case-study-button">
-                            {{ spec.proj_spec }}
-                        </button>
-                    </li>
+                    <ul class="case-study-list-ul">
+                        <li class="case-study-list-li"
+                            v-for="spec in caseStudyInfo.specs"
+                            :key="spec.proj_spec_id">
+                            <button class="case-study-button">
+                                {{ spec.proj_spec }}
+                            </button>
+                        </li>
 
-                    <span class="completion-box">
-                        <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
-                    </span>
-                </ul>
+                        <span class="completion-box">
+                            <p>{{ specsCompleted }} / {{ totalSpecs }}</p>
+                        </span>
+                    </ul>
+                </div>
+
+                <div class="limitations-goals-wrapper">
+                    <h4 class="case-study-h4">Personal Goals</h4>
+
+                    <ul class="case-study-list-ul">
+                        <li class="case-study-list-li"
+                            v-for="goal in caseStudyInfo.goals"
+                            :key="goal.personal_goal_id">
+                            <button class="case-study-button">
+                                {{ goal.personal_goal }}
+                            </button>
+                        </li>
+                        
+                        <span class="completion-box">
+                            <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
+                        </span>
+                    </ul>
+                </div>
             </div>
 
-            <div class="case-study-content-wrapper">
-                <h4 class="case-study-h4">Personal Goals</h4>
-
-                <ul class="case-study-list-ul">
-                    <li class="case-study-list-li"
-                        v-for="goal in caseStudyInfo.goals"
-                        :key="goal.personal_goal_id">
-                        <button class="case-study-button">
-                            {{ goal.personal_goal }}
-                        </button>
-                    </li>
-                    
-                    <span class="completion-box">
-                        <p>{{ goalsCompleted }} / {{ totalGoals }}</p>
-                    </span>
-                </ul>
-            </div>
-
-            <div class="case-study-content-wrapper">
+            <div class="case-study-content-wrapper criticisms-wrapper">
                 <h4 class="case-study-h4">Project Criticism</h4>
                 
                 <div>
@@ -92,16 +94,33 @@
 </script>
 
 <style scoped lang="scss">
-    @media screen and (min-width: 768px) {
-        
-        .grid-list-con-thirds {
-            grid-template-columns: repeat(2, 1fr);
-        }
+
+.criticism-con {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .criticism-con {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .limitations-specs-goals-wrapper {
+        grid-column: span 3;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    @media screen and (min-width: 1024px) {
-        .grid-list-con-thirds {
-            grid-template-columns: repeat(3, 1fr);
-        }
+    .criticisms-wrapper {
+        grid-column: span 3;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    .criticism-con {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
 </style>
