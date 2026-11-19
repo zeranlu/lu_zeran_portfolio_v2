@@ -3,16 +3,17 @@
         
         <h2>Project Highlights</h2>
 
-        <div class="case-study-content-con">
-            <div class="case-study-content-wrapper">
-
+        <div class="case-study-content-con grid-con">
+            <div class="case-study-content-wrapper s-col-span-4 m-col-span-3 l-col-span-8">
                 <YouTubeEmbed
                     class="youTubeEmbed-con"
                     ref="youTubeEmbedRef"
                     :youTubeVideoId="caseStudyInfo.proj_video_id"
                     :youTubeTitle="`Youtube video of ${caseStudyInfo.proj_name}`">
                 </YouTubeEmbed>
+            </div>
 
+            <div class="case-study-content-wrapper s-col-span-4 m-col-span-3 l-col-span-4">
                 <div class="video-chapters-con">
                     <div class="video-chapters-wrapper">
                         <h5>Project Highlights for {{ caseStudyInfo.proj_name }}</h5>
