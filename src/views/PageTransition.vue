@@ -31,6 +31,8 @@ router.afterEach((to, from) => {
             panel.value.style.transition = '';
         }, { once: true });
 
+        panel.value.classList.remove('animate-center');
+        panel.value.classList.add('animate-out');
     })
 })
 </script>
