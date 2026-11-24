@@ -14,6 +14,8 @@ const router = useRouter();
 router.beforeEach((to, from) => {
     if (from === START_LOCATION) return;
     return new Promise((resolve) => {
+        panel.value.addEventListener('transitionend', resolve, {once: true});
+        panel.value.classList.add('animate-center');
     });
 });
 // const main = document.querySelector('main');
