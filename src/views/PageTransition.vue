@@ -6,7 +6,7 @@
 
 <script setup>
 import { useTemplateRef } from 'vue';
-import { useRouter } from 'vue-router';
+import { START_LOCATION, useRouter } from 'vue-router';
 
 const panel = useTemplateRef('panel');
 const router = useRouter();
