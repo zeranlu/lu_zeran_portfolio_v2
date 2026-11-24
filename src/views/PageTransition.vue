@@ -27,6 +27,7 @@ router.afterEach((to, from) => {
         panel.value.addEventListener('transitionend', () => {
             panel.value.style.transition = 'none';
             panel.value.classList.remove('animate-out');
+            panel.value.offsetHeight;
     })
 })
 </script>
