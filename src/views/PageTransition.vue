@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { useTemplateRef } from 'vue';
+import { useTemplateRef, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 
 const panel = useTemplateRef('panel');
