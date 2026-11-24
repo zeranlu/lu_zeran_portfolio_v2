@@ -24,6 +24,7 @@ router.afterEach((to, from) => {
     if (from.matched.length === 0) return;
 
     nextTick(() => {
+        panel.value.addEventListener('transitionend', () => {
     })
 })
 </script>
