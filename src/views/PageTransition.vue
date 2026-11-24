@@ -30,6 +30,7 @@ router.afterEach((to, from) => {
             panel.value.offsetHeight;
             panel.value.style.transition = '';
         }, { once: true });
+
     })
 })
 </script>
