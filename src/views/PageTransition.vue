@@ -19,6 +19,9 @@ router.beforeEach((to, from) => {
         panel.value.classList.add('animate-center');
     });
 });
+
+router.afterEach((to, from) => {
+})
 </script>
 
 <style scoped lang="scss">
