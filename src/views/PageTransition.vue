@@ -1,10 +1,12 @@
 <template>
-    <div class="transition-div">
+    <div ref="panel" class="transition-div">
 
     </div>
 </template>
 
 <script setup>
+import { useTemplateRef } from 'vue';
+const panel = useTemplateRef('panel');
 // const main = document.querySelector('main');
 // const links = [...document.querySelectorAll('a')];
 // const transitionDiv = document.querySelector('.transition-div');
