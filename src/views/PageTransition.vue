@@ -11,10 +11,10 @@ import { useRouter } from 'vue-router';
 const panel = useTemplateRef('panel');
 const router = useRouter();
 
-router.beforeEach((from) => {
+router.beforeEach((to, from) => {
     if (from.matched.length === 0) return;
 
-    return new Promise((to, resolve) => {
+    return new Promise((resolve) => {
         panel.value.addEventListener('transitionend', resolve, {once: true});
         panel.value.classList.add('animate-center');
     });
