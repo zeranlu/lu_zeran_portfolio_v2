@@ -50,7 +50,7 @@ const panel = useTemplateRef('panel');
     background-color: pink;
     z-index: 10;
 
-    transition: 1s;
+    transition: a.$transition;
     will-change: transform;
 
     transform: translateX(-100%);
