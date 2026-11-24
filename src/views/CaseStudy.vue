@@ -8,6 +8,8 @@
 
         <div v-if="error">{{ error }}</div>
 
+        <PageTransition />
+
         <section class="case-study-section" v-if="!isLoading && !error && caseStudyInfo">
 
             <template
@@ -78,6 +80,7 @@
     import { useParallax } from '@/composables/useParallax'
 
     // IMPORTING CASE STUDY COMPONENTS
+    import PageTransition from '@/views/PageTransition.vue'
     import ProjectBeginnings from '@/components/case-study-sections/ProjectBeginnings.vue'
     import InspirationAndReferences from '@/components/case-study-sections/Inspiration&References.vue'
     import ProjectHighlights from '@/components/case-study-sections/ProjectHighlights.vue'
