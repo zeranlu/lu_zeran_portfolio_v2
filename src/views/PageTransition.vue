@@ -22,6 +22,9 @@ router.beforeEach((to, from) => {
 
 router.afterEach((to, from) => {
     if (from.matched.length === 0) return;
+
+    nextTick(() => {
+    })
 })
 </script>
 
