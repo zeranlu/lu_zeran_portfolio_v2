@@ -48,9 +48,9 @@ const startTransition = async (url) => {
     width: 100%;
     height: 100vh;
     background-color: pink;
-    z-index: 1000;
+    z-index: 10;
 
-    transition: $transition;
+    transition: a.$transition;
     will-change: transform;
 }
 
