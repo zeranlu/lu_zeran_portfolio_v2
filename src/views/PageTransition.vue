@@ -25,6 +25,7 @@ router.afterEach((to, from) => {
 
     nextTick(() => {
         panel.value.addEventListener('transitionend', () => {
+            panel.value.style.transition = 'none';
     })
 })
 </script>
