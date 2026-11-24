@@ -6,7 +6,10 @@
 
 <script setup>
 import { useTemplateRef } from 'vue';
+import { useRouter } from 'vue-router';
+
 const panel = useTemplateRef('panel');
+
 // const main = document.querySelector('main');
 // const links = [...document.querySelectorAll('a')];
 // const transitionDiv = document.querySelector('.transition-div');
