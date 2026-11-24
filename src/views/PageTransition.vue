@@ -9,6 +9,7 @@ import { useTemplateRef } from 'vue';
 import { useRouter } from 'vue-router';
 
 const panel = useTemplateRef('panel');
+const router = useRouter();
 
 // const main = document.querySelector('main');
 // const links = [...document.querySelectorAll('a')];
