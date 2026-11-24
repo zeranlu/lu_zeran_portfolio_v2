@@ -11,13 +11,17 @@ import { START_LOCATION, useRouter } from 'vue-router';
 const panel = useTemplateRef('panel');
 const router = useRouter();
 
-router.beforeEach((to, from) => {
+router.beforeEach((from) => {
     if (from === START_LOCATION) return;
+
     return new Promise((resolve) => {
         panel.value.addEventListener('transitionend', resolve, {once: true});
         panel.value.classList.add('animate-center');
     });
 });
+
+router.afterEach
+
 // const main = document.querySelector('main');
 // const links = [...document.querySelectorAll('a')];
 // const transitionDiv = document.querySelector('.transition-div');
