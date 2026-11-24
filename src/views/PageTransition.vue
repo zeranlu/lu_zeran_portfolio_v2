@@ -6,21 +6,19 @@
 
 <script setup>
 import { useTemplateRef } from 'vue';
-import { START_LOCATION, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 
 const panel = useTemplateRef('panel');
 const router = useRouter();
 
 router.beforeEach((from) => {
-    if (from === START_LOCATION) return;
+    if (from.matched.length === 0) return;
 
-    return new Promise((resolve) => {
+    return new Promise((to, resolve) => {
         panel.value.addEventListener('transitionend', resolve, {once: true});
         panel.value.classList.add('animate-center');
     });
 });
-
-router.afterEach
 
 // const main = document.querySelector('main');
 // const links = [...document.querySelectorAll('a')];
