@@ -3,16 +3,17 @@
         
         <h2>Project Highlights</h2>
 
-        <div class="case-study-content-con project-highlights-con">
-            <div class="case-study-content-wrapper project-highlights-wrapper">
-
+        <div class="case-study-content-con grid-con">
+            <div class="case-study-content-wrapper s-col-span-4 m-col-span-3 l-col-span-8">
                 <YouTubeEmbed
                     class="youTubeEmbed-con"
                     ref="youTubeEmbedRef"
                     :youTubeVideoId="caseStudyInfo.proj_video_id"
                     :youTubeTitle="`Youtube video of ${caseStudyInfo.proj_name}`">
                 </YouTubeEmbed>
+            </div>
 
+            <div class="case-study-content-wrapper s-col-span-4 m-col-span-3 l-col-span-4">
                 <div class="video-chapters-con">
                     <div class="video-chapters-wrapper">
                         <h5>Project Highlights for {{ caseStudyInfo.proj_name }}</h5>
@@ -62,38 +63,4 @@
 
 <style scoped lang="scss">
 
-.project-highlights-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.video-chapters-con {
-    background-color: purple;
-    margin: 5%;
-}
-
-.video-chapters-wrapper {
-    background-color: indigo;
-    margin: 5%;
-}
-
-@media screen and (min-width: 768px) {
-    .project-highlights-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .project-highlights-wrapper {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .youTubeEmbed-con {
-        grid-column: span 4;
-    }
-
-    .video-chapters-con {
-        grid-column: span 2;
-    }
-}
 </style>

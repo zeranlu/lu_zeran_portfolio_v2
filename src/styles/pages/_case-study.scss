@@ -1,18 +1,5 @@
 @use '../abstracts' as a;
 
-// Grid List Styles
-.grid-list-con {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 5%;
-}
-
-.grid-list-wrapper {
-    display: grid;
-    grid-row: span 2;
-    grid-template-rows: subgrid;
-}
-
 // Case Study Box Styles
 .case-study-content-con {
     background-color: red;
@@ -37,10 +24,4 @@
 
 .case-study-h4 {
     margin: 1rem;
-}
-
-@media (min-width: 768px) {
-    .grid-list-con {
-        grid-template-columns: 1fr 1fr;
-    }
 }

@@ -3,30 +3,34 @@
 
         <h2>Project Retrospective</h2>
 
-        <div class="case-study-content-wrapper">
-            <h4 class="case-study-h4">Success Metrics</h4>
+        <div class="case-study-content-con grid-con">
+            <div class="case-study-content-wrapper col-span-full">
+                <h4 class="case-study-h4">Success Metrics</h4>
+                
+                <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
 
-            <ul class="case-study-list-ul">
-                <li class="case-study-list-li"
-                    v-for="metric in caseStudyInfo.metrics"
-                    :key="metric.success_metric_id">
-                    <a>
-                        <span v-html="metric.proj_metric"></span>
+                <ul class="case-study-list-ul grid-con">
+                    <li class="case-study-list-li s-col-span-4 m-col-span-2 l-col-span-4"
+                        v-for="metric in caseStudyInfo.metrics"
+                        :key="metric.success_metric_id">
+                        <a>
+                            <span v-html="metric.proj_metric"></span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="retro-button-con">
+                    <a :href="caseStudyInfo.retrospective.proj_link_github"
+                        v-if="caseStudyInfo.retrospective.proj_link_github">
+                        View the GitHub Repo Here
                     </a>
-                </li>
-            </ul>
-            
-            <p>{{ caseStudyInfo.retrospective.proj_retro_summary }}</p>
-            
-            <a :href="caseStudyInfo.retrospective.proj_link_github"
-                v-if="caseStudyInfo.retrospective.proj_link_github">
-                View the GitHub Repo Here
-            </a>
 
-            <a :href="caseStudyInfo.retrospective.proj_link_live"
-                v-if="caseStudyInfo.retrospective.proj_link_live">
-                View the Live Link Here
-            </a>
+                    <a :href="caseStudyInfo.retrospective.proj_link_live"
+                        v-if="caseStudyInfo.retrospective.proj_link_live">
+                        View the Live Link Here
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </template>
