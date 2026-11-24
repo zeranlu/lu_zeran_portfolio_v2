@@ -12,6 +12,7 @@ const panel = useTemplateRef('panel');
 const router = useRouter();
 
 router.beforeEach((to, from) => {
+    if (from === START_LOCATION) return;
 });
 // const main = document.querySelector('main');
 // const links = [...document.querySelectorAll('a')];
