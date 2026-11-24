@@ -7,7 +7,7 @@
 <script setup>
 const main = document.querySelector('main');
 const links = [...document.querySelectorAll('a')];
-const transitionDiv = document.querySelector('transition-div');
+const transitionDiv = document.querySelector('.transition-div');
 
 links.forEach(link => {
     link.addEventListener('click', async e => {
@@ -36,11 +36,6 @@ const startTransition = async (url) => {
 
 <style scoped lang="scss">
 @use '@/styles/abstracts' as a;
-
-.transition-hidden {
-    opacity: 0;
-}
-
 .transition-div {
     position: fixed;
     top: 0;
@@ -50,15 +45,17 @@ const startTransition = async (url) => {
     background-color: pink;
     z-index: 10;
 
-    transition: a.$transition;
+    transition: 1s;
     will-change: transform;
+
+    transform: translateX(-100%);
 }
 
-.transition-div.animate-in {
-    transform: translateX(100%)
+.transition-div.animate-center {
+    transform: translateX(0);
 }
 
 .transition-div.animate-out {
-    transform: translateX(200%)
+    transform: translateX(100%)
 }
 </style>
