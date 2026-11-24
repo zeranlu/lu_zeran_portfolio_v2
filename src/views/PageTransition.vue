@@ -29,6 +29,7 @@ router.afterEach((to, from) => {
             panel.value.classList.remove('animate-out');
             panel.value.offsetHeight;
             panel.value.style.transition = '';
+        }, { once: true });
     })
 })
 </script>
