@@ -44,7 +44,7 @@
     import { ref, onMounted } from 'vue'
     import { useYouTubeApi } from '@/composables/useYouTubeApi'
 
-    import YouTubeEmbed from '@/components/case-study-sections/case-study-components/YouTubeEmbed.vue'
+    import YouTubeEmbed from '@/components/case-study-sections/Section-3-ProjectHighlights/YouTubeEmbed.vue'
 
     const props = defineProps({
         caseStudyInfo: Object
