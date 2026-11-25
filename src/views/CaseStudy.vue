@@ -82,7 +82,7 @@
     import InspirationAndReferences from '@/components/case-study-sections/Section-2-Inspiration&References/Inspiration&References.vue'
     import ProjectHighlights from '@/components/case-study-sections/Section-3-ProjectHighlights/ProjectHighlights.vue'
     import StrategicLimitations from '@/components/case-study-sections/Section-4-StrategicLimitations/StrategicLimitations.vue'
-    import ProjectRetrospective from '@/components/case-study-sections/ProjectRetrospective.vue'
+    import ProjectRetrospective from '@/components/case-study-sections/Section-5-ProjectRetrospective/ProjectRetrospective.vue'
 
 
     const caseStudyInfo = ref(null)
