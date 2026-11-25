@@ -60,22 +60,5 @@
 </script>
 
 <style scoped lang="scss">
-// Grid List Styles
-// .grid-list-con {
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     column-gap: 5%;
-// }
 
-// .grid-list-wrapper {
-//     display: grid;
-//     grid-row: span 2;
-//     grid-template-rows: subgrid;
-// }
-
-// @media (min-width: 768px) {
-//     .grid-list-con {
-//         grid-template-columns: 1fr 1fr;
-//     }
-// }
 </style>
