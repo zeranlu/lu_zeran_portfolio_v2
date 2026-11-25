@@ -78,7 +78,7 @@
     import { useParallax } from '@/composables/useParallax'
 
     // IMPORTING CASE STUDY COMPONENTS
-    import ProjectBeginnings from '@/components/case-study-sections/ProjectBeginnings.vue'
+    import ProjectBeginnings from '@/components/case-study-sections/ProjectBeginnings/ProjectBeginnings.vue'
     import InspirationAndReferences from '@/components/case-study-sections/Inspiration&References.vue'
     import ProjectHighlights from '@/components/case-study-sections/ProjectHighlights.vue'
     import StrategicLimitations from '@/components/case-study-sections/StrategicLimitations.vue'
