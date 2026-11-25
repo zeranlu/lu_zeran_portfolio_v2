@@ -78,11 +78,11 @@
     import { useParallax } from '@/composables/useParallax'
 
     // IMPORTING CASE STUDY COMPONENTS
-    import ProjectBeginnings from '@/components/case-study-sections/ProjectBeginnings.vue'
-    import InspirationAndReferences from '@/components/case-study-sections/Inspiration&References.vue'
-    import ProjectHighlights from '@/components/case-study-sections/ProjectHighlights.vue'
-    import StrategicLimitations from '@/components/case-study-sections/StrategicLimitations.vue'
-    import ProjectRetrospective from '@/components/case-study-sections/ProjectRetrospective.vue'
+    import ProjectBeginnings from '@/components/case-study-sections/Section-1-ProjectBeginnings/ProjectBeginnings.vue'
+    import InspirationAndReferences from '@/components/case-study-sections/Section-2-Inspiration&References/Inspiration&References.vue'
+    import ProjectHighlights from '@/components/case-study-sections/Section-3-ProjectHighlights/ProjectHighlights.vue'
+    import StrategicLimitations from '@/components/case-study-sections/Section-4-StrategicLimitations/StrategicLimitations.vue'
+    import ProjectRetrospective from '@/components/case-study-sections/Section-5-ProjectRetrospective/ProjectRetrospective.vue'
 
 
     const caseStudyInfo = ref(null)
