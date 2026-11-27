@@ -1,11 +1,10 @@
 <template>
     <div class="project-retrospective content-con">
-
         <h2>Project Retrospective</h2>
 
-        <LinkButtons :caseStudyInfo="caseStudyInfo" />
-
         <SuccessMetrics :caseStudyInfo="caseStudyInfo" />
+
+        <LinkButtons :caseStudyInfo="caseStudyInfo" />
     </div>
 </template>
 
