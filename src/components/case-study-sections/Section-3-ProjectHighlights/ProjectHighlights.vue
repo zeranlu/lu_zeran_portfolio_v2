@@ -13,7 +13,7 @@
                 </YouTubeEmbed>
             </div>
 
-            <VideoTimestamps />
+            <VideoTimestamps :caseStudyInfo="caseStudyInfo" />
         </div>
     </div>
 </template>
