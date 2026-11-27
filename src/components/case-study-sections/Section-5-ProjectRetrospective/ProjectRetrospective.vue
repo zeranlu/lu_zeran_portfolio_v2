@@ -5,7 +5,7 @@
 
         <LinkButtons :caseStudyInfo="caseStudyInfo" />
 
-        <SuccessMetrics />
+        <SuccessMetrics :caseStudyInfo="caseStudyInfo" />
     </div>
 </template>
 
