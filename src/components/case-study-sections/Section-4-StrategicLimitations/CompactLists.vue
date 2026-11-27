@@ -41,6 +41,10 @@
 <script setup>
     import { computed } from 'vue'
 
+    const props = defineProps({
+        caseStudyInfo: Object
+    })
+    
     const goalsCompleted = computed(() => {
         return props.caseStudyInfo.goals.filter((goal) => Number(goal.personal_goal_completed) === 1).length
     })
