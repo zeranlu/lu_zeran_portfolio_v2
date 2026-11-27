@@ -18,18 +18,6 @@
                         </a>
                     </li>
                 </ul>
-                
-                <div class="retro-button-con">
-                    <a :href="caseStudyInfo.retrospective.proj_link_github"
-                        v-if="caseStudyInfo.retrospective.proj_link_github">
-                        View the GitHub Repo Here
-                    </a>
-
-                    <a :href="caseStudyInfo.retrospective.proj_link_live"
-                        v-if="caseStudyInfo.retrospective.proj_link_live">
-                        View the Live Link Here
-                    </a>
-                </div>
             </div>
         </div>
     </div>
