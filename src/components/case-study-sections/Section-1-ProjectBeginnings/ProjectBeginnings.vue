@@ -8,7 +8,7 @@
             <img :src="caseStudyInfo.proj_image_link_1" :alt="`Sketch images of ${caseStudyInfo.proj_name}`" class="hidden">
         </div>
 
-        <SpecsGoalsLists />
+        <SpecsGoalsLists :caseStudyInfo="caseStudyInfo" />
     </div>
 
 </template>
