@@ -6,7 +6,7 @@
         <div class="case-study-content-con grid-con">
             <CompactLists :caseStudyInfo="caseStudyInfo" />
 
-            <CriticismsList />
+            <CriticismsList :caseStudyInfo="caseStudyInfo" />
         </div>
     </div>
 </template>
