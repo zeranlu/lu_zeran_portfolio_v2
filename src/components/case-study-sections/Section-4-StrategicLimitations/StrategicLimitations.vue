@@ -4,7 +4,7 @@
         <h2>Strategic Limitations</h2>
         
         <div class="case-study-content-con grid-con">
-            <CompactLists />
+            <CompactLists :caseStudyInfo="caseStudyInfo" />
 
             <div class="case-study-content-wrapper s-col-span-4 m-col-span-3 l-col-span-6">
                 <h4 class="case-study-h4">Project Criticism</h4>
