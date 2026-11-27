@@ -3,7 +3,7 @@
 
         <h2>Project Retrospective</h2>
 
-        <LinkButtons />
+        <LinkButtons :caseStudyInfo="caseStudyInfo" />
         <div class="case-study-content-con grid-con">
             <div class="case-study-content-wrapper col-span-full">
                 <h4 class="case-study-h4">Success Metrics</h4>
