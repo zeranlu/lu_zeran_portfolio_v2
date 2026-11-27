@@ -14,10 +14,14 @@
                 </li>
             </ul>
         </div>
+
+        <ReferenceContainer />
     </div>
 </template>
 
 <script setup>
+    import ReferenceContainer from '@/components/case-study-sections/Section-2-Inspiration&References/ReferenceContainer.vue';
+
     defineProps({
         caseStudyInfo: Object
     })
