@@ -13,7 +13,7 @@
                 </YouTubeEmbed>
             </div>
 
-            
+            <VideoTimestamps />
         </div>
     </div>
 </template>
@@ -23,6 +23,7 @@
     import { useYouTubeApi } from '@/composables/useYouTubeApi'
 
     import YouTubeEmbed from '@/components/case-study-sections/Section-3-ProjectHighlights/YouTubeEmbed.vue'
+    import VideoTimestamps from '@/components/case-study-sections/Section-3-ProjectHighlights/VideoTimestamps.vue'
 
     const props = defineProps({
         caseStudyInfo: Object
