@@ -3,6 +3,7 @@
 
         <h2>Project Retrospective</h2>
 
+        <LinkButtons />
         <div class="case-study-content-con grid-con">
             <div class="case-study-content-wrapper col-span-full">
                 <h4 class="case-study-h4">Success Metrics</h4>
@@ -24,6 +25,7 @@
 </template>
 
 <script setup>
+    import LinkButtons from '@/components/case-study-sections/Section-5-ProjectRetrospective/LinkButtons.vue';
     const props = defineProps({
         caseStudyInfo: Object
     })
