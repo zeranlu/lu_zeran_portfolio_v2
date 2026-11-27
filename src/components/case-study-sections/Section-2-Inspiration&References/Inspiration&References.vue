@@ -15,7 +15,7 @@
             </ul>
         </div>
 
-        <ReferenceContainer />
+        <ReferenceContainer :caseStudyInfo="caseStudyInfo" />
     </div>
 </template>
 
